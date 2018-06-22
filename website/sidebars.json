@@ -1,0 +1,10 @@
+{
+  "docs": {
+    "Introdução": ["doc1", "doc2"],
+    "Second Category": ["doc3"],
+    "Integração": ["doc4"]
+  },
+  "docs-other": {
+    "First Category": ["doc5", "doc6"]
+  }
+}
