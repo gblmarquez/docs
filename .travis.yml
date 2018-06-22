@@ -13,4 +13,4 @@ script:
   - cd website
   - yarn install
   - GIT_USER="yagosenhorini"
-  - yarn run publish-gh-pages
+  - yarn run docusaurus-publish
