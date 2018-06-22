@@ -12,5 +12,5 @@ script:
   - echo "machine github.com login yagosenhorini password 7dd138a491008a38ad667960f4caba0702967d17" > ~/.netrc
   - cd website
   - yarn install
-  - GIT_USER="yagosenhorini"
-  - yarn run docusaurus-publish
+  - GIT_USER="${yagosenhorini}"
+  - yarn docusaurus-publish
