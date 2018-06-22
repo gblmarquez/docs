@@ -14,7 +14,7 @@ const users = [
     caption: 'User1',
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: '/img/docusaurus.svg',
+    image: 'img/nfe_transp.png',
     infoLink: 'https://www.facebook.com',
     pinned: true,
   },
@@ -49,7 +49,7 @@ const siteConfig = {
 
   /* path to images for header/footer */
   headerIcon: 'img/nfe_transp.png',
-  footerIcon: 'img/docusaurus.svg',
+  footerIcon: 'img/nfe_transp.png',
   favicon: 'img/favicon.ico',
 
   /* colors for website */
@@ -74,7 +74,7 @@ const siteConfig = {
   copyright:
     'Copyright © ' +
     new Date().getFullYear() +
-    ' Your Name or Your Company Name',
+    ' NFe.io',
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks
@@ -88,8 +88,8 @@ const siteConfig = {
   onPageNav: 'separate',
 
   /* Open Graph and Twitter card images */
-  ogImage: 'img/docusaurus.png',
-  twitterImage: 'img/docusaurus.png',
+  ogImage: 'img/nfe_transp.png',
+  twitterImage: 'img/nfe_transp.png',
 
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...
