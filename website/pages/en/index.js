@@ -166,35 +166,35 @@ const Description = props => (
   </Block>
 );
 
-const Showcase = props => {
-  if ((siteConfig.users || []).length === 0) {
-    return null;
-  }
-  const showcase = siteConfig.users
-    .filter(user => {
-      return user.pinned;
-    })
-    .map((user, i) => {
-      return (
-        <a href={user.infoLink} key={i}>
-          <img src={user.image} alt={user.caption} title={user.caption} />
-        </a>
-      );
-    });
+// const Showcase = props => {
+//   if ((siteConfig.users || []).length === 0) {
+//     return null;
+//   }
+//   const showcase = siteConfig.users
+//     .filter(user => {
+//       return user.pinned;
+//     })
+//     .map((user, i) => {
+//       return (
+//         <a href={user.infoLink} key={i}>
+//           <img src={user.image} alt={user.caption} title={user.caption} />
+//         </a>
+//       );
+//     });
 
-  return (
-    <div className="productShowcaseSection paddingBottom">
-      <h2>Quem usa o NFe hoje?</h2>
-      <p>Nosso produto é utilizado por diversas empresas, como: </p>
-      <div className="logos">{showcase}</div>
-      <div className="more-users">
-        <a className="button" href={pageUrl('users.html', props.language)}>
-          Veja Mais
-        </a>
-      </div>
-    </div>
-  );
-};
+//   return (
+//     <div className="productShowcaseSection paddingBottom">
+//       <h2>Quem usa o NFe hoje?</h2>
+//       <p>Nosso produto é utilizado por diversas empresas, como: </p>
+//       <div className="logos">{showcase}</div>
+//       <div className="more-users">
+//         <a className="button" href={pageUrl('users.html', props.language)}>
+//           Veja Mais
+//         </a>
+//       </div>
+//     </div>
+//   );
+// };
 
 class Index extends React.Component {
   render() {
@@ -209,7 +209,6 @@ class Index extends React.Component {
           <LearnHow />
           <TryOut />
           <Description />
-          <Showcase language={language} />
         </div>
       </div>
     );
