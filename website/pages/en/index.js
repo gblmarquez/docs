@@ -157,7 +157,7 @@ const Description = props => (
   <Block background="dark">
     {[
       {
-        content: 'Esta é outra descição sobre o quanto este projeto é util',
+        content: 'Esta é outra descrição sobre o quanto este projeto é util',
         image: imgUrl('nfe_transp.png'),
         imageAlign: 'right',
         title: 'Descrição',
