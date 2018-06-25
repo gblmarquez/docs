@@ -87,7 +87,7 @@ class Footer extends React.Component {
           rel="noreferrer noopener"
           className="fbOpenSource">
           <img
-            src={this.props.config.baseUrl + 'img/nfe_transp.png'}
+            src={this.props.config.baseUrl + 'img/oss_logo.png'}
             alt="NFe.io"
             width="170"
             height="45"
