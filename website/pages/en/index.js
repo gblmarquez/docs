@@ -76,7 +76,7 @@ class HomeSplash extends React.Component {
     let language = this.props.language || '';
     return (
       <SplashContainer>
-        <Logo img_src={imgUrl('docusaurus.svg')} />
+        <Logo img_src={imgUrl('nfe_transp.png')} />
         <div className="inner">
           <ProjectTitle />
           <PromoSection>
@@ -104,13 +104,13 @@ const Features = props => (
     {[
       {
         content: 'This is the content of my feature',
-        image: imgUrl('docusaurus.svg'),
+        image: imgUrl('nfe_transp.png'),
         imageAlign: 'top',
         title: 'Primeira Feature',
       },
       {
         content: 'The content of my second feature',
-        image: imgUrl('docusaurus.svg'),
+        image: imgUrl('nfe_transp.png'),
         imageAlign: 'top',
         title: 'Segunda Feature',
       },
@@ -132,7 +132,7 @@ const LearnHow = props => (
     {[
       {
         content: 'Converse sobre aprender a usar isto',
-        image: imgUrl('docusaurus.svg'),
+        image: imgUrl('nfe_transp.png'),
         imageAlign: 'right',
         title: 'Aprenda',
       },
@@ -145,7 +145,7 @@ const TryOut = props => (
     {[
       {
         content: 'Converse sobre testar isso',
-        image: imgUrl('docusaurus.svg'),
+        image: imgUrl('nfe_transp.png'),
         imageAlign: 'left',
         title: 'Testar',
       },
@@ -158,7 +158,7 @@ const Description = props => (
     {[
       {
         content: 'Esta é outra descição sobre o quanto este projeto é util',
-        image: imgUrl('docusaurus.svg'),
+        image: imgUrl('nfe_transp.png'),
         imageAlign: 'right',
         title: 'Descrição',
       },
