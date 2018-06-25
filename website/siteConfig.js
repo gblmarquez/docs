@@ -11,18 +11,18 @@
 /* List of projects/orgs using your project for the users page */
 const users = [
   {
-    caption: 'User1',
+    caption: 'Empresa XPTO',
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: 'img/docusaurus.svg',
+    image: 'img/nfe_transp.png',
     infoLink: 'https://www.facebook.com',
     pinned: true,
   },
 ];
 
 const siteConfig = {
-  title: 'Test Site' /* title for your website */,
-  tagline: 'A website for testing',
+  tagline: 'Documentações',
+  title: 'NFe.io' /* title for your website */,
   url: 'https://yagosenhorini.github.io' /* your website url */,
   baseUrl: '/docusaurus/' /* base url for your project */,
   // For github.io type URLs, you would set the url and baseUrl like:
@@ -40,8 +40,8 @@ const siteConfig = {
   headerLinks: [
     {doc: 'doc1', label: 'Docs'},
     {doc: 'doc4', label: 'API'},
-    {page: 'help', label: 'Help'},
-    {blog: true, label: 'Blog'},
+    {page: 'help', label: 'Ajuda'},
+    {blog: true, label: 'Changelog'},
   ],
 
   // If you have users set above, you add it here:
@@ -49,7 +49,7 @@ const siteConfig = {
 
   /* path to images for header/footer */
   headerIcon: 'img/nfe_transp.png',
-  footerIcon: 'img/nfe_transp.png',
+  footerIcon: 'img/nfe-io-logo.svg',
   favicon: 'img/favicon.ico',
 
   /* colors for website */

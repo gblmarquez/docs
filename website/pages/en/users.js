@@ -31,8 +31,8 @@ class Users extends React.Component {
         <Container padding={['bottom', 'top']}>
           <div className="showcaseSection">
             <div className="prose">
-              <h1>Quem está usando isso?</h1>
-              <p>Este projeto é utilizado por várias pessoas</p>
+              <h1>Quem usa o NFe hoje?</h1>
+              <p>Nosso produto é utilizado por diversas empresas, como: </p>
             </div>
             <div className="logos">{showcase}</div>
             <p>Você está usando esse projeto?</p>

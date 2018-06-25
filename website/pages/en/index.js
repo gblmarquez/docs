@@ -121,7 +121,7 @@ const Features = props => (
 const FeatureCallout = props => (
   <div
     className="productShowcaseSection paddingBottom"
-    style={{textAlign: 'center'}}>
+    style={{ textAlign: 'center' }}>
     <h2>Callout da Feature</h2>
     <MarkdownBlock>Estas são as features deste projeto</MarkdownBlock>
   </div>
@@ -184,12 +184,12 @@ const Showcase = props => {
 
   return (
     <div className="productShowcaseSection paddingBottom">
-      <h2>{"Quem está usando?"}</h2>
-      <p>Este projeto é usado por todas estas pessoas</p>
+      <h2>Quem usa o NFe hoje?</h2>
+      <p>Nosso produto é utilizado por diversas empresas, como: </p>
       <div className="logos">{showcase}</div>
       <div className="more-users">
         <a className="button" href={pageUrl('users.html', props.language)}>
-          More {siteConfig.title} Users
+          Veja Mais
         </a>
       </div>
     </div>
