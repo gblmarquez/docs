@@ -21,7 +21,7 @@ const users = [
 ];
 
 const siteConfig = {
-  title: 'Test Site' /* title for your website */,
+  title: 'Documentação' /* title for your website */,
   tagline: 'A website for testing',
   url: 'https://yagosenhorini.github.io' /* your website url */,
   baseUrl: '/docusaurus/' /* base url for your project */,
@@ -44,12 +44,13 @@ const siteConfig = {
     {blog: true, label: 'Blog'},
   ],
 
+
   // If you have users set above, you add it here:
   users,
 
   /* path to images for header/footer */
-  headerIcon: 'img/nfe_transp.png',
-  footerIcon: 'img/nfe_transp.png',
+  headerIcon: 'img/nfe-logo.svg',
+  footerIcon: 'img/nfe-logo.svg',
   favicon: 'img/favicon.ico',
 
   /* colors for website */
@@ -88,8 +89,23 @@ const siteConfig = {
   onPageNav: 'separate',
 
   /* Open Graph and Twitter card images */
-  ogImage: 'img/nfe_transp.png',
-  twitterImage: 'img/nfe_transp.png',
+  ogImage: 'img/nfe-logo.svg',
+  twitterImage: 'img/nfe-logo.svg',
+
+
+
+  disableHeaderTitle: true,
+  disableTitleTagline: true,
+
+  algolia: {
+    apiKey: '0f9f28b9ab9efae89810921a351753b5',
+    indexName: 'github',
+  },
+
+  scrollToTop: true,
+  scrollToTopOptions: {
+    zIndex: 100,
+  },
 
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...

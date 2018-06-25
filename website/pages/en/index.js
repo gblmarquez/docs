@@ -76,14 +76,16 @@ class HomeSplash extends React.Component {
     let language = this.props.language || '';
     return (
       <SplashContainer>
-        <Logo img_src={imgUrl('docusaurus.svg')} />
+        <Logo img_src={imgUrl('nfe-logo.svg')} />
         <div className="inner">
           <ProjectTitle />
-          <PromoSection>
+          <Features />
+
+          {/* <PromoSection>
             <Button href="#try">Teste aqui</Button>
             <Button href={docUrl('doc1.html', language)}>Link de Exemplo</Button>
             <Button href={docUrl('doc2.html', language)}>Link de Exemplo 2</Button>
-          </PromoSection>
+          </PromoSection> */}
         </div>
       </SplashContainer>
     );
@@ -104,16 +106,28 @@ const Features = props => (
     {[
       {
         content: 'This is the content of my feature',
-        image: imgUrl('docusaurus.svg'),
+        image: imgUrl('nfe-logo.svg'),
         imageAlign: 'top',
-        title: 'Primeira Feature',
+        title: 'Nfe conceitos',
       },
       {
         content: 'The content of my second feature',
-        image: imgUrl('docusaurus.svg'),
+        image: imgUrl('nfe-logo.svg'),
         imageAlign: 'top',
-        title: 'Segunda Feature',
+        title: 'Tutoriais',
       },
+      {
+        content: 'This is the content of my feature',
+        image: imgUrl('nfe-logo.svg'),
+        imageAlign: 'top',
+        title: 'Referência de API',
+      },
+      {
+        content: 'This is the content of my feature',
+        image: imgUrl('nfe-logo.svg'),
+        imageAlign: 'top',
+        title: 'FAQ',
+      }
     ]}
   </Block>
 );
@@ -204,8 +218,7 @@ class Index extends React.Component {
       <div>
         <HomeSplash language={language} />
         <div className="mainContainer">
-          <Features />
-          <FeatureCallout />
+          {/* <FeatureCallout /> */}
           <LearnHow />
           <TryOut />
           <Description />
