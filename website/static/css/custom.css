@@ -70,11 +70,22 @@
   display: none;
 }
 
-/* @media only screen and (min-device-width: 360px){
-  .navPusher{
-    padding-top: 100px;
-  }
-} */
+.mainContainer{
+  padding: 0;
+}
+
+
+
+
+
+#back-to-top{
+  background: #fff;
+  -webkit-box-shadow: 0 5px 10px 0px rgba(0,0,0,.5);
+  -moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,.5);
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.5);
+  color: green;
+}
+
 
 @media only screen and (min-width: 1024px) {}
 
@@ -108,6 +119,15 @@
 
   .gridBlock .fourByGridBlock{
     margin: 25px;
+  }
+
+  #back-to-top{
+    height: 45px;
+    width: 45px;
+  }
+  
+  #back-to-top svg{
+    margin: 11px auto 0;
   }
 }
 

@@ -103,7 +103,7 @@ const siteConfig = {
 
   scrollToTop: true,
   scrollToTopOptions: {
-    zIndex: 100,
+    scrollDuration: 200,
   },
 
   // You may provide arbitrary config keys to be used as needed by your
