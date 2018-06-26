@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
+   <defs>
+      <linearGradient id="a23t19" x1="31.234%" x2="81.126%" y1="-9.229%" y2="104.898%">
+         <stop offset="0%" stop-color="#3369E6"></stop>
+         <stop offset="100%" stop-color="#1CC7D0"></stop>
+      </linearGradient>
+   </defs>
+   <g fill="none" fill-rule="evenodd">
+      <rect width="80" height="80" fill="#FFF" rx="6"></rect>
+      <g fill="url(#a23t19)" transform="translate(23.333 23.333)">
+         <g class="animatable" style="opacity: 0.994809; transform: translate(0px, 0.084358px);">
+            <path d="M15.202 16.968c.81-.404 2.13-.4 2.929 0l14.6 7.3c.808.404.798 1.065 0 1.464l-14.6 7.3c-.809.404-2.13.4-2.929 0l-14.6-7.3c-.808-.404-.798-1.065 0-1.464l14.6-7.3z"></path>
+         </g>
+         <g class="animatable" style="opacity: 0.994809; transform: translate(0px, 0.0551572px);">
+            <path d="M15.202 8.635c.81-.405 2.13-.4 2.929 0l14.6 7.3c.808.404.798 1.065 0 1.464l-14.6 7.3c-.809.404-2.13.399-2.929 0l-14.6-7.3c-.808-.405-.798-1.065 0-1.464l14.6-7.3z"></path>
+         </g>
+         <g class="animatable" style="opacity: 0.994809; transform: translate(0px, 0.0324454px);">
+            <path d="M15.202.301c.81-.404 2.13-.399 2.929 0l14.6 7.3c.808.405.798 1.065 0 1.464l-14.6 7.3c-.809.405-2.13.4-2.929 0l-14.6-7.3c-.808-.404-.798-1.065 0-1.464l14.6-7.3z"></path>
+         </g>
+      </g>
+   </g>
+</svg>

@@ -1,0 +1,28 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <title>View API Reference</title>
+  <defs>
+    <linearGradient x1="31.234%" y1="-9.229%" x2="81.126%" y2="104.898%" id="aaf41">
+      <stop stop-color="#B84592" offset="0%"></stop>
+      <stop stop-color="#FF4F81" offset="100%"></stop>
+    </linearGradient>
+    <linearGradient x1="12.497%" y1="50%" y2="40.413%" id="baf41">
+      <stop stop-color="#B84592" offset="0%"></stop>
+      <stop stop-color="#FF4F81" offset="100%"></stop>
+    </linearGradient>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <rect fill="#FFF" width="80" height="80" rx="6"></rect>
+    <g class="animatable" style="opacity: 0.999247; transform: translate(0.00954252px, 0px);">
+      <path d="M11.535.464l7.612 4.307c.523.297.846.85.846 1.452v8.556c0 .6-.323 1.155-.846 1.45l-7.612 4.308a1.664 1.664 0 0 1-1.64 0L2.28 16.23a1.674 1.674 0 0 1-.845-1.452V6.222c0-.6.324-1.155.846-1.45L9.895.463a1.664 1.664 0 0 1 1.64 0z"
+        fill="url(#aaf41)" transform="translate(25 23.333)"></path>
+    </g>
+    <g class="animatable" style="opacity: 0.999247; transform: translate(0.00651725px, 0px);">
+      <path d="M23.44 7.464l7.612 4.307c.523.297.846.85.846 1.452v8.556c0 .6-.323 1.155-.846 1.45l-7.612 4.308a1.668 1.668 0 0 1-1.642 0l-7.612-4.307a1.668 1.668 0 0 1-.846-1.452v-8.556c0-.6.323-1.155.846-1.45l7.612-4.308a1.668 1.668 0 0 1 1.642 0z"
+        fill="url(#baf41)" transform="translate(25 23.333)"></path>
+    </g>
+    <g class="animatable" style="opacity: 0.999247; transform: translate(-0.00270638px, 0px);">
+      <path d="M11.535 14.464l7.612 4.307c.523.297.846.85.846 1.452v8.556c0 .6-.323 1.155-.846 1.45l-7.612 4.308a1.664 1.664 0 0 1-1.64 0L2.28 30.23a1.674 1.674 0 0 1-.845-1.452v-8.556c0-.6.324-1.155.846-1.45l7.614-4.308a1.664 1.664 0 0 1 1.64 0z"
+        fill="url(#aaf41)" transform="translate(25 23.333)"></path>
+    </g>
+  </g>
+</svg>
