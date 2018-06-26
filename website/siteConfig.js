@@ -72,13 +72,8 @@ const sdks = [
 ]
 
 const siteConfig = {
-<<<<<<< HEAD
-  title: 'Documentação' /* title for your website */,
-  tagline: 'A website for testing',
-=======
   tagline: 'Documentações',
   title: 'NFe.io' /* title for your website */,
->>>>>>> config
   url: 'https://yagosenhorini.github.io' /* your website url */,
   baseUrl: '/docusaurus/' /* base url for your project */,
   // For github.io type URLs, you would set the url and baseUrl like:
@@ -94,15 +89,9 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-<<<<<<< HEAD
-    {page: 'help', label: 'Conceitos'},
-    {doc: 'doc1', label: 'Referência de APIs'},
-    {blog: true, label: 'Atualizações'},
-=======
     { doc: 'doc1', label: 'Documentação' },
     { doc: 'doc4', label: `API's` },
     { blog: true, label: 'Atualizações' },
->>>>>>> config
   ],
 
 
@@ -110,13 +99,8 @@ const siteConfig = {
   plugins, sdks,
 
   /* path to images for header/footer */
-<<<<<<< HEAD
   headerIcon: 'img/nfe-logo.svg',
   footerIcon: 'img/nfe-logo.svg',
-=======
-  headerIcon: 'img/nfe_transp.png',
-  footerIcon: 'img/nfe-io-logo.svg',
->>>>>>> config
   favicon: 'img/favicon.ico',
   /* colors for website */
   colors: {
