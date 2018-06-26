@@ -2,11 +2,15 @@
 
 .fixedHeaderContainer{
   background: linear-gradient(90deg,#33c586 0%,#51cbff 100%);
-  padding: 25px 0;
+  padding: 3px 0;
 }
 
-.navSearchWrapper{
-  top: 25px;
+.fixedHeaderContainer header {
+  padding: 20px 0;
+}
+
+.navigationSlider .slidingNav ul li a:hover{
+  background: none;
 }
 
 .reactNavSearchWrapper input#search_input_react{
@@ -19,32 +23,43 @@
   background: rgba(0, 0, 0, 0.2);  
 }
 
-.navigationSlider .slidingNav ul{
-  background: linear-gradient(90deg,#50e0a2 0%, #82d9ff 100%);
-  margin-top: 84px;;
-  /* border-top: 1px solid rgba(255,255,255,.3);  
-  border-bottom: 1px solid rgba(255,255,255,.3); */
-}
-
 .navPusher{
-  padding-top: 100px;
+  padding-top: 80px;
 }
 
 .homeSplashFade{
   background: linear-gradient(90deg,#33c586 0%,#51cbff 100%);
 }
 
+.homeSplashFade::after{
+  transform: skewY(5deg);
+}
+
 .projectTitle{
   color: #fff;
+}
+
+.homeContainer .homeWrapper .wrapper{
+  max-width: 1000px;
 }
 
 .gridBlock .fourByGridBlock{
   background: rgba(255,255,255,.2);
   padding: 30px 0;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   border-radius: 6px;
   box-shadow: 0 16px 32px 0 rgba(62,57,107,0.1);
   color: #fff;
+  cursor: pointer;
+  transition: .3s
+}
+
+.gridBlock .fourByGridBlock:hover{
+  box-shadow: 0 16px 32px 0 rgba(62,57,107,0.2);
+}
+
+.gridBlock .fourByGridBlock:nth-child(2){
+  margin: 0 25px;
 }
 
 .imageAlignTop .blockImage{
@@ -55,15 +70,46 @@
   display: none;
 }
 
-@media only screen and (min-device-width: 360px) and (max-device-width: 736px) {}
+/* @media only screen and (min-device-width: 360px){
+  .navPusher{
+    padding-top: 100px;
+  }
+} */
 
-@media only screen and (min-width: 1024px) {
-  .fixedHeaderContainer header {
-    padding: 20px 0;
+@media only screen and (min-width: 1024px) {}
+
+@media only screen and (max-width: 768px) {
+  /* .fixedHeaderContainer{
+    padding: 25px 0;
+  } */
+
+  .navSearchWrapper{
+    top: 25px;
+  }
+
+  .reactNavSearchWrapper input#search_input_react{
+    padding-left: 35px;
+  }
+
+  .navPusher{
+    padding-top: 130px;
+  }
+
+  .navigationSlider .slidingNav ul{
+    background: linear-gradient(90deg,#50e0a2 0%, #82d9ff 100%);
+    margin-top: 80px;;
   }
 }
 
-@media only screen and (max-width: 1023px) {}
+@media only screen and (max-width: 425px){
+  .navPusher{
+    padding-top: 100px;
+  }
+
+  .gridBlock .fourByGridBlock{
+    margin: 25px;
+  }
+}
 
 @media only screen and (min-width: 1400px) {}
 

@@ -76,7 +76,8 @@ class HomeSplash extends React.Component {
     let language = this.props.language || '';
     return (
       <SplashContainer>
-        <Logo img_src={imgUrl('nfe-logo.svg')} />
+
+        {/* <Logo img_src={imgUrl('nfe-logo.svg')} /> */}
         <div className="inner">
           <ProjectTitle />
           <Features />
@@ -106,28 +107,22 @@ const Features = props => (
     {[
       {
         content: 'This is the content of my feature',
-        image: imgUrl('nfe-logo.svg'),
+        image: imgUrl('docs.svg'),
         imageAlign: 'top',
-        title: 'Nfe conceitos',
+        title: 'Conceitos',
       },
       {
         content: 'The content of my second feature',
-        image: imgUrl('nfe-logo.svg'),
+        image: imgUrl('api-reference.svg'),
         imageAlign: 'top',
-        title: 'Tutoriais',
+        title: 'Referência de APIs',
       },
       {
         content: 'This is the content of my feature',
-        image: imgUrl('nfe-logo.svg'),
+        image: imgUrl('updates.svg'),
         imageAlign: 'top',
-        title: 'Referência de API',
+        title: 'Atualizações',
       },
-      {
-        content: 'This is the content of my feature',
-        image: imgUrl('nfe-logo.svg'),
-        imageAlign: 'top',
-        title: 'FAQ',
-      }
     ]}
   </Block>
 );
