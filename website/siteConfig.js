@@ -71,6 +71,18 @@ const sdks = [
   // }
 ]
 
+const integrations = [
+  {
+    caption: `Integrações com ERP's`,
+    // You will need to prepend the image path with your baseUrl
+    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
+    image: 'img/integracoes.svg',
+    // infoLink: 'https://wordpress.org/plugins/woo-nfe/',
+    pinned: true,
+  },
+  
+];
+
 const siteConfig = {
   tagline: 'Documentações',
   title: 'NFe.io' /* title for your website */,
@@ -96,7 +108,7 @@ const siteConfig = {
 
 
   // If you have users set above, you add it here:
-  plugins, sdks,
+  plugins, sdks, integrations,
 
   /* path to images for header/footer */
   headerIcon: 'img/nfe-logo.svg',
