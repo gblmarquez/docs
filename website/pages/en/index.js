@@ -196,6 +196,108 @@ const Description = props => (
 //   );
 // };
 
+
+
+// const Plugin = props => {
+//   return (
+//     <div className="productShowcaseSection paddingBottom">
+//       <h2>Plugins para Integração</h2>
+//       <p>lorem ipsum </p>
+//       <div className="more-users">
+//         <a className="button" href={pageUrl('plugins.html', props.language)}>
+//           Veja Mais
+//          </a>
+//       </div>
+//     </div>
+//   )
+// };
+
+class Plugins extends React.Component {
+  render() {
+    let language = this.props.language || '';
+    const plugins = siteConfig.plugins.map((plugin, i) => {
+      return (
+        <a href={plugin.infoLink} key={i}>
+          <img src={plugin.image} alt={plugin.caption} title={plugin.caption} />
+        </a>
+      );
+    });
+
+    return (
+      <div>
+        <Container padding={['bottom', 'top']}>
+          <div className="productShowcaseSection">
+            <div className="prose">
+              <a href="plugins.html" style={{ color: "black" }}>
+                <h2>Plugins para Integração</h2>
+                <h4>Não é um Desenvolvedor?</h4>
+                <p>Fique tranquilo!
+                  Nós disponibilizamos alguns plugins para integração ao seu site.
+              </p>
+              </a>
+            </div>
+            <div className="logos">{plugins}</div>
+            <a className="button" href={pageUrl('plugins.html', language)}>
+              Clique Aqui
+            </a>
+          </div>
+        </Container>
+      </div>
+    );
+  }
+}
+module.exports = Plugins;
+
+// const SdkClients = props => {
+//   return (
+//     <div className="productShowcaseSection paddingBottom">
+//       <h2>Clientes SDK</h2>
+//       <p>lorem ipsum </p>
+//       <div className="more-users">
+//         <a className="button" href={pageUrl('clientes-sdk.html', props.language)}>
+//           Veja Mais
+//          </a>
+//       </div>
+//     </div>
+//   )
+// };
+
+class SDKS extends React.Component {
+  render() {
+    let language = this.props.language || '';
+    const sdks = siteConfig.sdks.map((sdk, i) => {
+      return (
+        <a href={sdk.infoLink} key={i}>
+          <img src={sdk.image} alt={sdk.caption} title={sdk.caption} />
+        </a>
+      );
+    });
+
+    return (
+      <div>
+        <Container padding={['bottom', 'top']}>
+          <div className="productShowcaseSection">
+            <div className="prose">
+              <a href={pageUrl('clientes-sdk.html', language)} target="_blank" style={{ color: "black" }}>
+                <h2>Clientes SDK</h2>
+                <h4>Pensado para desenvolvedores</h4>
+                <p>Disponibilização de Clientes SDK para integração.</p>
+              </a>
+            </div>
+          </div>
+          <div className="logos" style={{ display: "block", textAlign: "center"}}>{sdks}</div>
+          <div className="productShowcaseSection">
+            <a className="button" href={pageUrl('clientes-sdk.html', language)}>
+              Clique Aqui
+            </a>
+          </div>
+        </Container>
+      </div>
+    );
+  }
+}
+module.exports = SDKS;
+
 class Index extends React.Component {
   render() {
     let language = this.props.language || '';
@@ -208,6 +310,10 @@ class Index extends React.Component {
           <FeatureCallout />
           <LearnHow />
           <TryOut />
+          <section style={{ display: "flex", flexDirection: "row", justifyContent: "center" }}>
+            <Plugins language={language} />
+            <SDKS language={language} />
+          </section>
           <Description />
         </div>
       </div>
