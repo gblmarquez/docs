@@ -60,9 +60,6 @@ class Footer extends React.Component {
               Consulta.Guru
             </a>
             <a href="https://caiu.la">Sistema de Monitoramento</a>
-            <a href={this.pageUrl('users.html', this.props.language)}>
-              User Showcase
-            </a>
           </div>
           <div>
             <h5>Veja Mais</h5>
