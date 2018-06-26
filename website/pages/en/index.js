@@ -76,8 +76,12 @@ class HomeSplash extends React.Component {
     let language = this.props.language || '';
     return (
       <SplashContainer>
+<<<<<<< HEAD
 
         {/* <Logo img_src={imgUrl('nfe-logo.svg')} /> */}
+=======
+        <Logo img_src={imgUrl('nfe_transp.png')} />
+>>>>>>> config
         <div className="inner">
           <ProjectTitle />
           <Features />
@@ -107,13 +111,21 @@ const Features = props => (
     {[
       {
         content: 'This is the content of my feature',
+<<<<<<< HEAD
         image: imgUrl('docs.svg'),
+=======
+        image: imgUrl('nfe_transp.png'),
+>>>>>>> config
         imageAlign: 'top',
         title: 'Conceitos',
       },
       {
         content: 'The content of my second feature',
+<<<<<<< HEAD
         image: imgUrl('api-reference.svg'),
+=======
+        image: imgUrl('nfe_transp.png'),
+>>>>>>> config
         imageAlign: 'top',
         title: 'Referência de APIs',
       },
@@ -130,7 +142,7 @@ const Features = props => (
 const FeatureCallout = props => (
   <div
     className="productShowcaseSection paddingBottom"
-    style={{textAlign: 'center'}}>
+    style={{ textAlign: 'center' }}>
     <h2>Callout da Feature</h2>
     <MarkdownBlock>Estas são as features deste projeto</MarkdownBlock>
   </div>
@@ -141,7 +153,7 @@ const LearnHow = props => (
     {[
       {
         content: 'Converse sobre aprender a usar isto',
-        image: imgUrl('docusaurus.svg'),
+        image: imgUrl('nfe_transp.png'),
         imageAlign: 'right',
         title: 'Aprenda',
       },
@@ -154,7 +166,7 @@ const TryOut = props => (
     {[
       {
         content: 'Converse sobre testar isso',
-        image: imgUrl('docusaurus.svg'),
+        image: imgUrl('nfe_transp.png'),
         imageAlign: 'left',
         title: 'Testar',
       },
@@ -166,8 +178,8 @@ const Description = props => (
   <Block background="dark">
     {[
       {
-        content: 'Esta é outra descição sobre o quanto este projeto é util',
-        image: imgUrl('docusaurus.svg'),
+        content: 'Esta é outra descrição sobre o quanto este projeto é util',
+        image: imgUrl('nfe_transp.png'),
         imageAlign: 'right',
         title: 'Descrição',
       },
@@ -175,35 +187,137 @@ const Description = props => (
   </Block>
 );
 
-const Showcase = props => {
-  if ((siteConfig.users || []).length === 0) {
-    return null;
-  }
-  const showcase = siteConfig.users
-    .filter(user => {
-      return user.pinned;
-    })
-    .map((user, i) => {
+// const Showcase = props => {
+//   if ((siteConfig.users || []).length === 0) {
+//     return null;
+//   }
+//   const showcase = siteConfig.users
+//     .filter(user => {
+//       return user.pinned;
+//     })
+//     .map((user, i) => {
+//       return (
+//         <a href={user.infoLink} key={i}>
+//           <img src={user.image} alt={user.caption} title={user.caption} />
+//         </a>
+//       );
+//     });
+
+//   return (
+//     <div className="productShowcaseSection paddingBottom">
+//       <h2>Quem usa o NFe hoje?</h2>
+//       <p>Nosso produto é utilizado por diversas empresas, como: </p>
+//       <div className="logos">{showcase}</div>
+//       <div className="more-users">
+//         <a className="button" href={pageUrl('users.html', props.language)}>
+//           Veja Mais
+//         </a>
+//       </div>
+//     </div>
+//   );
+// };
+
+
+
+// const Plugin = props => {
+//   return (
+//     <div className="productShowcaseSection paddingBottom">
+//       <h2>Plugins para Integração</h2>
+//       <p>lorem ipsum </p>
+//       <div className="more-users">
+//         <a className="button" href={pageUrl('plugins.html', props.language)}>
+//           Veja Mais
+//          </a>
+//       </div>
+//     </div>
+//   )
+// };
+
+class Plugins extends React.Component {
+  render() {
+    let language = this.props.language || '';
+    const plugins = siteConfig.plugins.map((plugin, i) => {
       return (
-        <a href={user.infoLink} key={i}>
-          <img src={user.image} alt={user.caption} title={user.caption} />
+        <a href={plugin.infoLink} key={i}>
+          <img src={plugin.image} alt={plugin.caption} title={plugin.caption} />
         </a>
       );
     });
 
-  return (
-    <div className="productShowcaseSection paddingBottom">
-      <h2>{"Quem está usando?"}</h2>
-      <p>Este projeto é usado por todas estas pessoas</p>
-      <div className="logos">{showcase}</div>
-      <div className="more-users">
-        <a className="button" href={pageUrl('users.html', props.language)}>
-          More {siteConfig.title} Users
-        </a>
+    return (
+      <div>
+        <Container padding={['bottom', 'top']}>
+          <div className="productShowcaseSection">
+            <div className="prose">
+              <a href="plugins.html" style={{ color: "black" }}>
+                <h2>Plugins para Integração</h2>
+                <h4>Não é um Desenvolvedor?</h4>
+                <p>Fique tranquilo!
+                  Nós disponibilizamos alguns plugins para integração ao seu site.
+              </p>
+              </a>
+            </div>
+            <div className="logos">{plugins}</div>
+            <a className="button" href={pageUrl('plugins.html', language)}>
+              Clique Aqui
+            </a>
+          </div>
+        </Container>
       </div>
-    </div>
-  );
-};
+    );
+  }
+}
+module.exports = Plugins;
+
+// const SdkClients = props => {
+//   return (
+//     <div className="productShowcaseSection paddingBottom">
+//       <h2>Clientes SDK</h2>
+//       <p>lorem ipsum </p>
+//       <div className="more-users">
+//         <a className="button" href={pageUrl('clientes-sdk.html', props.language)}>
+//           Veja Mais
+//          </a>
+//       </div>
+//     </div>
+//   )
+// };
+
+class SDKS extends React.Component {
+  render() {
+    let language = this.props.language || '';
+    const sdks = siteConfig.sdks.map((sdk, i) => {
+      return (
+        <a href={sdk.infoLink} key={i}>
+          <img src={sdk.image} alt={sdk.caption} title={sdk.caption} />
+        </a>
+      );
+    });
+
+    return (
+      <div>
+        <Container padding={['bottom', 'top']}>
+          <div className="productShowcaseSection">
+            <div className="prose">
+              <a href={pageUrl('clientes-sdk.html', language)} target="_blank" style={{ color: "black" }}>
+                <h2>Clientes SDK</h2>
+                <h4>Pensado para desenvolvedores</h4>
+                <p>Disponibilização de Clientes SDK para integração.</p>
+              </a>
+            </div>
+          </div>
+          <div className="logos" style={{ display: "block", textAlign: "center"}}>{sdks}</div>
+          <div className="productShowcaseSection">
+            <a className="button" href={pageUrl('clientes-sdk.html', language)}>
+              Clique Aqui
+            </a>
+          </div>
+        </Container>
+      </div>
+    );
+  }
+}
+module.exports = SDKS;
 
 class Index extends React.Component {
   render() {
@@ -216,8 +330,11 @@ class Index extends React.Component {
           {/* <FeatureCallout /> */}
           <LearnHow />
           <TryOut />
+          <section style={{ display: "flex", flexDirection: "row", justifyContent: "center" }}>
+            <Plugins language={language} />
+            <SDKS language={language} />
+          </section>
           <Description />
-          <Showcase language={language} />
         </div>
       </div>
     );

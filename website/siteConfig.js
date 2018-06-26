@@ -9,20 +9,76 @@
 // site configuration options.
 
 /* List of projects/orgs using your project for the users page */
-const users = [
+const plugins = [
   {
-    caption: 'User1',
+    caption: 'Wordpress',
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: 'img/docusaurus.svg',
-    infoLink: 'https://www.facebook.com',
+    image: 'img/wordpress.png',
+    // infoLink: 'https://wordpress.org/plugins/woo-nfe/',
     pinned: true,
   },
+  {
+    caption: 'WHMCS',
+    // You will need to prepend the image path with your baseUrl
+    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
+    image: 'img/whmcs.png',
+    // infoLink: 'https://www.whmcs.com/members/clientarea.php',
+    pinned: true,
+  }
 ];
 
+const sdks = [
+  {
+    caption: 'Clientes SDK',
+    // You will need to prepend the image path with your baseUrl
+    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
+    image: 'img/languages.svg',
+    // infoLink: 'https://github.com/nfe/client-nodejs',
+    pinned: true,
+  }
+  // {
+  //   caption: 'Node.JS',
+  //   // You will need to prepend the image path with your baseUrl
+  //   // if it is not '/', like: '/test-site/img/docusaurus.svg'.
+  //   image: 'img/node.png',
+  //   // infoLink: 'https://github.com/nfe/client-nodejs',
+  //   pinned: true,
+  // },
+  // {
+  //   caption: 'PHP',
+  //   // You will need to prepend the image path with your baseUrl
+  //   // if it is not '/', like: '/test-site/img/docusaurus.svg'.
+  //   image: 'img/php.png',
+  //   // infoLink: 'https://github.com/nfe/client-php',
+  //   pinned: true,
+  // },
+  // {
+  //   caption: 'Python',
+  //   // You will need to prepend the image path with your baseUrl
+  //   // if it is not '/', like: '/test-site/img/docusaurus.svg'.
+  //   image: 'img/python.png',
+  //   // infoLink: 'https://github.com/nfe/client-python',
+  //   pinned: true,
+  // },
+  // {
+  //   caption: 'Ruby',
+  //   // You will need to prepend the image path with your baseUrl
+  //   // if it is not '/', like: '/test-site/img/docusaurus.svg'.
+  //   image: 'img/ruby.png',
+  //   // infoLink: 'https://github.com/nfe/client-ruby',
+  //   pinned: true,
+  // }
+]
+
 const siteConfig = {
+<<<<<<< HEAD
   title: 'Documentação' /* title for your website */,
   tagline: 'A website for testing',
+=======
+  tagline: 'Documentações',
+  title: 'NFe.io' /* title for your website */,
+>>>>>>> config
   url: 'https://yagosenhorini.github.io' /* your website url */,
   baseUrl: '/docusaurus/' /* base url for your project */,
   // For github.io type URLs, you would set the url and baseUrl like:
@@ -38,20 +94,30 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
+<<<<<<< HEAD
     {page: 'help', label: 'Conceitos'},
     {doc: 'doc1', label: 'Referência de APIs'},
     {blog: true, label: 'Atualizações'},
+=======
+    { doc: 'doc1', label: 'Documentação' },
+    { doc: 'doc4', label: `API's` },
+    { blog: true, label: 'Atualizações' },
+>>>>>>> config
   ],
 
 
   // If you have users set above, you add it here:
-  users,
+  plugins, sdks,
 
   /* path to images for header/footer */
+<<<<<<< HEAD
   headerIcon: 'img/nfe-logo.svg',
   footerIcon: 'img/nfe-logo.svg',
+=======
+  headerIcon: 'img/nfe_transp.png',
+  footerIcon: 'img/nfe-io-logo.svg',
+>>>>>>> config
   favicon: 'img/favicon.ico',
-
   /* colors for website */
   colors: {
     primaryColor: '#2E8555',
@@ -108,7 +174,7 @@ const siteConfig = {
 
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...
-  //   repoUrl: 'https://github.com/facebook/test-site',
+  repoUrl: 'https://github.com/yagosenhorini/docusaurus',
 };
 
 module.exports = siteConfig;

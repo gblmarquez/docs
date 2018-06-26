@@ -34,12 +34,12 @@ class Footer extends React.Component {
             )}
           </a>
           <div>
-            <h5>Docs</h5>
+            <h5>Documentações</h5>
             <a href={this.docUrl('doc1.html', this.props.language)}>
-              Getting Started (or other categories)
+              Como Utilizar?
             </a>
             <a href={this.docUrl('doc2.html', this.props.language)}>
-              Guides (or other categories)
+              Guias
             </a>
             <a href="https://nfe.io/docs" target="_blank">
               Referência da API
@@ -47,22 +47,19 @@ class Footer extends React.Component {
           </div>
           <div>
             <h5>Comunidade</h5>
-            <a href={this.pageUrl('users.html', this.props.language)}>
-              User Showcase
-            </a>
             <a
-              href="http://stackoverflow.com/questions/tagged/"
+              href="https://nfe.io/blog"
               target="_blank"
               rel="noreferrer noopener">
-              Stack Overflow
+              Blog NFe.io
             </a>
-            <a href="https://discordapp.com/">Project Chat</a>
             <a
-              href="https://facebook.com/nfe.io"
+              href="https://consulta.guru"
               target="_blank"
               rel="noreferrer noopener">
-              Facebook
+              Consulta.Guru
             </a>
+            <a href="https://caiu.la">Sistema de Monitoramento</a>
           </div>
           <div>
             <h5>Veja Mais</h5>
@@ -76,19 +73,19 @@ class Footer extends React.Component {
               data-show-count={true}
               data-count-aria-label="# stargazers on GitHub"
               aria-label="Star this project on GitHub">
-              Star
+              Estrela
             </a>
           </div>
         </section>
 
         <a
-          href="https://code.facebook.com/projects/"
+          href="https://nfe.io"
           target="_blank"
           rel="noreferrer noopener"
           className="fbOpenSource">
           <img
-            src={this.props.config.baseUrl + 'img/oss_logo.png'}
-            alt="Facebook Open Source"
+            src={this.props.config.baseUrl + 'img/nfe-io-logo.svg'}
+            alt="NFe.io"
             width="170"
             height="45"
           />
