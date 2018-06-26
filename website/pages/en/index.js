@@ -76,12 +76,8 @@ class HomeSplash extends React.Component {
     let language = this.props.language || '';
     return (
       <SplashContainer>
-<<<<<<< HEAD
 
         {/* <Logo img_src={imgUrl('nfe-logo.svg')} /> */}
-=======
-        <Logo img_src={imgUrl('nfe_transp.png')} />
->>>>>>> config
         <div className="inner">
           <ProjectTitle />
           <Features />
@@ -111,21 +107,13 @@ const Features = props => (
     {[
       {
         content: 'This is the content of my feature',
-<<<<<<< HEAD
         image: imgUrl('docs.svg'),
-=======
-        image: imgUrl('nfe_transp.png'),
->>>>>>> config
         imageAlign: 'top',
         title: 'Conceitos',
       },
       {
         content: 'The content of my second feature',
-<<<<<<< HEAD
         image: imgUrl('api-reference.svg'),
-=======
-        image: imgUrl('nfe_transp.png'),
->>>>>>> config
         imageAlign: 'top',
         title: 'Referência de APIs',
       },
