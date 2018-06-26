@@ -237,7 +237,7 @@ class Plugins extends React.Component {
         <Container padding={['bottom', 'top']}>
           <div className="productShowcaseSection">
             <div className="prose">
-              <a href="plugins.html" style={{ color: "black" }}>
+              <a href="plugins.html" target="_blank" style={{ color: "black" }}>
                 <h2>Plugins para Integração</h2>
                 <h4>Não é um Desenvolvedor?</h4>
                 <p>Fique tranquilo!
@@ -246,7 +246,7 @@ class Plugins extends React.Component {
               </a>
             </div>
             <div className="logos">{plugins}</div>
-            <a className="button" href={pageUrl('plugins.html', language)}>
+          <a className="button" target="_blank" href={pageUrl('plugins.html', language)}>
               Clique Aqui
             </a>
           </div>
@@ -307,6 +307,42 @@ class SDKS extends React.Component {
 }
 module.exports = SDKS;
 
+class Integrations extends React.Component {
+  render() {
+    let language = this.props.language || '';
+    const integrations = siteConfig.integrations.map((integrations, i) => {
+      return (
+        <a href={integrations.infoLink} key={i}>
+          <img src={integrations.image} alt={integrations.caption} title={integrations.caption} />
+        </a>
+      );
+    });
+
+    return (
+      <div>
+        <Container padding={['bottom', 'top']}>
+          <div className="productShowcaseSection">
+            <div className="prose">
+              <a href={pageUrl('integracoes.html', language)} target="_blank" style={{ color: "black" }}>
+                <h2>Integrações com ERP's</h2>
+                <h4>Pensado para desenvolvedores</h4>
+                <p>Disponibilização de Clientes SDK para integração.</p>
+              </a>
+            </div>
+          </div>
+          <div className="logos" style={{ display: "block", textAlign: "center"}}>{integrations}</div>
+          <div className="productShowcaseSection">
+            <a className="button" href={pageUrl('integracoes.html', language)}>
+              Clique Aqui
+            </a>
+          </div>
+        </Container>
+      </div>
+    );
+  }
+}
+module.exports = Integrations;
+
 class Index extends React.Component {
   render() {
     let language = this.props.language || '';
@@ -319,8 +355,9 @@ class Index extends React.Component {
           <LearnHow />
           <TryOut />
           <section style={{ display: "flex", flexDirection: "row", justifyContent: "center" }}>
-            <Plugins language={language} />
             <SDKS language={language} />
+            <Integrations language={language} />
+            <Plugins language={language} />
           </section>
           <Description />
         </div>
