@@ -22,8 +22,8 @@ function docUrl(doc, language) {
   return siteConfig.baseUrl + 'docs/' + (language ? language + '/' : '') + doc;
 }
 
-function pageUrl(page, language) {
-  return siteConfig.baseUrl + (language ? language + '/' : '') + page;
+function pageUrl(page) {
+  return siteConfig.baseUrl + page;
 }
 
 class Button extends React.Component {
@@ -109,13 +109,13 @@ const Features = props => (
         content: 'This is the content of my feature',
         image: imgUrl('docs.svg'),
         imageAlign: 'top',
-        title: 'Conceitos',
+        title: 'Documentação',
       },
       {
         content: 'The content of my second feature',
         image: imgUrl('api-reference.svg'),
         imageAlign: 'top',
-        title: 'Referência de APIs',
+        title: 'Referência da API',
       },
       {
         content: 'This is the content of my feature',
@@ -175,52 +175,6 @@ const Description = props => (
   </Block>
 );
 
-// const Showcase = props => {
-//   if ((siteConfig.users || []).length === 0) {
-//     return null;
-//   }
-//   const showcase = siteConfig.users
-//     .filter(user => {
-//       return user.pinned;
-//     })
-//     .map((user, i) => {
-//       return (
-//         <a href={user.infoLink} key={i}>
-//           <img src={user.image} alt={user.caption} title={user.caption} />
-//         </a>
-//       );
-//     });
-
-//   return (
-//     <div className="productShowcaseSection paddingBottom">
-//       <h2>Quem usa o NFe hoje?</h2>
-//       <p>Nosso produto é utilizado por diversas empresas, como: </p>
-//       <div className="logos">{showcase}</div>
-//       <div className="more-users">
-//         <a className="button" href={pageUrl('users.html', props.language)}>
-//           Veja Mais
-//         </a>
-//       </div>
-//     </div>
-//   );
-// };
-
-
-
-// const Plugin = props => {
-//   return (
-//     <div className="productShowcaseSection paddingBottom">
-//       <h2>Plugins para Integração</h2>
-//       <p>lorem ipsum </p>
-//       <div className="more-users">
-//         <a className="button" href={pageUrl('plugins.html', props.language)}>
-//           Veja Mais
-//          </a>
-//       </div>
-//     </div>
-//   )
-// };
-
 class Plugins extends React.Component {
   render() {
     let language = this.props.language || '';
@@ -246,7 +200,7 @@ class Plugins extends React.Component {
               </a>
             </div>
             <div className="logos">{plugins}</div>
-          <a className="button" target="_blank" href={pageUrl('plugins.html', language)}>
+          <a className="button" target="_blank" href={pageUrl('plugins', language)}>
               Clique Aqui
             </a>
           </div>
@@ -296,7 +250,7 @@ class SDKS extends React.Component {
           </div>
           <div className="logos" style={{ display: "block", textAlign: "center"}}>{sdks}</div>
           <div className="productShowcaseSection">
-            <a className="button" href={pageUrl('clientes-sdk.html', language)}>
+            <a className="button" target="_blank" href={pageUrl('clientes-sdk', language)}>
               Clique Aqui
             </a>
           </div>
@@ -325,14 +279,14 @@ class Integrations extends React.Component {
             <div className="prose">
               <a href={pageUrl('integracoes.html', language)} target="_blank" style={{ color: "black" }}>
                 <h2>Integrações com ERP's</h2>
-                <h4>Pensado para desenvolvedores</h4>
-                <p>Disponibilização de Clientes SDK para integração.</p>
+                <h4>Fácil integração com vários ERP's do mercado</h4>
+                <p>Nosso sistema possui fácil integração com vários ERP's e sistemas de pagamentos</p>
               </a>
             </div>
           </div>
           <div className="logos" style={{ display: "block", textAlign: "center"}}>{integrations}</div>
           <div className="productShowcaseSection">
-            <a className="button" href={pageUrl('integracoes.html', language)}>
+            <a className="button" target="_blank" href={pageUrl('integracoes', language)}>
               Clique Aqui
             </a>
           </div>
