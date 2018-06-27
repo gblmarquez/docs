@@ -75,6 +75,28 @@
   text-align: justify;
 }
 
+.integrations{
+  display: flex;
+  justify-content: center;
+}
+
+.integrations .container{
+  max-width: 500px;
+}
+
+.integrations .logos{
+  display: block;
+  text-align: center
+}
+
+.integrations .logos .sdks{
+  width: 50px;
+  height: 50px;
+  box-shadow: 0px 3px 20px -5px rgba(0,0,0,0.75);
+  margin: 10px;
+  border-radius: 5px; 
+}
+
 /* @media only screen and (min-device-width: 360px){
   .navPusher{
     padding-top: 100px;
