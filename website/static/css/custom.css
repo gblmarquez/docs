@@ -74,16 +74,17 @@
   padding: 0;
 }
 
-
-
-
-
 #back-to-top{
   background: #fff;
   -webkit-box-shadow: 0 5px 10px 0px rgba(0,0,0,.5);
   -moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,.5);
   box-shadow: 0 2px 5px 0 rgba(0,0,0,.5);
   color: green;
+}
+
+.sitemap__align{
+  margin-left: 110px;
+  text-align: justify;
 }
 
 .integrations{
