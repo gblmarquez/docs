@@ -37,38 +37,6 @@ const sdks = [
     // infoLink: 'https://github.com/nfe/client-nodejs',
     pinned: true,
   }
-  // {
-  //   caption: 'Node.JS',
-  //   // You will need to prepend the image path with your baseUrl
-  //   // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-  //   image: 'img/node.png',
-  //   // infoLink: 'https://github.com/nfe/client-nodejs',
-  //   pinned: true,
-  // },
-  // {
-  //   caption: 'PHP',
-  //   // You will need to prepend the image path with your baseUrl
-  //   // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-  //   image: 'img/php.png',
-  //   // infoLink: 'https://github.com/nfe/client-php',
-  //   pinned: true,
-  // },
-  // {
-  //   caption: 'Python',
-  //   // You will need to prepend the image path with your baseUrl
-  //   // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-  //   image: 'img/python.png',
-  //   // infoLink: 'https://github.com/nfe/client-python',
-  //   pinned: true,
-  // },
-  // {
-  //   caption: 'Ruby',
-  //   // You will need to prepend the image path with your baseUrl
-  //   // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-  //   image: 'img/ruby.png',
-  //   // infoLink: 'https://github.com/nfe/client-ruby',
-  //   pinned: true,
-  // }
 ]
 
 const integrations = [
@@ -95,15 +63,14 @@ const siteConfig = {
   // Used for publishing and more
   projectName: 'docusaurus',
   organizationName: 'yagosenhorini',
-  // For top-level user or org sites, the organization is still the same.
-  // e.g., for the https://JoelMarcey.github.io site, it would be set like...
-  //   organizationName: 'JoelMarcey'
+  noIndex: false,
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
     { doc: 'doc1', label: 'Documentação' },
     { doc: 'doc4', label: `API's` },
     { blog: true, label: 'Atualizações' },
+    { languages: false }
   ],
 
 
@@ -112,7 +79,7 @@ const siteConfig = {
 
   /* path to images for header/footer */
   headerIcon: 'img/nfe-logo.svg',
-  footerIcon: 'img/nfe-logo.svg',
+  footerIcon: false,
   favicon: 'img/favicon.ico',
   /* colors for website */
   colors: {
@@ -157,6 +124,7 @@ const siteConfig = {
 
   disableHeaderTitle: true,
   disableTitleTagline: true,
+  cleanUrl: true,
 
   algolia: {
     apiKey: '0f9f28b9ab9efae89810921a351753b5',
