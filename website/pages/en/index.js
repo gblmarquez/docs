@@ -22,8 +22,8 @@ function docUrl(doc, language) {
   return siteConfig.baseUrl + 'docs/' + (language ? language + '/' : '') + doc;
 }
 
-function pageUrl(page, language) {
-  return siteConfig.baseUrl + (language ? language + '/' : '') + page;
+function pageUrl(page) {
+  return siteConfig.baseUrl + page;
 }
 
 class Button extends React.Component {
@@ -109,13 +109,13 @@ const Features = props => (
         content: 'This is the content of my feature',
         image: imgUrl('docs.svg'),
         imageAlign: 'top',
-        title: 'Conceitos',
+        title: 'Documentação',
       },
       {
         content: 'The content of my second feature',
         image: imgUrl('api-reference.svg'),
         imageAlign: 'top',
-        title: 'Referência de APIs',
+        title: 'Referência da API',
       },
       {
         content: 'This is the content of my feature',
@@ -181,7 +181,7 @@ class Plugins extends React.Component {
     const plugins = siteConfig.plugins.map((plugin, i) => {
       return (
         // <a href={plugin.infoLink} key={i}>
-          <img src={plugin.image} alt={plugin.caption} title={plugin.caption} />
+        <img src={plugin.image} alt={plugin.caption} title={plugin.caption} />
         // </a>
       );
     });
@@ -199,7 +199,7 @@ class Plugins extends React.Component {
             </a>
           </div>
           <div className="logos">{plugins}</div>
-          <a className="button" target="_blank" href={pageUrl('plugins.html', language)}>
+          <a className="button" target="_blank" href={pageUrl('plugins', language)}>
             Clique Aqui
             </a>
         </div>
@@ -214,7 +214,7 @@ class SDKS extends React.Component {
     const sdks = siteConfig.sdks.map((sdk, i) => {
       return (
         // <a href={sdk.infoLink} key={i}>
-          <img className="sdks" src={sdk.image} alt={sdk.caption} title={sdk.caption} />
+        <img className="sdks" src={sdk.image} alt={sdk.caption} title={sdk.caption} />
         // </a>
       );
     });
@@ -245,7 +245,7 @@ class Integrations extends React.Component {
     const integrations = siteConfig.integrations.map((integrations, i) => {
       return (
         // <a href={integrations.infoLink} key={i}>
-          <img src={integrations.image} alt={integrations.caption} title={integrations.caption} />
+        <img src={integrations.image} alt={integrations.caption} title={integrations.caption} />
         // </a>
       );
     });
