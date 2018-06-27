@@ -175,173 +175,100 @@ const Description = props => (
   </Block>
 );
 
-// const Showcase = props => {
-//   if ((siteConfig.users || []).length === 0) {
-//     return null;
-//   }
-//   const showcase = siteConfig.users
-//     .filter(user => {
-//       return user.pinned;
-//     })
-//     .map((user, i) => {
-//       return (
-//         <a href={user.infoLink} key={i}>
-//           <img src={user.image} alt={user.caption} title={user.caption} />
-//         </a>
-//       );
-//     });
-
-//   return (
-//     <div className="productShowcaseSection paddingBottom">
-//       <h2>Quem usa o NFe hoje?</h2>
-//       <p>Nosso produto é utilizado por diversas empresas, como: </p>
-//       <div className="logos">{showcase}</div>
-//       <div className="more-users">
-//         <a className="button" href={pageUrl('users.html', props.language)}>
-//           Veja Mais
-//         </a>
-//       </div>
-//     </div>
-//   );
-// };
-
-
-
-// const Plugin = props => {
-//   return (
-//     <div className="productShowcaseSection paddingBottom">
-//       <h2>Plugins para Integração</h2>
-//       <p>lorem ipsum </p>
-//       <div className="more-users">
-//         <a className="button" href={pageUrl('plugins.html', props.language)}>
-//           Veja Mais
-//          </a>
-//       </div>
-//     </div>
-//   )
-// };
-
 class Plugins extends React.Component {
   render() {
     let language = this.props.language || '';
     const plugins = siteConfig.plugins.map((plugin, i) => {
       return (
-        <a href={plugin.infoLink} key={i}>
+        // <a href={plugin.infoLink} key={i}>
           <img src={plugin.image} alt={plugin.caption} title={plugin.caption} />
-        </a>
+        // </a>
       );
     });
 
     return (
-      <div>
-        <Container padding={['bottom', 'top']}>
-          <div className="productShowcaseSection">
-            <div className="prose">
-              <a href="plugins.html" target="_blank" style={{ color: "black" }}>
-                <h2>Plugins para Integração</h2>
-                <h4>Não é um Desenvolvedor?</h4>
-                <p>Fique tranquilo!
-                  Nós disponibilizamos alguns plugins para integração ao seu site.
+      <Container padding={['bottom', 'top']}>
+        <div className="productShowcaseSection">
+          <div className="prose">
+            <a href="plugins.html" target="_blank" style={{ color: "black" }}>
+              <h2>Plugins para Integração</h2>
+              <h4>Não é um Desenvolvedor?</h4>
+              <p>Fique tranquilo!
+                Nós disponibilizamos alguns plugins para integração ao seu site.
               </p>
-              </a>
-            </div>
-            <div className="logos">{plugins}</div>
-          <a className="button" target="_blank" href={pageUrl('plugins.html', language)}>
-              Clique Aqui
             </a>
           </div>
-        </Container>
-      </div>
+          <div className="logos">{plugins}</div>
+          <a className="button" target="_blank" href={pageUrl('plugins.html', language)}>
+            Clique Aqui
+            </a>
+        </div>
+      </Container>
     );
   }
 }
-module.exports = Plugins;
-
-// const SdkClients = props => {
-//   return (
-//     <div className="productShowcaseSection paddingBottom">
-//       <h2>Clientes SDK</h2>
-//       <p>lorem ipsum </p>
-//       <div className="more-users">
-//         <a className="button" href={pageUrl('clientes-sdk.html', props.language)}>
-//           Veja Mais
-//          </a>
-//       </div>
-//     </div>
-//   )
-// };
 
 class SDKS extends React.Component {
   render() {
     let language = this.props.language || '';
     const sdks = siteConfig.sdks.map((sdk, i) => {
       return (
-        <a href={sdk.infoLink} key={i}>
-          <img src={sdk.image} alt={sdk.caption} title={sdk.caption} />
-        </a>
+        // <a href={sdk.infoLink} key={i}>
+          <img className="sdks" src={sdk.image} alt={sdk.caption} title={sdk.caption} />
+        // </a>
       );
     });
 
     return (
-      <div>
-        <Container padding={['bottom', 'top']}>
-          <div className="productShowcaseSection">
-            <div className="prose">
-              <a href={pageUrl('clientes-sdk.html', language)} target="_blank" style={{ color: "black" }}>
-                <h2>Clientes SDK</h2>
-                <h4>Pensado para desenvolvedores</h4>
-                <p>Disponibilização de Clientes SDK para integração.</p>
-              </a>
-            </div>
-          </div>
-          <div className="logos" style={{ display: "block", textAlign: "center"}}>{sdks}</div>
-          <div className="productShowcaseSection">
-            <a className="button" href={pageUrl('clientes-sdk.html', language)}>
-              Clique Aqui
+      <Container padding={['bottom', 'top']}>
+        <div className="productShowcaseSection">
+          <div className="prose">
+            <a href={pageUrl('clientes-sdk.html', language)} target="_blank" style={{ color: "black" }}>
+              <h2>Clientes SDK</h2>
+              <h4>Pensado para desenvolvedores</h4>
+              <p>Disponibilização de Clientes SDK para integração.</p>
             </a>
           </div>
-        </Container>
-      </div>
+          <div className="logos">{sdks}</div>
+          <a className="button" href={pageUrl('clientes-sdk.html', language)}>
+            Clique Aqui
+          </a>
+        </div>
+      </Container>
     );
   }
 }
-module.exports = SDKS;
 
 class Integrations extends React.Component {
   render() {
     let language = this.props.language || '';
     const integrations = siteConfig.integrations.map((integrations, i) => {
       return (
-        <a href={integrations.infoLink} key={i}>
+        // <a href={integrations.infoLink} key={i}>
           <img src={integrations.image} alt={integrations.caption} title={integrations.caption} />
-        </a>
+        // </a>
       );
     });
 
     return (
-      <div>
-        <Container padding={['bottom', 'top']}>
-          <div className="productShowcaseSection">
-            <div className="prose">
-              <a href={pageUrl('integracoes.html', language)} target="_blank" style={{ color: "black" }}>
-                <h2>Integrações com ERP's</h2>
-                <h4>Pensado para desenvolvedores</h4>
-                <p>Disponibilização de Clientes SDK para integração.</p>
-              </a>
-            </div>
-          </div>
-          <div className="logos" style={{ display: "block", textAlign: "center"}}>{integrations}</div>
-          <div className="productShowcaseSection">
-            <a className="button" href={pageUrl('integracoes.html', language)}>
-              Clique Aqui
+      <Container padding={['bottom', 'top']}>
+        <div className="productShowcaseSection">
+          <div className="prose">
+            <a href={pageUrl('integracoes.html', language)} target="_blank" style={{ color: "black" }}>
+              <h2>Integrações com ERP's</h2>
+              <h4>Pensado para desenvolvedores</h4>
+              <p>Disponibilização de Clientes SDK para integração.</p>
             </a>
           </div>
-        </Container>
-      </div>
+          <div className="logos">{integrations}</div>
+          <a className="button" href={pageUrl('integracoes.html', language)}>
+            Clique Aqui
+            </a>
+        </div>
+      </Container>
     );
   }
 }
-module.exports = Integrations;
 
 class Index extends React.Component {
   render() {
@@ -354,7 +281,7 @@ class Index extends React.Component {
           {/* <FeatureCallout /> */}
           <LearnHow />
           <TryOut />
-          <section style={{ display: "flex", flexDirection: "row", justifyContent: "center" }}>
+          <section className="integrations">
             <SDKS language={language} />
             <Integrations language={language} />
             <Plugins language={language} />
