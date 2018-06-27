@@ -33,7 +33,7 @@ const sdks = [
     caption: 'Csharp',
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: 'img/csharp.svg',
+    image: 'img/lang-logos/csharp.svg',
     // infoLink: 'https://github.com/nfe/client-nodejs',
     pinned: true,
   },
@@ -41,7 +41,7 @@ const sdks = [
     caption: 'Node.JS',
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: 'img/nodejs.svg',
+    image: 'img/lang-logos/nodejs.svg',
     // infoLink: 'https://github.com/nfe/client-nodejs',
     pinned: true,
   },
@@ -49,7 +49,7 @@ const sdks = [
     caption: 'PHP',
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: 'img/php.svg',
+    image: 'img/lang-logos/php.svg',
     // infoLink: 'https://github.com/nfe/client-php',
     pinned: true,
   },
@@ -57,7 +57,7 @@ const sdks = [
     caption: 'Python',
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: 'img/python.svg',
+    image: 'img/lang-logos/python.svg',
     // infoLink: 'https://github.com/nfe/client-python',
     pinned: true,
   },
@@ -65,7 +65,7 @@ const sdks = [
     caption: 'Ruby',
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: 'img/ruby.svg',
+    image: 'img/lang-logos/ruby.svg',
     // infoLink: 'https://github.com/nfe/client-ruby',
     pinned: true,
   },
@@ -73,7 +73,7 @@ const sdks = [
     caption: 'Scala',
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: 'img/scala.svg',
+    image: 'img/lang-logos/scala.svg',
     // infoLink: 'https://github.com/nfe/client-ruby',
     pinned: true,
   },
@@ -81,7 +81,7 @@ const sdks = [
     caption: 'Java',
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: 'img/java.svg',
+    image: 'img/lang-logos/java.svg',
     // infoLink: 'https://github.com/nfe/client-ruby',
     pinned: true,
   },
@@ -89,7 +89,7 @@ const sdks = [
     caption: 'Golang',
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: 'img/golang.svg',
+    image: 'img/lang-logos/golang.svg',
     // infoLink: 'https://github.com/nfe/client-ruby',
     pinned: true,
   },
@@ -97,7 +97,7 @@ const sdks = [
     caption: 'Erlang',
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: 'img/erlang.svg',
+    image: 'img/lang-logos/erlang.svg',
     // infoLink: 'https://github.com/nfe/client-ruby',
     pinned: true,
   },
@@ -105,10 +105,66 @@ const sdks = [
 
 const integrations = [
   {
+    caption: `Moip`,
+    // You will need to prepend the image path with your baseUrl
+    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
+    image: 'img/integration-logos/moip.svg',
+    // infoLink: 'https://wordpress.org/plugins/woo-nfe/',
+    pinned: true,
+  },
+  {
     caption: `Integrações com ERP's`,
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: 'img/integracoes.svg',
+    image: 'img/integration-logos/integration2.svg',
+    // infoLink: 'https://wordpress.org/plugins/woo-nfe/',
+    pinned: true,
+  },
+  {
+    caption: `Vindi`,
+    // You will need to prepend the image path with your baseUrl
+    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
+    image: 'img/integration-logos/vindi.svg',
+    // infoLink: 'https://wordpress.org/plugins/woo-nfe/',
+    pinned: true,
+  },
+  {
+    caption: `Pag Seguro`,
+    // You will need to prepend the image path with your baseUrl
+    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
+    image: 'img/integration-logos/pagseguro.svg',
+    // infoLink: 'https://wordpress.org/plugins/woo-nfe/',
+    pinned: true,
+  },
+  {
+    caption: `Integrações com ERP's`,
+    // You will need to prepend the image path with your baseUrl
+    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
+    image: 'img/integration-logos/integration5.svg',
+    // infoLink: 'https://wordpress.org/plugins/woo-nfe/',
+    pinned: true,
+  },
+  {
+    caption: `Iugu`,
+    // You will need to prepend the image path with your baseUrl
+    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
+    image: 'img/integration-logos/iugu.svg',
+    // infoLink: 'https://wordpress.org/plugins/woo-nfe/',
+    pinned: true,
+  },
+  {
+    caption: `Integrações com ERP's`,
+    // You will need to prepend the image path with your baseUrl
+    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
+    image: 'img/integration-logos/integration7.svg',
+    // infoLink: 'https://wordpress.org/plugins/woo-nfe/',
+    pinned: true,
+  },
+  {
+    caption: `Stripe`,
+    // You will need to prepend the image path with your baseUrl
+    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
+    image: 'img/integration-logos/stripe.svg',
     // infoLink: 'https://wordpress.org/plugins/woo-nfe/',
     pinned: true,
   },

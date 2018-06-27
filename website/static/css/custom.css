@@ -109,6 +109,14 @@
   border-radius: 5px; 
 }
 
+.integrations .logos .erp{
+  width: 50px;
+  height: 50px;
+  box-shadow: 0px 3px 20px -5px rgba(0,0,0,0.75);
+  margin: 10px;
+  border-radius: 50%; 
+}
+
 /* @media only screen and (min-device-width: 360px){
   .navPusher{
     padding-top: 100px;

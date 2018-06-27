@@ -245,7 +245,7 @@ class Integrations extends React.Component {
     const integrations = siteConfig.integrations.map((integrations, i) => {
       return (
         // <a href={integrations.infoLink} key={i}>
-        <img src={integrations.image} alt={integrations.caption} title={integrations.caption} />
+        <img className="erp" src={integrations.image} alt={integrations.caption} title={integrations.caption} />
         // </a>
       );
     });
