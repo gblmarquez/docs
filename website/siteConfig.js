@@ -127,7 +127,6 @@ const siteConfig = {
   // Used for publishing and more
   projectName: 'docusaurus',
   organizationName: 'yagosenhorini',
-  noIndex: false,
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
@@ -137,13 +136,11 @@ const siteConfig = {
     { languages: false }
   ],
 
-
   // If you have users set above, you add it here:
   plugins, sdks, integrations,
 
   /* path to images for header/footer */
   headerIcon: 'img/nfe-logo.svg',
-  footerIcon: false,
   favicon: 'img/favicon.ico',
   /* colors for website */
   colors: {
@@ -184,16 +181,13 @@ const siteConfig = {
   ogImage: 'img/nfe-logo.svg',
   twitterImage: 'img/nfe-logo.svg',
 
-
-
   disableHeaderTitle: true,
   disableTitleTagline: true,
-  cleanUrl: true,
 
-  algolia: {
-    apiKey: '0f9f28b9ab9efae89810921a351753b5',
-    indexName: 'github',
-  },
+  // algolia: {
+  //   apiKey: '0f9f28b9ab9efae89810921a351753b5',
+  //   indexName: 'github',
+  // },
 
   scrollToTop: true,
   scrollToTopOptions: {
@@ -202,7 +196,7 @@ const siteConfig = {
 
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...
-  repoUrl: 'https://github.com/yagosenhorini/docusaurus',
+  // repoUrl: 'https://github.com/yagosenhorini/docusaurus',
 };
 
 module.exports = siteConfig;
