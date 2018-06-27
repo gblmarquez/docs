@@ -23,17 +23,7 @@ class Footer extends React.Component {
     return (
       <footer className="nav-footer" id="footer">
         <section className="sitemap">
-          <a href={this.props.config.baseUrl} className="nav-home">
-            {this.props.config.footerIcon && (
-              <img
-                src={this.props.config.baseUrl + this.props.config.footerIcon}
-                alt={this.props.config.title}
-                width="66"
-                height="58"
-              />
-            )}
-          </a>
-          <div>
+          <div className="sitemap__align">
             <h5>Documentações</h5>
             <a href={this.docUrl('doc1.html', this.props.language)}>
               Como Utilizar?
@@ -45,7 +35,7 @@ class Footer extends React.Component {
               Referência da API
             </a>
           </div>
-          <div>
+          <div className="sitemap__align">
             <h5>Comunidade</h5>
             <a
               href="https://nfe.io/blog"
@@ -59,9 +49,14 @@ class Footer extends React.Component {
               rel="noreferrer noopener">
               Consulta.Guru
             </a>
-            <a href="https://caiu.la">Sistema de Monitoramento</a>
+            <a
+              href="https://caiu.la"
+              target="_blank"
+              rel="noreferrer noopener">
+              Sistema de Monitoramento
+            </a>
           </div>
-          <div>
+          <div className="sitemap__align">
             <h5>Veja Mais</h5>
             <a href={this.props.config.baseUrl + 'blog'}>Blog</a>
             <a href="https://github.com/nfe">GitHub</a>
@@ -73,7 +68,7 @@ class Footer extends React.Component {
               data-show-count={true}
               data-count-aria-label="# stargazers on GitHub"
               aria-label="Star this project on GitHub">
-              Estrela
+              NFe.io
             </a>
           </div>
         </section>
@@ -82,9 +77,9 @@ class Footer extends React.Component {
           href="https://nfe.io"
           target="_blank"
           rel="noreferrer noopener"
-          className="fbOpenSource">
+          style={{ display: "block", textAlign: "center" }}>
           <img
-            src={this.props.config.baseUrl + 'img/nfe-io-logo.svg'}
+            src={this.props.config.baseUrl + 'img/nfe-logo.svg'}
             alt="NFe.io"
             width="170"
             height="45"
