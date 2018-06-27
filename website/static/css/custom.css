@@ -70,6 +70,11 @@
   display: none;
 }
 
+.sitemap__align{
+  margin-left: 110px;
+  text-align: justify;
+}
+
 /* @media only screen and (min-device-width: 360px){
   .navPusher{
     padding-top: 100px;
