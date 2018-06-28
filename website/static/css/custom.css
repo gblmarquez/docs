@@ -109,6 +109,70 @@
   border-radius: 5px; 
 }
 
+.shadow-card {
+  padding: 24px;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#F5F5FA), to(#fff));
+  background-image: linear-gradient(to top, #F5F5FA, #fff);
+  color: #3c3c3d;
+  -webkit-box-shadow: 0 5px 15px 0 rgba(37,44,97,0.15), 0 2px 4px 0 rgba(93,100,148,0.2);
+  box-shadow: 0 5px 15px 0 rgba(37,44,97,0.15), 0 2px 4px 0 rgba(93,100,148,0.2);
+  border-radius: 2px;
+}
+
+.shadow-card-elevate {
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.shadow-card-elevate:hover, .shadow-card-elevate:focus {
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+  -webkit-box-shadow: 0 10px 30px 0 rgba(37,44,97,0.15), 0 4px 18px 0 rgba(93,100,148,0.2);
+  box-shadow: 0 10px 30px 0 rgba(37,44,97,0.15), 0 4px 18px 0 rgba(93,100,148,0.2);
+}
+
+.use-cases .use-case-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 12px;
+}
+
+.flex-it-3-sm {
+  -ms-flex: 0 1 33.33%;
+  -webkit-box-flex: 0;
+  flex: 0 1 33.33%;
+}
+
+.use-cases .use-case-content {
+  position: relative;
+  width: 100%;
+}
+
+.flex-space-between {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.flex-dir-col {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+}
+
+.flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pos-rel {
+  position: relative;
+}
+
+
 /* @media only screen and (min-device-width: 360px){
   .navPusher{
     padding-top: 100px;
