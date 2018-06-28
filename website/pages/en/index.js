@@ -109,13 +109,13 @@ const Features = props => (
         content: 'This is the content of my feature',
         image: imgUrl('docs.svg'),
         imageAlign: 'top',
-        title: 'Conceitos',
+        title: 'Documentação',
       },
       {
         content: 'The content of my second feature',
         image: imgUrl('api-reference.svg'),
         imageAlign: 'top',
-        title: 'Referência de APIs',
+        title: 'Referência da API',
       },
       {
         content: 'This is the content of my feature',
@@ -181,7 +181,7 @@ class Plugins extends React.Component {
     const plugins = siteConfig.plugins.map((plugin, i) => {
       return (
         // <a href={plugin.infoLink} key={i}>
-          <img src={plugin.image} alt={plugin.caption} title={plugin.caption} />
+        <img className="plugin" src={plugin.image} alt={plugin.caption} title={plugin.caption} />
         // </a>
       );
     });
@@ -189,19 +189,16 @@ class Plugins extends React.Component {
     return (
       <Container padding={['bottom', 'top']}>
         <div className="productShowcaseSection">
-          <div className="prose">
-            <a href="plugins.html" target="_blank" style={{ color: "black" }}>
+          <div className="prose use-case-card shadow-card shadow-card-elevate flex-it-3-sm flex-it-1">
+            <a className="use-case-content" href={pageUrl('plugins', language)} target="_blank" style={{ color: "black" }}>
               <h2>Plugins para Integração</h2>
               <h4>Não é um Desenvolvedor?</h4>
               <p>Fique tranquilo!
                 Nós disponibilizamos alguns plugins para integração ao seu site.
               </p>
+              <div className="logos">{plugins}</div>
             </a>
           </div>
-          <div className="logos">{plugins}</div>
-          <a className="button" target="_blank" href={pageUrl('plugins.html', language)}>
-            Clique Aqui
-            </a>
         </div>
       </Container>
     );
@@ -214,7 +211,7 @@ class SDKS extends React.Component {
     const sdks = siteConfig.sdks.map((sdk, i) => {
       return (
         // <a href={sdk.infoLink} key={i}>
-          <img className="sdks" src={sdk.image} alt={sdk.caption} title={sdk.caption} />
+        <img className="sdk" src={sdk.image} alt={sdk.caption} title={sdk.caption} />
         // </a>
       );
     });
@@ -222,17 +219,14 @@ class SDKS extends React.Component {
     return (
       <Container padding={['bottom', 'top']}>
         <div className="productShowcaseSection">
-          <div className="prose">
-            <a href={pageUrl('clientes-sdk.html', language)} target="_blank" style={{ color: "black" }}>
+          <div className="prose use-case-card shadow-card shadow-card-elevate flex-it-3-sm flex-it-1">
+            <a className="use-case-content" href={pageUrl('clientes-sdk', language)} target="_blank" style={{ color: "black" }}>
               <h2>Clientes SDK</h2>
               <h4>Pensado para desenvolvedores</h4>
               <p>Disponibilização de Clientes SDK para integração.</p>
+              <div className="logos">{sdks}</div>
             </a>
           </div>
-          <div className="logos">{sdks}</div>
-          <a className="button" href={pageUrl('clientes-sdk.html', language)}>
-            Clique Aqui
-          </a>
         </div>
       </Container>
     );
@@ -245,7 +239,7 @@ class Integrations extends React.Component {
     const integrations = siteConfig.integrations.map((integrations, i) => {
       return (
         // <a href={integrations.infoLink} key={i}>
-          <img src={integrations.image} alt={integrations.caption} title={integrations.caption} />
+        <img className="erp" src={integrations.image} alt={integrations.caption} title={integrations.caption} />
         // </a>
       );
     });
@@ -253,17 +247,16 @@ class Integrations extends React.Component {
     return (
       <Container padding={['bottom', 'top']}>
         <div className="productShowcaseSection">
-          <div className="prose">
-            <a href={pageUrl('integracoes.html', language)} target="_blank" style={{ color: "black" }}>
-              <h2>Integrações com ERP's</h2>
-              <h4>Pensado para desenvolvedores</h4>
-              <p>Disponibilização de Clientes SDK para integração.</p>
+          <div className="prose use-case-card shadow-card shadow-card-elevate flex-it-3-sm flex-it-1">
+            <a className="use-case-content " href={pageUrl('integracoes', language)} target="_blank" style={{ color: "black" }}>
+              <div>
+                <h2>Integrações com Plataformas</h2>
+                <h4>Facilidade na hora de integrar o NFe</h4>
+                <p>Nosso sistema possui integração com diversas plataformas do mercado</p>
+                <div className="logos">{integrations}</div>
+              </div>
             </a>
           </div>
-          <div className="logos">{integrations}</div>
-          <a className="button" href={pageUrl('integracoes.html', language)}>
-            Clique Aqui
-            </a>
         </div>
       </Container>
     );

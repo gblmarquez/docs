@@ -53,5 +53,4 @@ class Help extends React.Component {
     );
   }
 }
-
 module.exports = Help;
