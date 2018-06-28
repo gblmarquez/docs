@@ -58,8 +58,7 @@ const Logo = props => (
 
 const ProjectTitle = props => (
   <h2 className="projectTitle">
-    {siteConfig.title}
-    <small>{siteConfig.tagline}</small>
+    Documentação
   </h2>
 );
 
@@ -76,17 +75,9 @@ class HomeSplash extends React.Component {
     let language = this.props.language || '';
     return (
       <SplashContainer>
-
-        {/* <Logo img_src={imgUrl('nfe-logo.svg')} /> */}
         <div className="inner">
           <ProjectTitle />
           <Features />
-
-          {/* <PromoSection>
-            <Button href="#try">Teste aqui</Button>
-            <Button href={docUrl('doc1.html', language)}>Link de Exemplo</Button>
-            <Button href={docUrl('doc2.html', language)}>Link de Exemplo 2</Button>
-          </PromoSection> */}
         </div>
       </SplashContainer>
     );
@@ -249,12 +240,10 @@ class Integrations extends React.Component {
         <div className="productShowcaseSection">
           <div className="prose use-case-card shadow-card shadow-card-elevate flex-it-3-sm flex-it-1">
             <a className="use-case-content " href={pageUrl('integracoes', language)} target="_blank" style={{ color: "black" }}>
-              <div>
-                <h2>Integrações com Plataformas</h2>
-                <h4>Facilidade na hora de integrar o NFe</h4>
-                <p>Nosso sistema possui integração com diversas plataformas do mercado</p>
-                <div className="logos">{integrations}</div>
-              </div>
+              <h2>Integrações com Plataformas</h2>
+              <h4>Facilidade na hora de integrar o NFe</h4>
+              <p>Nosso sistema possui integração com diversas plataformas do mercado</p>
+              <div className="logos">{integrations}</div>
             </a>
           </div>
         </div>
