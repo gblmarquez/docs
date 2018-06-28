@@ -22,8 +22,8 @@ function docUrl(doc, language) {
   return siteConfig.baseUrl + 'docs/' + (language ? language + '/' : '') + doc;
 }
 
-function pageUrl(page) {
-  return siteConfig.baseUrl + page;
+function pageUrl(page, language) {
+  return siteConfig.baseUrl + (language ? language + '/' : '') + page;
 }
 
 class Button extends React.Component {
@@ -189,19 +189,16 @@ class Plugins extends React.Component {
     return (
       <Container padding={['bottom', 'top']}>
         <div className="productShowcaseSection">
-          <div className="prose">
-            <a href="plugins.html" target="_blank" style={{ color: "black" }}>
+          <div className="prose use-case-card shadow-card shadow-card-elevate flex-it-3-sm flex-it-1">
+            <a className="use-case-content" href={pageUrl('plugins', language)} target="_blank" style={{ color: "black" }}>
               <h2>Plugins para Integração</h2>
               <h4>Não é um Desenvolvedor?</h4>
               <p>Fique tranquilo!
                 Nós disponibilizamos alguns plugins para integração ao seu site.
               </p>
+              <div className="logos">{plugins}</div>
             </a>
           </div>
-          <div className="logos">{plugins}</div>
-          <a className="button" target="_blank" href={pageUrl('plugins', language)}>
-            Clique Aqui
-            </a>
         </div>
       </Container>
     );
@@ -222,17 +219,14 @@ class SDKS extends React.Component {
     return (
       <Container padding={['bottom', 'top']}>
         <div className="productShowcaseSection">
-          <div className="prose">
-            <a href={pageUrl('clientes-sdk.html', language)} target="_blank" style={{ color: "black" }}>
+          <div className="prose use-case-card shadow-card shadow-card-elevate flex-it-3-sm flex-it-1">
+            <a className="use-case-content" href={pageUrl('clientes-sdk', language)} target="_blank" style={{ color: "black" }}>
               <h2>Clientes SDK</h2>
               <h4>Pensado para desenvolvedores</h4>
               <p>Disponibilização de Clientes SDK para integração.</p>
+              <div className="logos">{sdks}</div>
             </a>
           </div>
-          <div className="logos">{sdks}</div>
-          <a className="button" href={pageUrl('clientes-sdk.html', language)}>
-            Clique Aqui
-          </a>
         </div>
       </Container>
     );
@@ -253,17 +247,16 @@ class Integrations extends React.Component {
     return (
       <Container padding={['bottom', 'top']}>
         <div className="productShowcaseSection">
-          <div className="prose">
-            <a href={pageUrl('integracoes.html', language)} target="_blank" style={{ color: "black" }}>
-              <h2>Integrações com ERP's</h2>
-              <h4>Pensado para desenvolvedores</h4>
-              <p>Disponibilização de Clientes SDK para integração.</p>
+          <div className="prose use-case-card shadow-card shadow-card-elevate flex-it-3-sm flex-it-1">
+            <a className="use-case-content " href={pageUrl('integracoes', language)} target="_blank" style={{ color: "black" }}>
+              <div>
+                <h2>Integrações com Plataformas</h2>
+                <h4>Facilidade na hora de integrar o NFe</h4>
+                <p>Nosso sistema possui integração com diversas plataformas do mercado</p>
+                <div className="logos">{integrations}</div>
+              </div>
             </a>
           </div>
-          <div className="logos">{integrations}</div>
-          <a className="button" href={pageUrl('integracoes.html', language)}>
-            Clique Aqui
-            </a>
         </div>
       </Container>
     );
