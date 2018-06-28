@@ -59,6 +59,9 @@ const Logo = props => (
 const ProjectTitle = props => (
   <h2 className="projectTitle">
     Documentação
+  <small>Bem vindo à documentação do NFe!
+    Automatize seu financeiro com nossa API de emissão de Notas Fiscais!
+     </small>
   </h2>
 );
 
@@ -180,8 +183,8 @@ class Plugins extends React.Component {
     return (
       <Container padding={['bottom', 'top']}>
         <div className="productShowcaseSection">
-          <div className="prose use-case-card shadow-card shadow-card-elevate flex-it-3-sm flex-it-1">
-            <a className="use-case-content" href={pageUrl('plugins', language)} target="_blank" style={{ color: "black" }}>
+          <div className="prose shadow-card shadow-card-elevate">
+            <a href={pageUrl('plugins', language)} target="_blank" style={{ color: "black" }}>
               <h2>Plugins para Integração</h2>
               <h4>Não é um Desenvolvedor?</h4>
               <p>Fique tranquilo!
@@ -210,8 +213,8 @@ class SDKS extends React.Component {
     return (
       <Container padding={['bottom', 'top']}>
         <div className="productShowcaseSection">
-          <div className="prose use-case-card shadow-card shadow-card-elevate flex-it-3-sm flex-it-1">
-            <a className="use-case-content" href={pageUrl('clientes-sdk', language)} target="_blank" style={{ color: "black" }}>
+          <div className="prose use-case-card shadow-card shadow-card-elevate">
+            <a href={pageUrl('clientes-sdk', language)} target="_blank" style={{ color: "black" }}>
               <h2>Clientes SDK</h2>
               <h4>Pensado para desenvolvedores</h4>
               <p>Disponibilização de Clientes SDK para integração.</p>
@@ -261,14 +264,14 @@ class Index extends React.Component {
         <HomeSplash language={language} />
         <div className="mainContainer">
           {/* <FeatureCallout /> */}
-          <LearnHow />
-          <TryOut />
+          {/* <LearnHow /> */}
+          {/* <TryOut /> */}
           <section className="integrations">
             <SDKS language={language} />
             <Integrations language={language} />
             <Plugins language={language} />
           </section>
-          <Description />
+          {/* <Description /> */}
         </div>
       </div>
     );
