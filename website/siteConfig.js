@@ -93,14 +93,14 @@ const sdks = [
     // infoLink: 'https://github.com/nfe/client-ruby',
     pinned: true,
   },
-  {
-    caption: 'Erlang',
-    // You will need to prepend the image path with your baseUrl
-    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: 'img/lang-logos/erlang.svg',
-    // infoLink: 'https://github.com/nfe/client-ruby',
-    pinned: true,
-  },
+  // {
+  //   caption: 'Erlang',
+  //   // You will need to prepend the image path with your baseUrl
+  //   // if it is not '/', like: '/test-site/img/docusaurus.svg'.
+  //   image: 'img/lang-logos/erlang.svg',
+  //   // infoLink: 'https://github.com/nfe/client-ruby',
+  //   pinned: true,
+  // },
 ]
 
 const integrations = [

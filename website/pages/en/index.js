@@ -181,7 +181,7 @@ class Plugins extends React.Component {
     const plugins = siteConfig.plugins.map((plugin, i) => {
       return (
         // <a href={plugin.infoLink} key={i}>
-        <img src={plugin.image} alt={plugin.caption} title={plugin.caption} />
+        <img className="plugin" src={plugin.image} alt={plugin.caption} title={plugin.caption} />
         // </a>
       );
     });
@@ -214,7 +214,7 @@ class SDKS extends React.Component {
     const sdks = siteConfig.sdks.map((sdk, i) => {
       return (
         // <a href={sdk.infoLink} key={i}>
-        <img className="sdks" src={sdk.image} alt={sdk.caption} title={sdk.caption} />
+        <img className="sdk" src={sdk.image} alt={sdk.caption} title={sdk.caption} />
         // </a>
       );
     });
