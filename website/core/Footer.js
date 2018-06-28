@@ -81,7 +81,7 @@ class Footer extends React.Component {
           <img
             src={this.props.config.baseUrl + 'img/nfe-logo.svg'}
             alt="NFe.io"
-            width="170"
+            width="90"
             height="45"
           />
         </a>

@@ -240,10 +240,10 @@ const siteConfig = {
   disableHeaderTitle: true,
   disableTitleTagline: true,
 
-  // algolia: {
-  //   apiKey: '0f9f28b9ab9efae89810921a351753b5',
-  //   indexName: 'github',
-  // },
+  algolia: {
+    apiKey: '0f9f28b9ab9efae89810921a351753b5',
+    indexName: 'github',
+  },
 
   scrollToTop: true,
   scrollToTopOptions: {
