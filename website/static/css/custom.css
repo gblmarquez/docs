@@ -1,8 +1,9 @@
 /* your custom css */
-
+@import url('fonts.css');
 
 h1, h2 {
-  font-family: "Maison Neue", sans-serif;
+  font: 500 16px/25px 'Maison Neue', sans-serif;
+  text-transform: uppercase;
 }
 
 p, span {
