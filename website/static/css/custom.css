@@ -2,11 +2,11 @@
 
 
 h1, h2 {
-  font-family: "Maison Neue", sans-serif;
+  font-family: 'Maison Neue';
 }
 
 p, span {
-  font: 500 16px/25px 'Maison Neue', sans-serif;
+  font-family: 'Maison Neue';
 }
 
 .fixedHeaderContainer{
@@ -210,9 +210,13 @@ p, span {
 }
 
 .page-api {
-  height: 150px;
+  height: 255px;
   background-color: #2F353E;
   color: #fff;
+}
+
+.page-api h1 {
+  /* font-size: 3em; */
 }
 
 .page-api .wrapper {
