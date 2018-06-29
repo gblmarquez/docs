@@ -92,7 +92,7 @@ const Block = props => (
     padding={['bottom', 'top']}
     id={props.id}
     background={props.background}>
-    <GridBlock align="center" contents={props.children} layout={props.layout} />
+    <GridBlock align="center" contents={props.children} layout={props.layout} className="features" />
   </Container>
 );
 
@@ -117,6 +117,7 @@ const Features = props => (
         imageAlign: 'top',
         title: 'Atualizações',
       },
+      
     ]}
   </Block>
 );

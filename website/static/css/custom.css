@@ -1,5 +1,14 @@
 /* your custom css */
 
+
+h1, h2 {
+  font-family: "Maison Neue", sans-serif;
+}
+
+p, span {
+  font: 500 16px/25px 'Maison Neue', sans-serif;
+}
+
 .fixedHeaderContainer{
   background: #fff;
   padding: 3px 0;
@@ -65,7 +74,7 @@
   max-width: 1000px;
 }
 
-.gridBlock .fourByGridBlock{
+.gridBlock .features{
   background: rgba(255,255,255,.2);
   padding: 30px 0;
   /* margin-bottom: 20px; */
@@ -77,14 +86,14 @@
   -webkit-transition: all 0.2s ease-out;
 }
 
-.gridBlock .fourByGridBlock:hover{
+.gridBlock .features:hover{
   box-shadow: 0 16px 32px 0 rgba(62,57,107,0.2);
   -webkit-transform: translateY(-5px);
   transform: translateY(-5px);
   -webkit-box-shadow: 0 16px 32px 0 rgba(62,57,107,0.2);;
 }
 
-.gridBlock .fourByGridBlock:nth-child(2){
+.gridBlock .features:nth-child(2){
   margin: 0 25px;
 }
 
@@ -92,7 +101,7 @@
   margin: 20px 0;
 }
 
-.gridBlock .fourByGridBlock .blockContent div:nth-child(2){
+.gridBlock .features .blockContent div:nth-child(2){
   display: none;
 }
 
@@ -256,6 +265,30 @@ section.developers{
   position: relative;
 }
 
+.page-api {
+  height: 150px;
+  background-color: #2F353E;
+  color: #fff;
+}
+
+.page-api .wrapper {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.page-api-box {
+  padding: 80px 10px;
+}
+
+.page-api-box p {
+  opacity: 0.7;
+}
+
+.page-api h1 {
+  margin: 0;
+  margin-bottom: 10px;
+}
 
 /* @media only screen and (min-device-width: 360px){
   .navPusher{
@@ -293,7 +326,7 @@ section.developers{
     padding-top: 100px;
   }
 
-  .gridBlock .fourByGridBlock{
+  .gridBlock .features{
     margin: 25px;
   }
 

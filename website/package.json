@@ -12,6 +12,7 @@
     "docusaurus": "^1.3.0"
   },
   "dependencies": {
-    "redoc": "^2.0.0-alpha.25"
+    "redoc": "^2.0.0-alpha.25",
+    "swagger-combine": "^0.18.1"
   }
 }

@@ -1,0 +1,51 @@
+---
+
+swagger: '2.0'
+host: "http://dev-dfe.westus2.cloudapp.azure.com"
+info:
+  title: "Nota Fiscal v2 (Beta)"
+  version: "1.0.0"
+  description: "# Introducão\nSeja bem-vindo a documentação do NFe.io!\nNossa API foi criada utilizando o padrão REST que possibilita a integração de seu sistema ao nosso, sendo assim você também pode extender ou recriar as funcionalidades existentes na nossa plataforma, tudo isso consumindo a API que está documentada abaixo.\n\n
+  
+  # Como usar a API?\nLogo a seguir você encontrará todos os recursos e metódos suportados pela API, sendo que essa página possibilita que você teste os recursos e métodos diretamente através dela.\n\n
+
+  # Autenticação\nVocê precisa de uma chave de API (API Key) para identificar a conta que está realizando solicitações para a API. \nPara isso você deve colocar sua chave de API no campo que se encontra topo desta página para que os métodos funcionem corretamente.\nNo seu código e integração temos suporte para autenticação de diversas formas sendo eles: \nHTTP Header (Authorization ou X-NFEIO-APIKEY) ou HTTP Query String (api_key) nos dois modos passando o valor da sua chave de api (API Key).\n<!-- ReDoc-Inject: <security-definitions> -->\n"
+
+tags:
+- name: "Companies"
+  description: | 
+    Utilize esta requisição para criar novas empresas plataforma para processar Documentos Fiscais. **Empresa** representa uma pessoa jurídica que precisa processar Documentos Fiscais.
+
+- name: "Companies Certificates"
+  description: | 
+    Utilize esta requisição para fazer upload de um **Certificado da ICP-Brasil** do tipo **e-CNPJ A1** ou **NFE A1** em uma **Empresa** e vincula-lo para processamentos.
+    
+    O **Certificado da ICP-Brasil** funciona como uma identidade virtual, para empresas e pessoas, que permite a identificação segura e inequívoca do autor de uma mensagem ou transação feita em meios eletrônicos, como a web.
+
+- name: "Companies State Taxes"
+  description: |
+    Está sessão é destinada às **Incrições Estaduais(IE).** Uma **Incrição Estadual** representa os dados necessários sobre o cadastro Estadual (ICMS) que é preciso para processar Documentos Fiscais na SEFAZ.
+
+    Utilizando as informações abaixo você pode criar novas IEs na empresa para processar **Documentos Fiscais.** Além disso, também é possível listar as IEs por empresa e consultar, alterar e exluir uma IE pelo ID da mesma.
+
+- name: "Product Invoices"
+  description: |
+    Nesta sessão estão disponíveis informações necessárias para emitir uma Nota Fiscal Eletrônica usando a nossa API. 
+    
+    Você também encontrará informações sobre consulta de uma nota fiscal por ID, consulta de uma lista de notas por empresa, consulta do PDF do Documento Auxiliar da Nota Fiscal Eletrônica(DANFE) e consulta do XML da nota fiscal eletrônica.
+
+- name: "WebHooks"
+  description: |
+    Eventos ocorrem a todo instante na plataforma durante os processamentos e são registrados criando notificações para os webhooks ativos e configurados para receber os eventos.
+    
+    Um **Webhook** é semelhante a uma assinatura em um sistema de publicação e assinatura que permite ao assinante indicar quando, como e onde as notificações de eventos devem ser despachadas. Um **Webhook** é registrado e gerenciado por Conta o que significa que cada Conta tem um conjunto separado de ganchos que podem ser acionados por eventos gerados através de ações executadas por esse Conta. Ou seja, a **Conta da Empresa A** não verá os WebHooks disparados por uma ação executada pelo usuário **Conta da Empresa B**.
+
+    São identificados seguindo o padrão **Resource.EventAction**, sendo **Resource** o nome da entidade que gerou o evento e **EventAction** o nome do evento e ação criados.
+
+    Esses tipos podem ser utilizados como filtro ao criar ou alterar um webhook, sendo que o filtro determina quais notificações de eventos e ação serão enviadas para um determinado webhook, ou seja, dependendo de quais filtros são vinculados ao webhook ele só receberá as notificações de evento e ação que correspondem a um ou mais desses filtros
+
+apis:
+  - url: 'http://dev-dfe.westus2.cloudapp.azure.com/v2/companies/swagger.json'
+  - url: 'http://dev-dfe.westus2.cloudapp.azure.com/v2/companies/swagger/productinvoices/swagger.json'
+  - url: 'http://dev-dfe.westus2.cloudapp.azure.com/v2/webhooks/swagger.json'
+

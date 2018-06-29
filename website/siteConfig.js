@@ -28,6 +28,39 @@ const plugins = [
   }
 ];
 
+const apis = [
+  {
+    title: 'Nfe v1',
+    content: 'API para emissão de Nota Fiscal de Serviço',
+    apiLink: 'api/nfe-v1',
+  },
+  {
+    title: 'Nfe v2',
+    content: 'API para emissão de Nota Fiscal de Produto',
+    apiLink: 'api/nfe-v1',
+  },
+  {
+    title: 'Address v1',
+    content: 'API para consulta da endereços',
+    apiLink: 'api/nfe-v1',
+  },
+  {
+    title: 'Legal Entity v1',
+    content: 'API para consulta de CNPJ',
+    apiLink: 'api/nfe-v1',
+  },
+  {
+    title: 'Sefaz NF v1',
+    content: 'API para consulta de notas fiscais',
+    apiLink: 'api/nfe-v1',
+  },
+  {
+    title: 'Natural Peson v1',
+    content: 'API para consulta de CPF',
+    apiLink: 'api/nfe-v1',
+  },
+];
+
 const sdks = [
   {
     caption: 'Csharp',
@@ -168,8 +201,9 @@ const platforms = [
     // infoLink: 'https://wordpress.org/plugins/woo-nfe/',
     pinned: true,
   },
-  
 ];
+
+
 
 const siteConfig = {
   tagline: 'Documentações',
@@ -187,13 +221,13 @@ const siteConfig = {
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
     { doc: 'doc1', label: 'Documentação' },
-    { doc: 'doc4', label: `API's` },
+    { page: 'api', label: `API's` },
     { blog: true, label: 'Atualizações' },
     // { languages: true }
   ],
 
   // If you have users set above, you add it here:
-  plugins, sdks, platforms,
+  plugins, sdks, platforms, apis,
 
   /* path to images for header/footer */
   headerIcon: 'img/nfe-logo.svg',
