@@ -10,7 +10,7 @@ class ApiBoxes extends React.Component {
             return (
                 <div className="use-cases flex-container flex-space-between flex-wrap">
                     <div className="use-case-card">
-                        <a className="use-case-content shadow-card shadow-card-elevate" href="/doc/guides/getting-started/what-is-algolia/">
+                        <a className="use-case-content shadow-card shadow-card-elevate" href={api.apiLink}>
                             <div className="block hfull">
                                 <div className="pos-rel flex-container flex-dir-col flex-space-between hfull">
                                     <div>
