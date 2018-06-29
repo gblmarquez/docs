@@ -9,14 +9,29 @@
   padding: 20px 0;
 }
 
+.navigationSlider .slidingNav ul li a{
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 1.5px
+}
+
 .navigationSlider .slidingNav ul li a:hover{
   background: none;
+}
+
+.navSearchWrapper:before{
+  left: 21px;
+}
+
+.navSearchWrapper:after{
+  left: 31px;
 }
 
 .reactNavSearchWrapper input#search_input_react{
   background: rgba(0, 0, 0, 0.2);
   padding: 5px 10px;
-  padding-left: 25px;
+  padding-left: 30px;
 }
 
 .reactNavSearchWrapper input#search_input_react:focus{
@@ -43,7 +58,7 @@
   max-width: 1000px;
 }
 
-.gridBlock .fourByGridBlock{
+.gridBlock .features{
   background: rgba(255,255,255,.2);
   padding: 30px 0;
   /* margin-bottom: 20px; */
@@ -51,14 +66,18 @@
   box-shadow: 0 16px 32px 0 rgba(62,57,107,0.1);
   color: #fff;
   cursor: pointer;
-  transition: .3s
+  transition: .3s;
+  -webkit-transition: all 0.2s ease-out;
 }
 
-.gridBlock .fourByGridBlock:hover{
+.gridBlock .features:hover{
   box-shadow: 0 16px 32px 0 rgba(62,57,107,0.2);
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+  -webkit-box-shadow: 0 16px 32px 0 rgba(62,57,107,0.2);;
 }
 
-.gridBlock .fourByGridBlock:nth-child(2){
+.gridBlock .features:nth-child(2){
   margin: 0 25px;
 }
 
@@ -66,7 +85,7 @@
   margin: 20px 0;
 }
 
-.gridBlock .fourByGridBlock .blockContent div:nth-child(2){
+.gridBlock .features .blockContent div:nth-child(2){
   display: none;
 }
 
@@ -93,7 +112,7 @@
 }
 
 .integrations .container{
-  max-width: 500px;
+  max-width: 600px;
 }
 
 .integrations .logos{
@@ -218,7 +237,7 @@
     padding-top: 100px;
   }
 
-  .gridBlock .fourByGridBlock{
+  .gridBlock .features{
     margin: 25px;
   }
 
