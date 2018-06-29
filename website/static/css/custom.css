@@ -1,5 +1,14 @@
 /* your custom css */
 
+
+h1, h2 {
+  font-family: "Maison Neue", sans-serif;
+}
+
+p, span {
+  font: 500 16px/25px 'Maison Neue', sans-serif;
+}
+
 .fixedHeaderContainer{
   background: linear-gradient(90deg,#33c586 0%,#51cbff 100%);
   padding: 3px 0;
