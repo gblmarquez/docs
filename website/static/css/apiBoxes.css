@@ -1,0 +1,117 @@
+.apis {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.apis h2,
+.apis p,
+.apis span {
+    margin-top: 0;
+    text-align: left;
+    padding: 0;
+}
+
+.apis p {
+    line-break: auto;
+}
+
+.use-cases {
+    width: 33.33%
+}
+
+.use-case-card {
+    width: 100%
+}
+
+.block,
+.pos-rel {
+    height: 100%;
+}
+
+.use-cases a {
+    color: #2e8555;
+}
+
+.spacer24 {
+    width: 100%;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: block;
+    height: 24px;
+}
+
+.flex-align-center {
+    align-items: center;
+}
+
+.upper-case {
+    text-transform: uppercase;
+}
+
+.use-cases .use-case-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 12px
+}
+
+.use-cases .use-case-card .link-arrow-hover {
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 1.5px
+}
+
+.use-cases .use-case-card .link-arrow-hover:before {
+    display: block;
+    background: #2e8555;
+    height: 1px;
+    width: 28px;
+    margin-right: 16px;
+    content: '';
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out
+}
+
+.use-cases .use-case-card .link-arrow-hover-icon {
+    width: 8px;
+    margin-left: 16px;
+    fill: #2e8555 
+}
+
+.use-cases .use-case-card:hover .link-arrow-hover {
+    color: #2e8555 !important;
+    opacity: 1
+}
+
+.use-cases .use-case-card:hover .link-arrow-hover:before {
+    width: 38px
+}
+
+.use-cases .use-case-card:hover .link-arrow-hover svg path {
+    fill: #2e8555
+}
+
+.use-cases .use-case-card h2 {
+    font-size: 20px;
+    line-height: 32px
+}
+
+.use-cases .use-case-card h2,.use-cases .use-case-card p {
+    color: #353535
+}
+
+@media (max-width: 768px) {
+    .use-cases .use-case-card {
+        width:100%
+    }
+
+    .use-cases .use-case-card .use-case-content {
+        text-align: center;
+        max-width: 320px;
+        margin: 0 auto
+    }
+}
