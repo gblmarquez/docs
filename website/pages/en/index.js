@@ -92,7 +92,7 @@ const Block = props => (
     padding={['bottom', 'top']}
     id={props.id}
     background={props.background}>
-    <GridBlock align="center" contents={props.children} layout={props.layout} />
+    <GridBlock align="center" contents={props.children} layout={props.layout} className="features" />
   </Container>
 );
 
@@ -117,6 +117,7 @@ const Features = props => (
         imageAlign: 'top',
         title: 'Atualizações',
       },
+      
     ]}
   </Block>
 );
@@ -241,7 +242,7 @@ class Integrations extends React.Component {
     return (
       <Container padding={['bottom', 'top']}>
         <div className="productShowcaseSection">
-          <div className="prose use-case-card shadow-card shadow-card-elevate flex-it-3-sm flex-it-1">
+          <div className="prose use-case-card shadow-card shadow-card-elevate">
             <a className="use-case-content " href={pageUrl('integracoes', language)} target="_blank" style={{ color: "black" }}>
               <h2>Integrações com Plataformas</h2>
               <h4>Facilidade na hora de integrar o NFe</h4>

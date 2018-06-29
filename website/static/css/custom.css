@@ -58,7 +58,7 @@
   max-width: 1000px;
 }
 
-.gridBlock .fourByGridBlock{
+.gridBlock .features{
   background: rgba(255,255,255,.2);
   padding: 30px 0;
   /* margin-bottom: 20px; */
@@ -70,14 +70,14 @@
   -webkit-transition: all 0.2s ease-out;
 }
 
-.gridBlock .fourByGridBlock:hover{
+.gridBlock .features:hover{
   box-shadow: 0 16px 32px 0 rgba(62,57,107,0.2);
   -webkit-transform: translateY(-5px);
   transform: translateY(-5px);
   -webkit-box-shadow: 0 16px 32px 0 rgba(62,57,107,0.2);;
 }
 
-.gridBlock .fourByGridBlock:nth-child(2){
+.gridBlock .features:nth-child(2){
   margin: 0 25px;
 }
 
@@ -85,7 +85,7 @@
   margin: 20px 0;
 }
 
-.gridBlock .fourByGridBlock .blockContent div:nth-child(2){
+.gridBlock .features .blockContent div:nth-child(2){
   display: none;
 }
 
@@ -237,7 +237,7 @@
     padding-top: 100px;
   }
 
-  .gridBlock .fourByGridBlock{
+  .gridBlock .features{
     margin: 25px;
   }
 
