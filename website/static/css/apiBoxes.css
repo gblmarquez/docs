@@ -5,6 +5,11 @@
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
+.apis h1 {
+    text-align: center;
+
+}
 .apis h2,
 .apis p,
 .apis span {
@@ -31,7 +36,15 @@
 }
 
 .use-cases a {
-    color: #2e8555;
+    color: #000000;
+}
+
+.use-case-card span {
+    opacity: 0.7;
+}
+
+.use-case-card span:hover {
+    opacity: 1;
 }
 
 .spacer24 {
@@ -67,7 +80,7 @@
 
 .use-cases .use-case-card .link-arrow-hover:before {
     display: block;
-    background: #2e8555;
+    background: #000000;
     height: 1px;
     width: 28px;
     margin-right: 16px;
@@ -79,11 +92,11 @@
 .use-cases .use-case-card .link-arrow-hover-icon {
     width: 8px;
     margin-left: 16px;
-    fill: #2e8555 
+    fill: #000000 
 }
 
 .use-cases .use-case-card:hover .link-arrow-hover {
-    color: #2e8555 !important;
+    color: #000000 !important;
     opacity: 1
 }
 
@@ -92,7 +105,7 @@
 }
 
 .use-cases .use-case-card:hover .link-arrow-hover svg path {
-    fill: #2e8555
+    fill: #000000
 }
 
 .use-cases .use-case-card h2 {

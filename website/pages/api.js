@@ -8,14 +8,19 @@ const ApiBoxes = require(process.cwd() + '/core/ApiBoxes.js');
 class Api extends React.Component {
     render() {
         return (
-            <Container padding={['bottom', 'top']}>
-                <div className="productShowcaseSection">
-                    <h1>Conheça nossas API's</h1>
-                    <div className="productShowcaseSection">
-                        <ApiBoxes />
+            <div>
+                <div className="page-api">
+                    <div className="wrapper">
+                        <div className="page-api__title">
+                            <h1>Conheça nossas API's</h1>
+                            <p>Aqui você encontrará todas as nossas APIs disponíveis</p>
+                        </div>
                     </div>
                 </div>
-            </Container >
+                <div className="wrapper homeWrapper page-api-box">
+                    <ApiBoxes />
+                </div>
+            </div >
         );
     }
 }
