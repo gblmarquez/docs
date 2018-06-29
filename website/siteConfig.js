@@ -14,7 +14,7 @@ const plugins = [
     caption: 'Wordpress',
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: 'img/wordpress.svg',
+    image: 'img/woocommerce.png',
     // infoLink: 'https://wordpress.org/plugins/woo-nfe/',
     pinned: true,
   },
@@ -103,20 +103,12 @@ const sdks = [
   // },
 ]
 
-const integrations = [
+const platforms = [
   {
     caption: `Moip`,
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
     image: 'img/integration-logos/moip.svg',
-    // infoLink: 'https://wordpress.org/plugins/woo-nfe/',
-    pinned: true,
-  },
-  {
-    caption: `Integrações com ERP's`,
-    // You will need to prepend the image path with your baseUrl
-    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: 'img/integration-logos/integration2.svg',
     // infoLink: 'https://wordpress.org/plugins/woo-nfe/',
     pinned: true,
   },
@@ -137,10 +129,10 @@ const integrations = [
     pinned: true,
   },
   {
-    caption: `Integrações com ERP's`,
+    caption: `Mundipagg`,
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: 'img/integration-logos/integration5.svg',
+    image: 'img/integration-logos/mundipagg.svg',
     // infoLink: 'https://wordpress.org/plugins/woo-nfe/',
     pinned: true,
   },
@@ -153,10 +145,10 @@ const integrations = [
     pinned: true,
   },
   {
-    caption: `Integrações com ERP's`,
+    caption: `Pagar.me`,
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: 'img/integration-logos/integration7.svg',
+    image: 'img/integration-logos/pagar-me.svg',
     // infoLink: 'https://wordpress.org/plugins/woo-nfe/',
     pinned: true,
   },
@@ -165,6 +157,14 @@ const integrations = [
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
     image: 'img/integration-logos/stripe.svg',
+    // infoLink: 'https://wordpress.org/plugins/woo-nfe/',
+    pinned: true,
+  },
+  {
+    caption: `Paypal`,
+    // You will need to prepend the image path with your baseUrl
+    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
+    image: 'img/integration-logos/paypal.svg',
     // infoLink: 'https://wordpress.org/plugins/woo-nfe/',
     pinned: true,
   },
@@ -189,11 +189,11 @@ const siteConfig = {
     { doc: 'doc1', label: 'Documentação' },
     { doc: 'doc4', label: `API's` },
     { blog: true, label: 'Atualizações' },
-    { languages: false }
+    // { languages: true }
   ],
 
   // If you have users set above, you add it here:
-  plugins, sdks, integrations,
+  plugins, sdks, platforms,
 
   /* path to images for header/footer */
   headerIcon: 'img/nfe-logo.svg',
@@ -228,7 +228,9 @@ const siteConfig = {
   },
 
   // Add custom scripts here that would be placed in <script> tags
-  scripts: ['https://buttons.github.io/buttons.js'],
+  scripts: [
+    'https://buttons.github.io/buttons.js',
+  ],
 
   /* On page navigation for the current documentation page */
   onPageNav: 'separate',
