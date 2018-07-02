@@ -30,9 +30,13 @@ h1 {
   color: #555555;
 }
 
-.navigationSlider .slidingNav ul li a:hover{
+.navigationSlider .slidingNav ul li a:hover, .navigationSlider .slidingNav ul li.siteNavItemActive a, .navigationSlider .slidingNav ul li.siteNavGroupActive a{
+  color: #555555;
+  text-decoration: underline;
+}
+
+.navigationSlider .slidingNav ul li a:focus, .navigationSlider .slidingNav ul li a:hover, .navigationSlider .slidingNav ul li.siteNavItemActive a, .navigationSlider .slidingNav ul li.siteNavGroupActive a{
   background: none;
-  color: #2ba872;
 }
 
 .navSearchWrapper:before{
