@@ -60,7 +60,7 @@ const ProjectTitle = props => (
   <h1 className="projectTitle">
     Documentação
   <small>Bem vindo à documentação do NFe!
-    Automatize seu financeiro com nossa API de emissão de Notas Fiscais!
+        Automatize seu financeiro com nossa API de emissão de Notas Fiscais!
      </small>
   </h1>
 );
@@ -116,7 +116,7 @@ const Features = props => (
         imageAlign: 'top',
         title: 'Atualizações',
       },
-      
+
     ]}
   </Block>
 );
@@ -174,27 +174,25 @@ class Plugins extends React.Component {
     let language = this.props.language || '';
     const plugins = siteConfig.plugins.map((plugin, i) => {
       return (
-        // <a href={plugin.infoLink} key={i}>
-        <div className="app-item">
-          <img className="plugin" src={plugin.image} alt={plugin.caption} title={plugin.caption} />
-          <span className="app-name">{plugin.caption}</span>
-        </div>
-        // </a>
+        <a href={plugin.pluginLink} key={i}>
+          <div className="app-item">
+            <img className="plugin" src={plugin.image} alt={plugin.caption} title={plugin.caption} />
+            <span className="app-name">{plugin.caption}</span>
+          </div>
+        </a>
       );
     });
 
     return (
       <Container>
         <div className="productShowcaseSection">
-          <div className="prose shadow-card shadow-card-elevate">
-            <a href={pageUrl('plugins', language)} target="_blank" style={{ color: "black" }}>
-              <h3>Integração Plugins</h3>
-              <h4>Não é um Desenvolvedor?</h4>
-              <p>Fique tranquilo!
-                Nós disponibilizamos alguns plugins para integração ao seu site.
+          <div className="prose shadow-card">
+            <h3>Integração Plugins</h3>
+            <h4>Não é um Desenvolvedor?</h4>
+            <p>Fique tranquilo!
+              Nós disponibilizamos alguns plugins para integração ao seu site.
               </p>
-              <div className="logos">{plugins}</div>
-            </a>
+            <div className="logos">{plugins}</div>
           </div>
         </div>
       </Container>
@@ -207,25 +205,23 @@ class SDKS extends React.Component {
     let language = this.props.language || '';
     const sdks = siteConfig.sdks.map((sdk, i) => {
       return (
-        // <a href={sdk.infoLink} key={i}>
-        <div className="app-item">
-          <img className="sdk" src={sdk.image} alt={sdk.caption} title={sdk.caption} />
-          <span className="app-name">{sdk.caption}</span>
-        </div>
-        // </a>
+        <a href={sdk.sdkLink} key={i}>
+          <div className="app-item">
+            <img className="sdk" src={sdk.image} alt={sdk.caption} title={sdk.caption} />
+            <span className="app-name">{sdk.caption}</span>
+          </div>
+        </a>
       );
     });
 
     return (
       <Container>
         <div className="productShowcaseSection">
-          <div className="prose use-case-card shadow-card shadow-card-elevate">
-            <a href={pageUrl('clientes-sdk', language)} target="_blank" style={{ color: "black" }}>
-              <h3>Clientes SDK</h3>
-              <h4>Pensado para desenvolvedores</h4>
-              <p>Disponibilização de Clientes SDK para integração. Asnaisnfas aisndaisda sd as</p>
-              <div className="logos">{sdks}</div>
-            </a>
+          <div className="prose shadow-card">
+            <h3>Clientes SDK</h3>
+            <h4>Pensado para desenvolvedores</h4>
+            <p>Disponibilização de Clientes SDK para integração. Asnaisnfas aisndaisda sd as</p>
+            <div className="logos">{sdks}</div>
           </div>
         </div>
       </Container>
@@ -251,12 +247,10 @@ class Platforms extends React.Component {
       <Container>
         <div className="productShowcaseSection">
           <div className="prose shadow-card">
-            <a className="use-case-content " href={pageUrl('integracoes', language)} target="_blank" style={{ color: "black" }}>
-              <h3>Integração Plataformas</h3>
-              <h4>Facilidade na hora de integrar o NFe</h4>
-              <p>Nosso sistema possui integração com diversas plataformas do mercado</p>
-              <div className="logos">{platforms}</div>
-            </a>
+            <h3>Integração Plataformas</h3>
+            <h4>Facilidade na hora de integrar o NFe</h4>
+            <p>Nosso sistema possui integração com diversas plataformas do mercado</p>
+            <div className="logos">{platforms}</div>
           </div>
         </div>
       </Container>
@@ -265,7 +259,7 @@ class Platforms extends React.Component {
 }
 
 class Index extends React.Component {
-  
+
 
 
   render() {

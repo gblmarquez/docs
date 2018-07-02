@@ -15,7 +15,7 @@ const plugins = [
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
     image: 'img/woocommerce.png',
-    // infoLink: 'https://wordpress.org/plugins/woo-nfe/',
+    pluginLink: 'plugin/woocommerce',
     pinned: true,
   },
   {
@@ -23,7 +23,7 @@ const plugins = [
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
     image: 'img/whmcs.png',
-    // infoLink: 'https://www.whmcs.com/members/clientarea.php',
+    pluginLink: 'plugin/whmcs',
     pinned: true,
   }
 ];
@@ -67,7 +67,7 @@ const sdks = [
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
     image: 'img/lang-logos/csharp.svg',
-    // infoLink: 'https://github.com/nfe/client-nodejs',
+    sdkLink: 'sdk',
     pinned: true,
   },
   {
@@ -75,7 +75,7 @@ const sdks = [
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
     image: 'img/lang-logos/nodejs.svg',
-    // infoLink: 'https://github.com/nfe/client-nodejs',
+    sdkLink: 'sdk',
     pinned: true,
   },
   {
@@ -83,7 +83,7 @@ const sdks = [
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
     image: 'img/lang-logos/php.svg',
-    // infoLink: 'https://github.com/nfe/client-php',
+    sdkLink: 'sdk',
     pinned: true,
   },
   {
@@ -91,7 +91,7 @@ const sdks = [
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
     image: 'img/lang-logos/python.svg',
-    // infoLink: 'https://github.com/nfe/client-python',
+    sdkLink: 'sdk',
     pinned: true,
   },
   {
@@ -99,7 +99,7 @@ const sdks = [
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
     image: 'img/lang-logos/ruby.svg',
-    // infoLink: 'https://github.com/nfe/client-ruby',
+    sdkLink: 'sdk',
     pinned: true,
   },
   {
@@ -107,7 +107,7 @@ const sdks = [
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
     image: 'img/lang-logos/scala.svg',
-    // infoLink: 'https://github.com/nfe/client-ruby',
+    sdkLink: 'sdk',
     pinned: true,
   },
   {
@@ -115,7 +115,7 @@ const sdks = [
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
     image: 'img/lang-logos/java.svg',
-    // infoLink: 'https://github.com/nfe/client-ruby',
+    sdkLink: 'sdk',
     pinned: true,
   },
   {
@@ -123,7 +123,7 @@ const sdks = [
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
     image: 'img/lang-logos/golang.svg',
-    // infoLink: 'https://github.com/nfe/client-ruby',
+    sdkLink: 'sdk',
     pinned: true,
   },
   // {
