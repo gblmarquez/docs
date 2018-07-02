@@ -207,7 +207,7 @@ const platforms = [
 
 const siteConfig = {
   tagline: 'Documentações',
-  title: 'NFe.io' /* title for your website */,
+  title: 'NFe.io : Documentação' /* title for your website */,
   url: 'https://yagosenhorini.github.io' /* your website url */,
   baseUrl: '/docusaurus/' /* base url for your project */,
   // For github.io type URLs, you would set the url and baseUrl like:
@@ -231,7 +231,7 @@ const siteConfig = {
 
   /* path to images for header/footer */
   headerIcon: 'img/nfe-logo.svg',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon/favicon.ico',
   /* colors for website */
   colors: {
     primaryColor: '#2E8555',
