@@ -13,7 +13,7 @@ class Api extends React.Component {
                     <div className="wrapper">
                         <div className="description__title">
                             <h1>Referências das API's</h1>
-                            <p>Aqui você encontrará todas as referência das nossas APIs</p>
+                            <p>Aqui você encontrará todas as referências das nossas API's</p>
                         </div>
                     </div>
                 </div>
