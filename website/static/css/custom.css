@@ -15,7 +15,7 @@ h1 {
 .fixedHeaderContainer{
   background: #fff;
   padding: 3px 0;
-  box-shadow: 0 10px 20px 0px rgba(62,57,107,0.2);
+  box-shadow: 0 5px 20px 0px rgba(62,57,107,0.2)
 }
 
 .fixedHeaderContainer header {
@@ -44,7 +44,7 @@ h1 {
 }
 
 input#search_input_react{
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.4);
   padding: 5px 10px;
   padding-left: 30px;
 }
@@ -277,6 +277,10 @@ section.developers{
   position: relative;
 }
 
+
+.nav-footer{
+  padding: 4em 0;
+}
 
 /* @media only screen and (min-device-width: 360px){
   .navPusher{
