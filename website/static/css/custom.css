@@ -184,14 +184,13 @@ section.developers{
   padding: 20px 0;
 }
 
-.integrations .app-item:hover{
-  transform: scale(1.15);
-
-}
-
 .productShowcaseSection .logos .app-item{
   margin: 10px;
   transition: .2s;
+}
+
+.productShowcaseSection .logos .app-item:hover{
+  transform: scale(1.15);
 }
 
 .productShowcaseSection .logos .app-name{
