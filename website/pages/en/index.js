@@ -238,19 +238,19 @@ class Platforms extends React.Component {
     let language = this.props.language || '';
     const platforms = siteConfig.platforms.map((platforms, i) => {
       return (
-        // <a href={platforms.infoLink} key={i}>
-        <div className="app-item">
-          <img className="erp" src={platforms.image} alt={platforms.caption} title={platforms.caption} />
-          <span className="app-name">{platforms.caption}</span>
-        </div>
-        // </a>
+        <a href={platforms.erpLink} key={i}>
+          <div className="app-item">
+            <img className="erp" src={platforms.image} alt={platforms.caption} title={platforms.caption} />
+            <span className="app-name">{platforms.caption}</span>
+          </div>
+        </a>
       );
     });
 
     return (
       <Container>
         <div className="productShowcaseSection">
-          <div className="prose use-case-card shadow-card shadow-card-elevate">
+          <div className="prose shadow-card">
             <a className="use-case-content " href={pageUrl('integracoes', language)} target="_blank" style={{ color: "black" }}>
               <h3>Integração Plataformas</h3>
               <h4>Facilidade na hora de integrar o NFe</h4>

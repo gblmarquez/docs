@@ -142,7 +142,7 @@ const platforms = [
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
     image: 'img/integration-logos/moip.svg',
-    // infoLink: 'https://wordpress.org/plugins/woo-nfe/',
+    erpLink: '/docusaurus/erp/moip',
     pinned: true,
   },
   {
@@ -150,7 +150,7 @@ const platforms = [
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
     image: 'img/integration-logos/vindi.svg',
-    // infoLink: 'https://wordpress.org/plugins/woo-nfe/',
+    erpLink: 'erp/vindi',
     pinned: true,
   },
   {
@@ -158,7 +158,7 @@ const platforms = [
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
     image: 'img/integration-logos/pagseguro.svg',
-    // infoLink: 'https://wordpress.org/plugins/woo-nfe/',
+    erpLink: 'erp/pagseguro',
     pinned: true,
   },
   {
@@ -166,7 +166,7 @@ const platforms = [
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
     image: 'img/integration-logos/mundipagg.svg',
-    // infoLink: 'https://wordpress.org/plugins/woo-nfe/',
+    erpLink: 'erp/mundipagg',
     pinned: true,
   },
   {
@@ -174,7 +174,7 @@ const platforms = [
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
     image: 'img/integration-logos/iugu.svg',
-    // infoLink: 'https://wordpress.org/plugins/woo-nfe/',
+    erpLink: 'erp/iugu',
     pinned: true,
   },
   {
@@ -182,7 +182,7 @@ const platforms = [
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
     image: 'img/integration-logos/pagar-me.svg',
-    // infoLink: 'https://wordpress.org/plugins/woo-nfe/',
+    erpLink: 'erp/pagarme',
     pinned: true,
   },
   {
@@ -190,7 +190,7 @@ const platforms = [
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
     image: 'img/integration-logos/stripe.svg',
-    // infoLink: 'https://wordpress.org/plugins/woo-nfe/',
+    erpLink: 'erp/stripe',
     pinned: true,
   },
   {
@@ -198,7 +198,7 @@ const platforms = [
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
     image: 'img/integration-logos/paypal.svg',
-    // infoLink: 'https://wordpress.org/plugins/woo-nfe/',
+    erpLink: 'erp/paypal',
     pinned: true,
   },
 ];
