@@ -89,7 +89,6 @@ class HomeSplash extends React.Component {
 
 const Block = props => (
   <Container
-    padding={['bottom', 'top']}
     id={props.id}
     background={props.background}>
     <GridBlock align="center" contents={props.children} layout={props.layout} className="features" />
