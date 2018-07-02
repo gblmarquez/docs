@@ -5,12 +5,12 @@ const Container = CompLibrary.Container;
 
 const siteConfig = require(process.cwd() + '/siteConfig.js');
 
-class Integrations extends React.Component {
+class Platforms extends React.Component {
   render() {
-    const integrations = siteConfig.integrations.map((integration, i) => {
+    const platforms = siteConfig.platforms.map((platforms, i) => {
       return (
-        <a href={integration.infoLink} key={i}>
-          <img src={integration.image} alt={integration.caption} title={integration.caption} />
+        <a href={platforms.infoLink} key={i}>
+          <img src={platforms.image} alt={platforms.caption} title={platforms.caption} />
         </a>
       );
     });
@@ -23,11 +23,11 @@ class Integrations extends React.Component {
               <h1>Integração com ERP'S</h1>
               <p>Integrações com os maiores ERP'S do mercado: </p>
             </div>
-            <div className="logos">{integrations}</div>
+            <div className="logos">{platforms}</div>
           </div>
         </Container>
       </div>
     );
   }
 }
-module.exports = Integrations;
+module.exports = Platforms;
