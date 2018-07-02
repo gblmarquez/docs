@@ -72,10 +72,13 @@
     padding: 12px
 }
 
+.use-cases .use-case-card .text-bold {
+    font-weight: 700 !important;
+}
+
 .use-cases .use-case-card .link-arrow-hover {
     font-size: 12px;
     line-height: 18px;
-    letter-spacing: 1.5px
 }
 
 .use-cases .use-case-card .link-arrow-hover:before {

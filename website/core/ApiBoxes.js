@@ -2,7 +2,7 @@
 
 const React = require('react');
 const siteConfig = require(process.cwd() + '/siteConfig.js');
-const styles = [siteConfig.baseUrl + "/css/redoc-component/style.css"];
+const styles = [siteConfig.baseUrl + "/css/components/apiBox.css"];
 
 class ApiBoxes extends React.Component {
     render() {

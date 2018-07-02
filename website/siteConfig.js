@@ -55,7 +55,7 @@ const apis = [
     apiLink: 'api/nfe-v1',
   },
   {
-    title: 'Natural Peson v1',
+    title: 'Natural Person v1',
     content: 'API para consulta de CPF',
     apiLink: 'api/nfe-v1',
   },

@@ -1,0 +1,33 @@
+.page-api__description {
+    height: 255px;
+    background-color: #2F353E;
+    color: #fff;
+}
+
+.description__title h1 {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.description__title p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.page-api .wrapper {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.page-api__api-box {
+    padding: 80px 10px;
+}
+
+.page-api__api-box p {
+    color: #AAAAAA !important;
+    font-size: 16px;
+    font-weight: 500;
+}
