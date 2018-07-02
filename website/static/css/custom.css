@@ -278,9 +278,13 @@ section.developers{
 }
 
 .page-api {
-  height: 150px;
+  height: 255px;
   background-color: #2F353E;
   color: #fff;
+}
+
+.page-api h1 {
+  /* font-size: 3em; */
 }
 
 .page-api .wrapper {

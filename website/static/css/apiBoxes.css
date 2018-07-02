@@ -36,7 +36,7 @@
 }
 
 .use-cases a {
-    color: #000000;
+    color: #2E8555;
 }
 
 .use-case-card span {
@@ -80,7 +80,7 @@
 
 .use-cases .use-case-card .link-arrow-hover:before {
     display: block;
-    background: #000000;
+    background: #2E8555;
     height: 1px;
     width: 28px;
     margin-right: 16px;
@@ -92,20 +92,21 @@
 .use-cases .use-case-card .link-arrow-hover-icon {
     width: 8px;
     margin-left: 16px;
-    fill: #000000 
+    fill: #2E8555 
 }
 
 .use-cases .use-case-card:hover .link-arrow-hover {
-    color: #000000 !important;
+    color: #2E8555 !important;
     opacity: 1
 }
 
 .use-cases .use-case-card:hover .link-arrow-hover:before {
+    color: #2E8555 !important;
     width: 38px
 }
 
 .use-cases .use-case-card:hover .link-arrow-hover svg path {
-    fill: #000000
+    fill: #2E8555
 }
 
 .use-cases .use-case-card h2 {
@@ -113,7 +114,11 @@
     line-height: 32px
 }
 
-.use-cases .use-case-card h2,.use-cases .use-case-card p {
+.use-cases .use-case-card h2,.use-cases {
+    color: #2E8555  
+}
+
+.use-case-card p {
     color: #353535
 }
 
