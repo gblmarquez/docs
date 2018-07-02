@@ -79,7 +79,7 @@ class Footer extends React.Component {
           rel="noreferrer noopener"
           style={{ display: "block", textAlign: "center" }}>
           <img
-            src={this.props.config.baseUrl + 'img/nfe-logo.svg'}
+            src={this.props.config.baseUrl + 'img/nfe-logo-gray.svg'}
             alt="NFe.io"
             width="90"
             height="45"
