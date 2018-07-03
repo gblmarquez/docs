@@ -15,7 +15,7 @@ const plugins = [
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
     image: 'img/woocommerce.png',
-    // infoLink: 'https://wordpress.org/plugins/woo-nfe/',
+    pluginLink: 'plugin/woocommerce',
     pinned: true,
   },
   {
@@ -23,7 +23,7 @@ const plugins = [
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
     image: 'img/whmcs.png',
-    // infoLink: 'https://www.whmcs.com/members/clientarea.php',
+    pluginLink: 'plugin/whmcs',
     pinned: true,
   }
 ];
@@ -67,7 +67,7 @@ const sdks = [
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
     image: 'img/lang-logos/csharp.svg',
-    // infoLink: 'https://github.com/nfe/client-nodejs',
+    sdkLink: 'sdk',
     pinned: true,
   },
   {
@@ -75,7 +75,7 @@ const sdks = [
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
     image: 'img/lang-logos/nodejs.svg',
-    // infoLink: 'https://github.com/nfe/client-nodejs',
+    sdkLink: 'sdk',
     pinned: true,
   },
   {
@@ -83,7 +83,7 @@ const sdks = [
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
     image: 'img/lang-logos/php.svg',
-    // infoLink: 'https://github.com/nfe/client-php',
+    sdkLink: 'sdk',
     pinned: true,
   },
   {
@@ -91,7 +91,7 @@ const sdks = [
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
     image: 'img/lang-logos/python.svg',
-    // infoLink: 'https://github.com/nfe/client-python',
+    sdkLink: 'sdk',
     pinned: true,
   },
   {
@@ -99,7 +99,7 @@ const sdks = [
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
     image: 'img/lang-logos/ruby.svg',
-    // infoLink: 'https://github.com/nfe/client-ruby',
+    sdkLink: 'sdk',
     pinned: true,
   },
   {
@@ -107,7 +107,7 @@ const sdks = [
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
     image: 'img/lang-logos/scala.svg',
-    // infoLink: 'https://github.com/nfe/client-ruby',
+    sdkLink: 'sdk',
     pinned: true,
   },
   {
@@ -115,7 +115,7 @@ const sdks = [
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
     image: 'img/lang-logos/java.svg',
-    // infoLink: 'https://github.com/nfe/client-ruby',
+    sdkLink: 'sdk',
     pinned: true,
   },
   {
@@ -123,7 +123,7 @@ const sdks = [
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
     image: 'img/lang-logos/golang.svg',
-    // infoLink: 'https://github.com/nfe/client-ruby',
+    sdkLink: 'sdk',
     pinned: true,
   },
   // {
@@ -142,7 +142,7 @@ const platforms = [
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
     image: 'img/integration-logos/moip.svg',
-    // infoLink: 'https://wordpress.org/plugins/woo-nfe/',
+    erpLink: '/docusaurus/erp/moip',
     pinned: true,
   },
   {
@@ -150,7 +150,7 @@ const platforms = [
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
     image: 'img/integration-logos/vindi.svg',
-    // infoLink: 'https://wordpress.org/plugins/woo-nfe/',
+    erpLink: 'erp/vindi',
     pinned: true,
   },
   {
@@ -158,7 +158,7 @@ const platforms = [
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
     image: 'img/integration-logos/pagseguro.svg',
-    // infoLink: 'https://wordpress.org/plugins/woo-nfe/',
+    erpLink: 'erp/pagseguro',
     pinned: true,
   },
   {
@@ -166,7 +166,7 @@ const platforms = [
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
     image: 'img/integration-logos/mundipagg.svg',
-    // infoLink: 'https://wordpress.org/plugins/woo-nfe/',
+    erpLink: 'erp/mundipagg',
     pinned: true,
   },
   {
@@ -174,7 +174,7 @@ const platforms = [
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
     image: 'img/integration-logos/iugu.svg',
-    // infoLink: 'https://wordpress.org/plugins/woo-nfe/',
+    erpLink: 'erp/iugu',
     pinned: true,
   },
   {
@@ -182,7 +182,7 @@ const platforms = [
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
     image: 'img/integration-logos/pagar-me.svg',
-    // infoLink: 'https://wordpress.org/plugins/woo-nfe/',
+    erpLink: 'erp/pagarme',
     pinned: true,
   },
   {
@@ -190,7 +190,7 @@ const platforms = [
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
     image: 'img/integration-logos/stripe.svg',
-    // infoLink: 'https://wordpress.org/plugins/woo-nfe/',
+    erpLink: 'erp/stripe',
     pinned: true,
   },
   {
@@ -198,14 +198,14 @@ const platforms = [
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
     image: 'img/integration-logos/paypal.svg',
-    // infoLink: 'https://wordpress.org/plugins/woo-nfe/',
+    erpLink: 'erp/paypal',
     pinned: true,
   },
 ];
 
 const siteConfig = {
   tagline: 'Documentações',
-  title: 'NFe.io' /* title for your website */,
+  title: 'NFe.io : Documentação' /* title for your website */,
   url: 'https://yagosenhorini.github.io' /* your website url */,
   baseUrl: '/docs/' /* base url for your project */,
   // For github.io type URLs, you would set the url and baseUrl like:
@@ -229,7 +229,7 @@ const siteConfig = {
 
   /* path to images for header/footer */
   headerIcon: 'img/nfe-logo.svg',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon/favicon.ico',
   /* colors for website */
   colors: {
     primaryColor: '#2E8555',
