@@ -5,15 +5,15 @@ const Container = CompLibrary.Container;
 
 const siteConfig = require(process.cwd() + '/siteConfig.js');
 
-class Iugu extends React.Component {
+class MSFlow extends React.Component {
   render() {
     return (
       <div className="page-integrations">
-        <div className="page-integrations__hero iugu">
+        <div className="page-integrations__hero msflow">
           <div className="hero__title-box">
-            <img className="title-box__icon" src="/docs/img/integration-logos/logo-iugu.svg" alt="Iugu" />
+            <img className="title-box__icon" src="/docs/img/integration-logos/logo-flow.png" alt="Microsoft Flow" />
             <div className="title-box__description">
-              <h1>Iugu</h1>
+              <h1>MSFlow</h1>
               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, itaque? Molestiae cupiditate consequuntur beatae tempora?</p>
             </div>
           </div>
@@ -27,4 +27,4 @@ class Iugu extends React.Component {
   }
 }
 
-module.exports = Iugu;
+module.exports = MSFlow;

@@ -60,7 +60,7 @@ const ProjectTitle = props => (
   <h1 className="projectTitle">
     Documentação
   <small>Bem vindo à documentação do NFe!
-        Automatize seu financeiro com nossa API de emissão de Notas Fiscais!
+                    Automatize seu financeiro com nossa API de emissão de Notas Fiscais!
      </small>
   </h1>
 );
@@ -96,85 +96,33 @@ const Block = props => (
 );
 
 const Features = props => (
-  <Block layout="fourColumn">
-    {[
-      {
-        content: 'This is the content of my feature',
-        image: imgUrl('docs.svg'),
-        imageAlign: 'top',
-        title: 'Documentação',
-      },
-      {
-        content: 'The content of my second feature',
-        image: imgUrl('api-reference.svg'),
-        imageAlign: 'top',
-        title: 'Referência da API',
-      },
-      {
-        content: 'This is the content of my feature',
-        image: imgUrl('updates.svg'),
-        imageAlign: 'top',
-        title: 'Atualizações',
-      },
+  <Container
+    id={props.id}
+    background={props.background}>
 
-    ]}
-  </Block>
-);
-
-const FeatureCallout = props => (
-  <div
-    className="productShowcaseSection paddingBottom"
-    style={{ textAlign: 'center' }}>
-    <h2>Callout da Feature</h2>
-    <MarkdownBlock>Estas são as features deste projeto</MarkdownBlock>
-  </div>
-);
-
-const LearnHow = props => (
-  <Block background="light">
-    {[
-      {
-        content: 'Converse sobre aprender a usar isto',
-        image: imgUrl('nfe_transp.png'),
-        imageAlign: 'right',
-        title: 'Aprenda',
-      },
-    ]}
-  </Block>
-);
-
-const TryOut = props => (
-  <Block id="try">
-    {[
-      {
-        content: 'Converse sobre testar isso',
-        image: imgUrl('nfe_transp.png'),
-        imageAlign: 'left',
-        title: 'Testar',
-      },
-    ]}
-  </Block>
-);
-
-const Description = props => (
-  <Block background="dark">
-    {[
-      {
-        content: 'Esta é outra descrição sobre o quanto este projeto é util',
-        image: imgUrl('nfe_transp.png'),
-        imageAlign: 'right',
-        title: 'Descrição',
-      },
-    ]}
-  </Block>
+    <div className="block-features">
+      <a href={siteConfig.baseUrl + 'docs/doc1'} className="features alignCenter">
+        <img src={siteConfig.baseUrl + 'img/docs.svg'} />
+        <h2>Documentação</h2>
+      </a>
+      <a href={siteConfig.baseUrl + 'api'} className="features alignCenter">
+        <img src={siteConfig.baseUrl + 'img/api-reference.svg'} />
+        <h2>Referência da API</h2>
+      </a>
+      <a href={siteConfig.baseUrl + 'blog'} className="features alignCenter">
+        <img src={siteConfig.baseUrl + 'img/updates.svg'} />
+        <h2>Atualizações</h2>
+      </a>
+    </div>
+  </Container>
 );
 
 class Plugins extends React.Component {
   render() {
     let language = this.props.language || '';
-    const plugins = siteConfig.plugins.map((plugin, i) => {
+    const plugins = siteConfig.plugins.map((plugin) => {
       return (
-        <a href={plugin.pluginLink} key={i}>
+        <a href={plugin.pluginLink}>
           <div className="app-item">
             <img className="plugin" src={plugin.image} alt={plugin.caption} title={plugin.caption} />
             <span className="app-name">{plugin.caption}</span>
@@ -203,9 +151,9 @@ class Plugins extends React.Component {
 class SDKS extends React.Component {
   render() {
     let language = this.props.language || '';
-    const sdks = siteConfig.sdks.map((sdk, i) => {
+    const sdks = siteConfig.sdks.map((sdk) => {
       return (
-        <a href={sdk.sdkLink} key={i}>
+        <a href={sdk.sdkLink}>
           <div className="app-item">
             <img className="sdk" src={sdk.image} alt={sdk.caption} title={sdk.caption} />
             <span className="app-name">{sdk.caption}</span>
@@ -232,9 +180,9 @@ class SDKS extends React.Component {
 class Platforms extends React.Component {
   render() {
     let language = this.props.language || '';
-    const platforms = siteConfig.platforms.map((platforms, i) => {
+    const platforms = siteConfig.platforms.map((platforms) => {
       return (
-        <a href={platforms.erpLink} key={i}>
+        <a href={platforms.erpLink}>
           <div className="app-item">
             <img className="erp" src={platforms.image} alt={platforms.caption} title={platforms.caption} />
             <span className="app-name">{platforms.caption}</span>

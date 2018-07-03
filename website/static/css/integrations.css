@@ -1,0 +1,103 @@
+/* COMPANIES BACKGROUMD */
+.moip {
+    background-color: #00a8ff;
+}
+
+.vindi {
+    background-color: #5d6973;
+    /* background-color: #899486 */
+}
+
+.pagseguro {
+    background-color: #97c130;
+}
+
+.pagseguro .title-box__icon {
+    height: 190px;
+}
+
+.mundipagg {
+    background-color: #00b9b5;
+}
+
+.mundipagg .title-box__icon {
+    height: 80px;
+}
+
+/* INTEGRATION PAGES STYLE */
+.page-integrations__hero {
+    height: 255px;
+    width: 100%;
+    /* background-color: #002948; */
+}
+
+.hero__title-box {
+    display: flex;
+    height: 255px;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.title-box__icon {
+    height: 121px;
+}
+
+.title-box__description {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    color: white;
+}
+
+.title-box__description h1 {
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+    font-weight: 500;
+}
+
+.title-box__description p {
+    margin: 0;
+    line-height: 28px;
+}
+
+.page-integrations__content-wrapper {
+    height: 1500px;
+}
+
+
+/* COMPANIES BACKGROUMD */
+.moip {
+    background-color: #00a8ff;
+}
+
+.vindi {
+    background-color: #5d6973;
+    /* background-color: #899486 */
+}
+
+.pagseguro {
+    background-color: #96c12e;    
+}
+
+.iugu{
+    background-color: #000000;    
+}
+
+.pagarme{
+    background-color: #95c93ffa;    
+}
+
+.stripe{
+    background-color: #6772e5;
+}
+
+.msflow{
+    background-color: #0983fc;
+}
+
+.paypal{
+    background-color: rgb(29, 71, 156);
+}
