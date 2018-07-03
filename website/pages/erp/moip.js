@@ -7,27 +7,22 @@ const siteConfig = require(process.cwd() + '/siteConfig.js');
 
 class Moip extends React.Component {
   render() {
-    // const platforms = siteConfig.platforms.map((platforms, i) => {
-    //   return (
-    //     <a href={platforms.infoLink} key={i}>
-    //       <img src={platforms.image} alt={platforms.caption} title={platforms.caption} />
-    //     </a>
-    //   );
-    // });
-
     return (
-      <div className="mainContainer">
-        <Container padding={['bottom', 'top']}>
-          <div className="showcaseSection">
-            <div className="prose">
-              <h1>Integração com ERP'S</h1>
-              <p>Integrações com os maiores ERP'S do mercado: </p>
-            </div>
-            <div className="logos"></div>
+      <div className="page-integrations">
+        <div className="page-integrations__title-box">
+          <img className="title-box__icon" src="/docusaurus/img/integration-icons/moip-icon.svg" alt="Moip" />
+          
+        </div>
+
+        <div className="page-integrations__content-wrapper">
+          <div className="wrapper">
+            <h1>Moip</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, incidunt voluptas ipsam itaque cum quibusdam eaque voluptates minus nesciunt doloribus numquam rem praesentium rerum similique asperiores dolorem quos alias accusantium quae molestiae qui sequi corporis nemo provident? Corrupti obcaecati exercitationem dolorum labore. Odio placeat quasi nihil, praesentium ab sint cumque.</p>
           </div>
-        </Container>
+        </div>
       </div>
     );
   }
 }
+
 module.exports = Moip;

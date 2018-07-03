@@ -121,54 +121,6 @@ const Features = props => (
   </Block>
 );
 
-const FeatureCallout = props => (
-  <div
-    className="productShowcaseSection paddingBottom"
-    style={{ textAlign: 'center' }}>
-    <h2>Callout da Feature</h2>
-    <MarkdownBlock>Estas são as features deste projeto</MarkdownBlock>
-  </div>
-);
-
-const LearnHow = props => (
-  <Block background="light">
-    {[
-      {
-        content: 'Converse sobre aprender a usar isto',
-        image: imgUrl('nfe_transp.png'),
-        imageAlign: 'right',
-        title: 'Aprenda',
-      },
-    ]}
-  </Block>
-);
-
-const TryOut = props => (
-  <Block id="try">
-    {[
-      {
-        content: 'Converse sobre testar isso',
-        image: imgUrl('nfe_transp.png'),
-        imageAlign: 'left',
-        title: 'Testar',
-      },
-    ]}
-  </Block>
-);
-
-const Description = props => (
-  <Block background="dark">
-    {[
-      {
-        content: 'Esta é outra descrição sobre o quanto este projeto é util',
-        image: imgUrl('nfe_transp.png'),
-        imageAlign: 'right',
-        title: 'Descrição',
-      },
-    ]}
-  </Block>
-);
-
 class Plugins extends React.Component {
   render() {
     let language = this.props.language || '';

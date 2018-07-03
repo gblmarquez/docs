@@ -1,0 +1,23 @@
+.page-integrations {
+    
+}
+
+.page-integrations__title-box {
+    display: flex;
+    flex-direction: column;
+    height: 255px;
+    width: 100%;
+    background-color: #2F353E;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-box__icon {
+    height: 155px;
+}
+
+.page-integrations__content-wrapper h1 {
+    margin: 0;
+    padding: 0;
+    margin: 0 auto;
+}
