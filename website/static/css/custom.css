@@ -32,7 +32,7 @@ h1 {
 
 }
 
-.navigationSlider .slidingNav ul li a:hover{
+.navigationSlider .slidingNav ul li a:hover, .navigationSlider .slidingNav ul li a:focus{
   text-decoration: underline;
   color: #555555;
   background: none;
@@ -82,11 +82,15 @@ input#search_input_react:focus{
 .homeContainer .homeWrapper{
   padding: 6em 0;
 }
+.homeContainer .block-features{
+  display: flex;
+  justify-content: center;
+}
 
-.gridBlock .features{
+.homeContainer .features{
   background: rgba(255,255,255,.2);
-  padding: 30px 0;
-  /* margin-bottom: 20px; */
+  padding: 40px 0;
+  width: 300px;
   border-radius: 6px;
   box-shadow: 0 16px 32px 0 rgba(62,57,107,0.1);
   color: #fff;
@@ -95,14 +99,14 @@ input#search_input_react:focus{
   -webkit-transition: all 0.2s ease-out;
 }
 
-.gridBlock .features:hover{
+.homeContainer .features:hover{
   box-shadow: 0 16px 32px 0 rgba(62,57,107,0.2);
   -webkit-transform: translateY(-5px);
   transform: translateY(-5px);
   -webkit-box-shadow: 0 16px 32px 0 rgba(62,57,107,0.2);;
 }
 
-.gridBlock .features:nth-child(2){
+.homeContainer .features:nth-child(2){
   margin: 0 25px;
 }
 
@@ -110,7 +114,7 @@ input#search_input_react:focus{
   margin: 20px 0;
 }
 
-.gridBlock .features .blockContent div:nth-child(2){
+.homeContainer .features .blockContent div:nth-child(2){
   display: none;
 }
 
@@ -209,6 +213,10 @@ section.developers{
   box-sizing: border-box;
   /* box-shadow: 0px 3px 20px -5px rgba(0,0,0,0.75); */
   /* border-radius: 5px; */
+}
+
+.productShowcaseSection .logos img[title="Microsoft Flow"]{
+  height: initial;
 }
 
 .shadow-card {
@@ -320,7 +328,7 @@ section.developers{
     padding-top: 100px;
   }
 
-  .gridBlock .features{
+  .homeContainer .features{
     margin: 25px;
   }
 
