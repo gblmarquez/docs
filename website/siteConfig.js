@@ -11,10 +11,10 @@
 /* List of projects/orgs using your project for the users page */
 const plugins = [
   {
-    caption: 'Wordpress',
+    caption: 'Woocommerce',
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: 'img/woocommerce.png',
+    image: 'img/woocommerce.svg',
     pluginLink: 'plugin/woocommerce',
     pinned: true,
   },
