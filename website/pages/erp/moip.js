@@ -9,16 +9,18 @@ class Moip extends React.Component {
   render() {
     return (
       <div className="page-integrations">
-        <div className="page-integrations__title-box">
-          <img className="title-box__icon" src="/docs/img/integration-icons/moip-icon.svg" alt="Moip" />
-          
+        <div className="page-integrations__hero moip">
+          <div className="hero__title-box">
+            <img className="title-box__icon" src="/docs/img/integration-logos/logo-moip-negativo.png" alt="Moip" />
+            <div className="title-box__description">
+              <h1>Moip</h1>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, itaque? Molestiae cupiditate consequuntur beatae tempora?</p>
+            </div>
+          </div>
         </div>
 
         <div className="page-integrations__content-wrapper">
-          <div className="wrapper">
-            <h1>Moip</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, incidunt voluptas ipsam itaque cum quibusdam eaque voluptates minus nesciunt doloribus numquam rem praesentium rerum similique asperiores dolorem quos alias accusantium quae molestiae qui sequi corporis nemo provident? Corrupti obcaecati exercitationem dolorum labore. Odio placeat quasi nihil, praesentium ab sint cumque.</p>
-          </div>
+
         </div>
       </div>
     );
