@@ -9,6 +9,7 @@
 // site configuration options.
 
 /* List of projects/orgs using your project for the users page */
+
 const plugins = [
   {
     caption: 'Woocommerce',
