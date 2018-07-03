@@ -154,7 +154,7 @@ const platforms = [
     pinned: true,
   },
   {
-    caption: `Pag Seguro`,
+    caption: `PagSeguro`,
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
     image: 'img/integration-logos/pagseguro.svg',
@@ -199,6 +199,14 @@ const platforms = [
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
     image: 'img/integration-logos/paypal.svg',
     erpLink: 'erp/paypal',
+    pinned: true,
+  },
+  {
+    caption: `Microsoft Flow`,
+    // You will need to prepend the image path with your baseUrl
+    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
+    image: 'img/integration-logos/microsoft-flow.png',
+    erpLink: 'erp/microsoftFlow',
     pinned: true,
   },
 ];
