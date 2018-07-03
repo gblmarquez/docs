@@ -38,27 +38,27 @@ const apis = [
   {
     title: 'Nfe v2',
     content: 'API para emissão de Nota Fiscal de Produto',
-    apiLink: 'api/nfe-v1',
+    apiLink: 'api/nfe-v2',
   },
   {
     title: 'Address v1',
     content: 'API para consulta da endereços',
-    apiLink: 'api/nfe-v1',
+    apiLink: 'api/address-v1',
   },
   {
     title: 'Legal Entity v1',
     content: 'API para consulta de CNPJ',
-    apiLink: 'api/nfe-v1',
+    apiLink: 'api/legalentity-v1',
   },
   {
     title: 'Sefaz NF v1',
     content: 'API para consulta de notas fiscais',
-    apiLink: 'api/nfe-v1',
+    apiLink: 'api/sefaz_nf-v1',
   },
   {
     title: 'Natural Person v1',
     content: 'API para consulta de CPF',
-    apiLink: 'api/nfe-v1',
+    apiLink: 'api/naturalperson-v1',
   },
 ];
 
@@ -143,7 +143,7 @@ const platforms = [
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
     image: 'img/integration-logos/moip.svg',
-    erpLink: '/docs/erp/moip',
+    erpLink: 'erp/moip',
     pinned: true,
   },
   {
