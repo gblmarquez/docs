@@ -22,7 +22,7 @@ h1 {
   padding: 20px 0;
 }
 
-.navigationSlider .slidingNav ul li a, .navigationSlider .slidingNav ul li.siteNavItemActive a{
+.navigationSlider .slidingNav ul li a, .navigationSlider .slidingNav ul li.siteNavItemActive a, .navigationSlider .slidingNav ul li.siteNavGroupActive a{
   text-transform: uppercase;
   font-weight: 600;
   font-size: 12px;
