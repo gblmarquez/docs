@@ -7,7 +7,7 @@ class RedocLoader extends React.Component {
   render() {
     return (
       <div>
-        <Redoc url={"/docusaurus/redoc-json/productInvoice.json"} />
+        <Redoc url={"/docs/redoc-json/productInvoice.json"} />
       </div>
     );
   }

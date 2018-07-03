@@ -22,20 +22,19 @@ h1 {
   padding: 20px 0;
 }
 
-.navigationSlider .slidingNav ul li a{
+.navigationSlider .slidingNav ul li a, .navigationSlider .slidingNav ul li.siteNavItemActive a{
   text-transform: uppercase;
   font-weight: 600;
   font-size: 12px;
   letter-spacing: 1.5px;
   color: #555555;
+  background: none;
+
 }
 
-.navigationSlider .slidingNav ul li a:hover, .navigationSlider .slidingNav ul li.siteNavItemActive a, .navigationSlider .slidingNav ul li.siteNavGroupActive a{
-  color: #555555;
+.navigationSlider .slidingNav ul li a:hover{
   text-decoration: underline;
-}
-
-.navigationSlider .slidingNav ul li a:focus, .navigationSlider .slidingNav ul li a:hover, .navigationSlider .slidingNav ul li.siteNavItemActive a, .navigationSlider .slidingNav ul li.siteNavGroupActive a{
+  color: #555555;
   background: none;
 }
 
