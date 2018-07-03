@@ -2,7 +2,6 @@
 id: doc1
 title: Latin-ish
 sidebar_label: Bem-vindo
-published: true
 ---
 
 ## Teste Deploy
