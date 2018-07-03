@@ -1,5 +1,4 @@
 ---
-
 swagger: '2.0'
 host: "http://dev-dfe.westus2.cloudapp.azure.com"
 info:

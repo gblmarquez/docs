@@ -2,7 +2,7 @@
 
 const React = require('react');
 const scripts = ["https://cdn.jsdelivr.net/npm/redoc/bundles/redoc.standalone.js"];
-const styles = ["/docusaurus/css/redoc-component/style.css"];
+const styles = ["/docs/css/redoc-component/style.css"];
 
 class Redoc extends React.Component {
     render() {

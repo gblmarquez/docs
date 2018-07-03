@@ -1,39 +1,39 @@
 @font-face {
 	font-family: 'Maison Neue';
-	src: url('/docusaurus/fonts/MaisonNeue-Light.eot');
-	src: url('/docusaurus/fonts/MaisonNeue-Light.eot?#iefix') format('embedded-opentype'),
-		url('/docusaurus/fonts/MaisonNeue-Light.woff') format('woff'),
-		url('/docusaurus/fonts/MaisonNeue-Light.ttf') format('truetype');
+	src: url('/docs/fonts/MaisonNeue-Light.eot');
+	src: url('/docs/fonts/MaisonNeue-Light.eot?#iefix') format('embedded-opentype'),
+		url('/docs/fonts/MaisonNeue-Light.woff') format('woff'),
+		url('/docs/fonts/MaisonNeue-Light.ttf') format('truetype');
 	font-weight: 300;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Maison Neue';
-	src: url('/docusaurus/fonts/MaisonNeue-Book.eot');
-	src: url('/docusaurus/fonts/MaisonNeue-Book.eot?#iefix') format('embedded-opentype'),
-		url('/docusaurus/fonts/MaisonNeue-Book.woff') format('woff'),
-		url('/docusaurus/fonts/MaisonNeue-Book.ttf') format('truetype');
+	src: url('/docs/fonts/MaisonNeue-Book.eot');
+	src: url('/docs/fonts/MaisonNeue-Book.eot?#iefix') format('embedded-opentype'),
+		url('/docs/fonts/MaisonNeue-Book.woff') format('woff'),
+		url('/docs/fonts/MaisonNeue-Book.ttf') format('truetype');
 	font-weight: 400;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Maison Neue';
-	src: url('/docusaurus/fonts/MaisonNeue-Medium.eot');
-	src: url('/docusaurus/fonts/MaisonNeue-Medium.eot?#iefix') format('embedded-opentype'),
-		url('/docusaurus/fonts/MaisonNeue-Medium.woff') format('woff'),
-		url('/docusaurus/fonts/MaisonNeue-Medium.ttf') format('truetype');
+	src: url('/docs/fonts/MaisonNeue-Medium.eot');
+	src: url('/docs/fonts/MaisonNeue-Medium.eot?#iefix') format('embedded-opentype'),
+		url('/docs/fonts/MaisonNeue-Medium.woff') format('woff'),
+		url('/docs/fonts/MaisonNeue-Medium.ttf') format('truetype');
 	font-weight: 500;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Maison Neue';
-	src: url('/docusaurus/fonts/MaisonNeue-Bold.eot');
-	src: url('/docusaurus/fonts/MaisonNeue-Bold.eot?#iefix') format('embedded-opentype'),
-		url('/docusaurus/fonts/MaisonNeue-Bold.woff') format('woff'),
-		url('/docusaurus/fonts/MaisonNeue-Bold.ttf') format('truetype');
+	src: url('/docs/fonts/MaisonNeue-Bold.eot');
+	src: url('/docs/fonts/MaisonNeue-Bold.eot?#iefix') format('embedded-opentype'),
+		url('/docs/fonts/MaisonNeue-Bold.woff') format('woff'),
+		url('/docs/fonts/MaisonNeue-Bold.ttf') format('truetype');
 	font-weight: 600;
 	font-style: normal;
 }
