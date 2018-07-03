@@ -10,7 +10,7 @@ class Moip extends React.Component {
     return (
       <div className="page-integrations">
         <div className="page-integrations__title-box">
-          <img className="title-box__icon" src="/docusaurus/img/integration-icons/moip-icon.svg" alt="Moip" />
+          <img className="title-box__icon" src="/docs/img/integration-icons/moip-icon.svg" alt="Moip" />
           
         </div>
 
