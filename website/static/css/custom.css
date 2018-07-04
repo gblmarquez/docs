@@ -36,8 +36,12 @@ h1 {
   padding: 20px 0;
 }
 
+<<<<<<< HEAD
 
 .navigationSlider .slidingNav ul li a, .navigationSlider .slidingNav ul li.siteNavItemActive a{
+=======
+.navigationSlider .slidingNav ul li a, .navigationSlider .slidingNav ul li.siteNavItemActive a, .navigationSlider .slidingNav ul li.siteNavGroupActive a{
+>>>>>>> 1e738d26ca9fc9ff6c16bee73a3070180b7dd0e2
   text-transform: uppercase;
   font-weight: 600;
   font-size: 12px;
