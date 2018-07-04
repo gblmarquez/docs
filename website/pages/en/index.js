@@ -61,8 +61,7 @@ const ProjectTitle = props => (
     <h1>
       Documentação
   </h1>
-    <p>Bem vindo à documentação do NFe!
-      Automatize seu financeiro com nossa API de emissão de Notas Fiscais!
+    <p>Seja bem vindo à documentação do NFE! Você vai encontrar aqui documentação sobre a plataforma, referência para as APIs e bibliotecas para desenvolvimento. Nosso objetivo com esse portal é apoiar você para que seja rápido e fácil começar a emissão de notas fiscais eletrônicas.
     </p>
   </div>
 );
