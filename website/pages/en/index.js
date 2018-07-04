@@ -57,12 +57,14 @@ const Logo = props => (
 );
 
 const ProjectTitle = props => (
-  <h1 className="projectTitle">
-    Documentação
-  <small>Bem vindo à documentação do NFe!
-                    Automatize seu financeiro com nossa API de emissão de Notas Fiscais!
-     </small>
+  <div className="projectTitle">
+    <h1>
+      Documentação
   </h1>
+    <p>Bem vindo à documentação do NFe!
+      Automatize seu financeiro com nossa API de emissão de Notas Fiscais!
+    </p>
+  </div>
 );
 
 const PromoSection = props => (
