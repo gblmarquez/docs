@@ -4,7 +4,7 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-
+"use strict"
 const React = require('react');
 
 const CompLibrary = require('../../core/CompLibrary.js');
@@ -18,8 +18,8 @@ function imgUrl(img) {
   return siteConfig.baseUrl + 'img/' + img;
 }
 
-function docUrl(doc, language) {
-  return siteConfig.baseUrl + 'docs/' + (language ? language + '/' : '') + doc;
+function docUrl(item, language) {
+  return siteConfig.baseUrl + 'items/' + (language ? language + '/' : '') + item;
 }
 
 function pageUrl(page, language) {
@@ -102,15 +102,15 @@ const Features = props => (
 
     <div className="block-features">
       <a href={siteConfig.baseUrl + 'docs/doc1'} className="features alignCenter">
-        <img src={siteConfig.baseUrl + 'img/docs.svg'} />
+        <img src={imgUrl('docs.svg')} />
         <h2>Documentação</h2>
       </a>
-      <a href={siteConfig.baseUrl + 'api'} className="features alignCenter">
-        <img src={siteConfig.baseUrl + 'img/api-reference.svg'} />
+      <a href={pageUrl('api')} className="features alignCenter">
+        <img src={imgUrl('api-reference.svg')} />
         <h2>Referência da API</h2>
       </a>
-      <a href={siteConfig.baseUrl + 'blog'} className="features alignCenter">
-        <img src={siteConfig.baseUrl + 'img/updates.svg'} />
+      <a href={pageUrl('blog')} className="features alignCenter">
+        <img src={imgUrl('updates.svg')} />
         <h2>Atualizações</h2>
       </a>
     </div>
@@ -119,10 +119,9 @@ const Features = props => (
 
 class Plugins extends React.Component {
   render() {
-    let language = this.props.language || '';
-    const plugins = siteConfig.plugins.map((plugin) => {
+    const plugins = siteConfig.plugins.map((plugin, i) => {
       return (
-        <a href={plugin.pluginLink}>
+        <a href={plugin.pluginLink} key={i}>
           <div className="app-item">
             <img className="plugin" src={plugin.image} alt={plugin.caption} title={plugin.caption} />
             <span className="app-name">{plugin.caption}</span>
@@ -150,10 +149,9 @@ class Plugins extends React.Component {
 
 class SDKS extends React.Component {
   render() {
-    let language = this.props.language || '';
-    const sdks = siteConfig.sdks.map((sdk) => {
+    const sdks = siteConfig.sdks.map((sdk, i) => {
       return (
-        <a href={sdk.sdkLink}>
+        <a href={sdk.sdkLink} key={i}>
           <div className="app-item">
             <img className="sdk" src={sdk.image} alt={sdk.caption} title={sdk.caption} />
             <span className="app-name">{sdk.caption}</span>
@@ -179,10 +177,9 @@ class SDKS extends React.Component {
 
 class Platforms extends React.Component {
   render() {
-    let language = this.props.language || '';
-    const platforms = siteConfig.platforms.map((platforms) => {
+    const platforms = siteConfig.platforms.map((platforms, i) => {
       return (
-        <a href={platforms.erpLink}>
+        <a href={platforms.erpLink} key={i}>
           <div className="app-item">
             <img className="erp" src={platforms.image} alt={platforms.caption} title={platforms.caption} />
             <span className="app-name">{platforms.caption}</span>
@@ -207,9 +204,6 @@ class Platforms extends React.Component {
 }
 
 class Index extends React.Component {
-
-
-
   render() {
     let language = this.props.language || '';
 
@@ -217,9 +211,6 @@ class Index extends React.Component {
       <div>
         <HomeSplash language={language} />
         <div className="mainContainer">
-          {/* <FeatureCallout /> */}
-          {/* <LearnHow /> */}
-          {/* <TryOut /> */}
           <section className="box integrations">
             <div className="wrapper">
               <h2>Integrações</h2>
@@ -237,7 +228,6 @@ class Index extends React.Component {
               </div>
             </div>
           </section>
-          {/* <Description /> */}
         </div>
       </div>
     );
