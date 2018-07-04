@@ -1,3 +1,4 @@
+"use strict"
 const React = require('react');
 
 const CompLibrary = require('../../core/CompLibrary.js');

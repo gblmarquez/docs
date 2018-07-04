@@ -10,25 +10,6 @@
 
 /* List of projects/orgs using your project for the users page */
 
-const plugins = [
-  {
-    caption: 'Woocommerce',
-    // You will need to prepend the image path with your baseUrl
-    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: 'img/woocommerce.svg',
-    pluginLink: 'plugin/woocommerce',
-    pinned: true,
-  },
-  {
-    caption: 'WHMCS',
-    // You will need to prepend the image path with your baseUrl
-    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: 'img/whmcs.png',
-    pluginLink: 'plugin/whmcs',
-    pinned: true,
-  }
-];
-
 const apis = [
   {
     title: 'Nfe v1',
@@ -59,83 +40,8 @@ const apis = [
     title: 'Natural Person v1',
     content: 'API para consulta de CPF',
     apiLink: 'api/naturalperson-v1',
-  },
+  }
 ];
-
-const sdks = [
-  {
-    caption: 'Csharp',
-    // You will need to prepend the image path with your baseUrl
-    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: 'img/lang-logos/csharp.svg',
-    sdkLink: 'sdk',
-    pinned: true,
-  },
-  {
-    caption: 'Node.JS',
-    // You will need to prepend the image path with your baseUrl
-    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: 'img/lang-logos/nodejs.svg',
-    sdkLink: 'sdk',
-    pinned: true,
-  },
-  {
-    caption: 'PHP',
-    // You will need to prepend the image path with your baseUrl
-    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: 'img/lang-logos/php.svg',
-    sdkLink: 'sdk',
-    pinned: true,
-  },
-  {
-    caption: 'Python',
-    // You will need to prepend the image path with your baseUrl
-    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: 'img/lang-logos/python.svg',
-    sdkLink: 'sdk',
-    pinned: true,
-  },
-  {
-    caption: 'Ruby',
-    // You will need to prepend the image path with your baseUrl
-    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: 'img/lang-logos/ruby.svg',
-    sdkLink: 'sdk',
-    pinned: true,
-  },
-  {
-    caption: 'Scala',
-    // You will need to prepend the image path with your baseUrl
-    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: 'img/lang-logos/scala.svg',
-    sdkLink: 'sdk',
-    pinned: true,
-  },
-  {
-    caption: 'Java',
-    // You will need to prepend the image path with your baseUrl
-    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: 'img/lang-logos/java.svg',
-    sdkLink: 'sdk',
-    pinned: true,
-  },
-  {
-    caption: 'Golang',
-    // You will need to prepend the image path with your baseUrl
-    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: 'img/lang-logos/golang.svg',
-    sdkLink: 'sdk',
-    pinned: true,
-  },
-  // {
-  //   caption: 'Erlang',
-  //   // You will need to prepend the image path with your baseUrl
-  //   // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-  //   image: 'img/lang-logos/erlang.svg',
-  //   // infoLink: 'https://github.com/nfe/client-ruby',
-  //   pinned: true,
-  // },
-]
 
 const platforms = [
   {
@@ -212,9 +118,98 @@ const platforms = [
   },
 ];
 
+const plugins = [
+  {
+    caption: 'Woocommerce',
+    // You will need to prepend the image path with your baseUrl
+    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
+    image: 'img/woocommerce.svg',
+    pluginLink: 'plugin/woocommerce',
+    pinned: true,
+  },
+  {
+    caption: 'WHMCS',
+    // You will need to prepend the image path with your baseUrl
+    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
+    image: 'img/whmcs.png',
+    pluginLink: 'plugin/whmcs',
+    pinned: true,
+  }
+];
+
+
+const sdks = [
+  {
+    caption: 'Csharp',
+    // You will need to prepend the image path with your baseUrl
+    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
+    image: 'img/lang-logos/csharp.svg',
+    sdkLink: 'sdk',
+    pinned: true,
+  },
+  {
+    caption: 'Node.JS',
+    // You will need to prepend the image path with your baseUrl
+    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
+    image: 'img/lang-logos/nodejs.svg',
+    sdkLink: 'sdk',
+    pinned: true,
+  },
+  {
+    caption: 'PHP',
+    // You will need to prepend the image path with your baseUrl
+    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
+    image: 'img/lang-logos/php.svg',
+    sdkLink: 'sdk',
+    pinned: true,
+  },
+  {
+    caption: 'Python',
+    // You will need to prepend the image path with your baseUrl
+    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
+    image: 'img/lang-logos/python.svg',
+    sdkLink: 'sdk',
+    pinned: true,
+  },
+  {
+    caption: 'Ruby',
+    // You will need to prepend the image path with your baseUrl
+    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
+    image: 'img/lang-logos/ruby.svg',
+    sdkLink: 'sdk',
+    pinned: true,
+  },
+  {
+    caption: 'Scala',
+    // You will need to prepend the image path with your baseUrl
+    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
+    image: 'img/lang-logos/scala.svg',
+    sdkLink: 'sdk',
+    pinned: true,
+  },
+  {
+    caption: 'Java',
+    // You will need to prepend the image path with your baseUrl
+    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
+    image: 'img/lang-logos/java.svg',
+    sdkLink: 'sdk',
+    pinned: true,
+  },
+  {
+    caption: 'Golang',
+    // You will need to prepend the image path with your baseUrl
+    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
+    image: 'img/lang-logos/golang.svg',
+    sdkLink: 'sdk',
+    pinned: true,
+  }
+];
+
+
+
 const siteConfig = {
-  tagline: 'Documentações',
   title: 'NFe.io : Documentação' /* title for your website */,
+  tagline: 'Documentações',
   url: 'https://yagosenhorini.github.io' /* your website url */,
   baseUrl: '/docs/' /* base url for your project */,
   // For github.io type URLs, you would set the url and baseUrl like:
@@ -222,7 +217,7 @@ const siteConfig = {
   //   baseUrl: '/test-site/',
 
   // Used for publishing and more
-  projectName: 'docusaurus',
+  projectName: 'docs',
   organizationName: 'yagosenhorini',
 
   // For no header links in the top nav bar -> headerLinks: [],
@@ -230,12 +225,10 @@ const siteConfig = {
     { doc: 'doc1', label: 'Documentação' },
     { page: 'api', label: `API's` },
     { blog: true, label: 'Atualizações' },
-    // { languages: true }
   ],
 
   // If you have users set above, you add it here:
-  plugins, sdks, platforms, apis,
-
+apis, platforms, plugins, sdks,
   /* path to images for header/footer */
   headerIcon: 'img/nfe-logo.svg',
   favicon: 'img/favicon/favicon.ico',
@@ -244,18 +237,6 @@ const siteConfig = {
     primaryColor: '#2E8555',
     secondaryColor: '#205C3B',
   },
-
-  /* custom fonts for website */
-  /*fonts: {
-    myFont: [
-      "Times New Roman",
-      "Serif"
-    ],
-    myOtherFont: [
-      "-apple-system",
-      "system-ui"
-    ]
-  },*/
 
   // This copyright info is used in /core/Footer.js and blog rss/atom feeds.
   copyright:
@@ -280,18 +261,10 @@ const siteConfig = {
   ogImage: 'img/nfe-logo.svg',
   twitterImage: 'img/nfe-logo.svg',
 
-  disableHeaderTitle: true,
-  disableTitleTagline: true,
-
-  algolia: {
-    apiKey: '0f9f28b9ab9efae89810921a351753b5',
-    indexName: 'github',
-  },
-
-  scrollToTop: true,
-  scrollToTopOptions: {
-    scrollDuration: 200,
-  },
+algolia:{
+  apiKey: '45459494sdaosidjoasd',
+  indexName: 'github'
+},
 
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...

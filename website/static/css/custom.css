@@ -69,14 +69,22 @@ input#search_input_react:focus{
   transform: skewY(5deg);
 }
 
-.projectTitle{
+.projectTitle {
   color: #fff;
   margin-bottom: 2em;
 }
 
-.projectTitle > small{
+.projectTitle > h1 {
+  margin: 0;
+  margin-bottom: 18px;
+  font-size: 45px;
+}
+
+.projectTitle > p {
   font-weight: 500;
+  line-height: 28px;
   font-size: 18px;
+  margin: 0;
 }
 
 .homeContainer .homeWrapper{
