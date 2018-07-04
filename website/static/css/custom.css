@@ -15,7 +15,6 @@ html {
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: antialiased;
   -webkit-font-smoothing: antialiased;
-  text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
 }
 
 
@@ -38,9 +37,9 @@ h1 {
 
 .navigationSlider .slidingNav ul li a, .navigationSlider .slidingNav ul li.siteNavItemActive a, .navigationSlider .slidingNav ul li.siteNavGroupActive a{
   text-transform: uppercase;
-  font-weight: 600;
-  font-size: 12px;
-  letter-spacing: 1.5px;
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.49px;
   color: #555555;
   background: none;
 }
