@@ -1,0 +1,23 @@
+@media only screen and (min-width: 1024px) {
+    /* ATUALIZAÇÕES */
+    .docsNavContainer {
+      top: 80px;
+    }
+  
+    .docsNavContainer .toc {
+      padding: 48px 0;
+    }
+  
+    .toc section .navGroups {
+      padding: 0;
+    }
+  
+    .mainContainer,
+    .onPageNav {
+      padding: 48px 0px;
+    }
+  
+    .anchor {
+      top: -128px;
+    }
+  }
