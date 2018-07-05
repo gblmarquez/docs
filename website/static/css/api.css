@@ -2,6 +2,12 @@
     height: 255px;
     background-color: #2F353E;
     color: #fff;
+
+    position: relative;
+    background-size: auto calc(100% - 20px);
+    background-repeat: no-repeat;
+    background-image: url(https://www.algolia.com/doc/assets/images/landing/api-reference-hero-9be1bb83.svg),url(https://www.algolia.com/doc/assets/images/landing/right-hero-e1932075.svg);
+    background-position: center left, center right;
 }
 
 .description__title h1 {

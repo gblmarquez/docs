@@ -109,7 +109,14 @@ input#search_input_react:focus{
 
 .projectTitle {
   color: #fff;
-  margin-bottom: 2em;
+  margin-bottom: 1.5em;
+}
+
+@media only screen and (min-width: 480px) {
+  .projectTitle {
+    font-size: 300%;
+    margin: 0;
+  }
 }
 
 .projectTitle > h1 {
@@ -126,7 +133,7 @@ input#search_input_react:focus{
 }
 
 .homeContainer .homeWrapper{
-  padding: 6em 20px;
+  padding: 3em 20px 4.5em 20px;
 }
 
 .homeContainer .homeWrapper .wrapper{
