@@ -97,33 +97,12 @@ const Block = props => (
 );
 
 const Features = props => (
-<<<<<<< HEAD
-  <Container
-    id={props.id}
-    background={props.background}>
-
-    <div className="block-features">
-      <a href={siteConfig.baseUrl + 'docs/doc1'} className="features alignCenter">
-        <img src={imgUrl('docs.svg')} />
-        <h4>Documentação</h4>
-      </a>
-      <a href={pageUrl('api/referencias')} className="features alignCenter">
-        <img src={imgUrl('api-reference.svg')} />
-        <h4>Referência da API</h4>
-      </a>
-      <a href={pageUrl('blog')} className="features alignCenter">
-        <img src={imgUrl('updates.svg')} />
-        <h4>Atualizações</h4>
-      </a>
-    </div>
-  </Container>
-=======
   <div className="block-features">
     <a href={siteConfig.baseUrl + 'docs/doc1'} className="features alignCenter">
       <img src={imgUrl('docs.svg')} />
       <h4>Documentação</h4>
     </a>
-    <a href={pageUrl('api')} className="features alignCenter">
+    <a href={pageUrl('api/referencias')} className="features alignCenter">
       <img src={imgUrl('api-reference.svg')} />
       <h4>Referência da API</h4>
     </a>
@@ -132,7 +111,6 @@ const Features = props => (
       <h4>Atualizações</h4>
     </a>
   </div>
->>>>>>> 53ebc8c265d9ac155f36d08a2ea751f8095fbb4b
 );
 
 class Plugins extends React.Component {
