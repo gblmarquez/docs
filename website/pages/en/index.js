@@ -127,18 +127,15 @@ class Plugins extends React.Component {
     });
 
     return (
-      <Container>
-        <div className="productShowcaseSection">
-          <div className="prose shadow-card">
-            <h3>Integração Plugins</h3>
-            <h5>Não é um Desenvolvedor?</h5>
-            <p>Fique tranquilo!
-              Nós disponibilizamos alguns plugins para integração ao seu site.
-              </p>
-            <div className="logos">{plugins}</div>
-          </div>
+      <div className="productShowcaseSection">
+        <div className="prose shadow-card">
+          <h3>Integração Plugins</h3>
+          <p>
+            Fique tranquilo! Não é um Desenvolvedor? Nós disponibilizamos alguns plugins para integração ao seu site.
+          </p>
+          <div className="logos">{plugins}</div>
         </div>
-      </Container>
+      </div>
     );
   }
 }
@@ -157,16 +154,13 @@ class SDKS extends React.Component {
     });
 
     return (
-      <Container>
-        <div className="productShowcaseSection">
-          <div className="prose shadow-card">
-            <h3>Clientes SDK</h3>
-            <h5>Pensado para desenvolvedores</h5>
-            <p>Disponibilização de Clientes SDK para integração. Asnaisnfas aisndaisda sd as</p>
-            <div className="logos">{sdks}</div>
-          </div>
+      <div className="productShowcaseSection">
+        <div className="prose shadow-card">
+          <h3>Clientes SDK</h3>
+          <p>Pensado para desenvolvedores. Disponibilização de Clientes SDK para integração.</p>
+          <div className="logos">{sdks}</div>
         </div>
-      </Container>
+      </div>
     );
   }
 }
@@ -185,16 +179,15 @@ class Platforms extends React.Component {
     });
 
     return (
-      <Container>
-        <div className="productShowcaseSection">
-          <div className="prose shadow-card">
-            <h3>Integração Plataformas</h3>
-            <h5>Facilidade na hora de integrar o NFe</h5>
-            <p>Nosso sistema possui integração com diversas plataformas do mercado</p>
-            <div className="logos">{platforms}</div>
-          </div>
+      <div className="productShowcaseSection">
+        <div className="prose shadow-card">
+          <h3>Integração Plataformas</h3>
+          <p>
+            Facilidade na hora de integrar o NFe. Nosso sistema possui integração com diversas plataformas do mercado
+          </p>
+          <div className="logos">{platforms}</div>
         </div>
-      </Container>
+      </div>
     );
   }
 }
@@ -204,10 +197,10 @@ class Index extends React.Component {
     let language = this.props.language || '';
 
     return (
-      <div>
+      <div className="index">
         <HomeSplash language={language} />
         <div className="mainContainer">
-          <section className="box integrations">
+          <section className="integrations">
             <div className="wrapper">
               <h2>Integrações</h2>
               <div className="box-wrapper">
@@ -216,7 +209,7 @@ class Index extends React.Component {
               </div>
             </div>
           </section>
-          <section className="box developers">
+          <section className="developers">
             <div className="wrapper">
               <h2>Desenvolvedores</h2>
               <div className="box-wrapper">
