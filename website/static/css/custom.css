@@ -112,13 +112,6 @@ input#search_input_react:focus{
   margin-bottom: 1.5em;
 }
 
-@media only screen and (min-width: 480px) {
-  .projectTitle {
-    font-size: 300%;
-    margin: 0;
-  }
-}
-
 .projectTitle > h1 {
   margin: 0;
   margin-bottom: 18px;
