@@ -1,0 +1,15 @@
+    .postHeaderTitle{
+        margin-top: 48px !important;
+    }
+
+@media screen and (min-width: 768px){
+    .postHeaderTitle{
+        margin-top: 48px !important;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .postHeaderTitle{
+        margin-top: 0 !important;
+    }
+}
