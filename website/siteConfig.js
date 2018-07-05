@@ -239,6 +239,7 @@ apis, platforms, plugins, sdks,
   },
 
   disableHeaderTitle: true,
+  disableTitleTagline: true,
 
   // This copyright info is used in /core/Footer.js and blog rss/atom feeds.
   copyright:
