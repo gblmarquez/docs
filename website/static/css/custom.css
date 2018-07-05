@@ -361,33 +361,19 @@ section.developers{
   }
 
   .reactNavSearchWrapper input#search_input_react {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.4) !important;
     padding-left: 30px;
   }
 
   .reactNavSearchWrapper input#search_input_react:focus,
   .reactNavSearchWrapper input#search_input_react:active {
-    background: rgba(0, 0, 0, 0.5);
-  }
-}
-
-@media only screen and (max-width: 1023px) {
-  .navigationSlider .slidingNav ul li:not(.navSearchWrapper){
-    display: none;
+    background: rgba(0, 0, 0, 0.5) !important;
   }
 
   .navSearchWrapper {
     right: 20px;
     top: 25px !important;
   }
-
-  /* .navSearchWrapper:before{
-    left: 10px;
-  }
-
-  .navSearchWrapper:after{
-    left: 21px;
-  } */
 }
 
 @media only screen and (max-width: 768px) {

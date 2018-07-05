@@ -20,4 +20,12 @@
     .anchor {
       top: -128px;
     }
+    
+    .reactNavSearchWrapper input#search_input_react:active {
+      background: rgba(0, 0, 0, 0.5) !important;
+    }
+
+    .reactNavSearchWrapper input#search_input_react {
+      background-color: rgba(0, 0, 0, 0.4) !important;
+    }
   }
