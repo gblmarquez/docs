@@ -173,7 +173,7 @@ input#search_input_react:focus{
 }
 
 .mainContainer{
-  padding: 0;
+  padding: 0 !important;
 }
 
 .mainContainer .wrapper{
@@ -357,20 +357,35 @@ section.developers{
     display: none;
   }
 
+  .reactNavSearchWrapper input#search_input_react {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-left: 30px;
+  }
+
+  .reactNavSearchWrapper input#search_input_react:focus,
+  .reactNavSearchWrapper input#search_input_react:active {
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .navigationSlider .slidingNav ul li:not(.navSearchWrapper){
+    display: none;
+  }
+
   .navSearchWrapper {
     right: 20px;
     top: 25px;
+    width: 30%;
   }
 
-  .navSearchWrapper:before{
+  /* .navSearchWrapper:before{
     left: 10px;
   }
 
   .navSearchWrapper:after{
     left: 21px;
-  }
-
-  
+  } */
 }
 
 @media only screen and (max-width: 768px) {
@@ -410,7 +425,7 @@ section.developers{
 
 @media only screen and (max-width: 735px){
   .navSearchWrapper {
-    /* width: 90px; */
+    /* width: initial; */
   }
 
   .reactNavSearchWrapper input#search_input_react {
@@ -444,6 +459,7 @@ section.developers{
     margin: 11px auto 0;
   }
 }
+
 
 @media only screen and (min-width: 1100px) {
   .wrapper {
