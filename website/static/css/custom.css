@@ -23,6 +23,16 @@ h1 {
   font-size: 45px;
 }
 
+.mainContainer h2 {
+  text-transform: uppercase;
+  font-size: 36px;
+  line-height: 36px;
+  color: #353A42;
+  letter-spacing: 2.09px;
+  margin-bottom: 19px;
+  font-weight: 400;
+}
+
 h2{
   text-transform: uppercase;
   font-size: 30px;
@@ -336,8 +346,6 @@ section.developers{
     padding-top: 100px;
   }
 } */
-
-@media only screen and (min-width: 1024px) {}
 
 @media only screen and (max-width: 768px) {
   /* .fixedHeaderContainer{

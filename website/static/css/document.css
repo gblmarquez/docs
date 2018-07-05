@@ -1,18 +1,23 @@
-.posts {
-    margin-top: 40px;
-}
-
-.post{
-    margin-top: 40px;
-}
-
-.navGroups{
-    position: sticky !important;
-    display: flex !important;
-    flex-direction: column;
-}
-
-.toc-headings{
-    margin-top: 40px;
-    padding-top: 5px !important;
-}
+@media only screen and (min-width: 1024px) {
+    /* ATUALIZAÇÕES */
+    .docsNavContainer {
+      top: 80px;
+    }
+  
+    .docsNavContainer .toc {
+      padding: 48px 0;
+    }
+  
+    .toc section .navGroups {
+      padding: 0;
+    }
+  
+    .mainContainer,
+    .onPageNav {
+      padding: 48px 0px;
+    }
+  
+    .anchor {
+      top: -128px;
+    }
+  }
