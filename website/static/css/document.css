@@ -1,0 +1,18 @@
+.posts {
+    margin-top: 40px;
+}
+
+.post{
+    margin-top: 40px;
+}
+
+.navGroups{
+    position: sticky !important;
+    display: flex !important;
+    flex-direction: column;
+}
+
+.toc-headings{
+    margin-top: 40px;
+    padding-top: 5px !important;
+}
