@@ -376,12 +376,8 @@ section.developers{
 
   .navSearchWrapper {
     right: 20px;
-<<<<<<< HEAD
-    top: 25px !important;
-=======
     top: 25px;
     width: 30%;
->>>>>>> master
   }
 
   /* .navSearchWrapper:before{
@@ -390,11 +386,7 @@ section.developers{
 
   .navSearchWrapper:after{
     left: 21px;
-<<<<<<< HEAD
-  }
-=======
   } */
->>>>>>> master
 }
 
 @media only screen and (max-width: 768px) {
