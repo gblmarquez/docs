@@ -1,0 +1,1266 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <title>
+        API NFSe: sistema para emissão de notas fiscais eletrônicas | NFe.io
+    </title>
+    
+    <meta charset="UTF-8">
+    <meta property="og:title" content="NFe.io">
+    <meta name="twitter:title" content="NFe.io">
+    <meta name="description" content="A NFe.io é um sistema de emissão de notas fiscais eletrônicas que faz integrações simples com softwares de pagamentos e gestão financeira.">
+    <meta name="twitter:description" content="A NFe.io é um sistema de emissão de notas fiscais eletrônicas que faz integrações simples com softwares de pagamentos e gestão financeira.">
+    <meta property="og:description" content="A NFe.io é um sistema de emissão de notas fiscais eletrônicas que faz integrações simples com softwares de pagamentos e gestão financeira.">
+    <meta name="keywords" content="NFe, notas, notas fiscais, emissão, financeiro">
+    
+    <link rel="canonical" href="https://nfe.io">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://nfe.io/images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://nfe.io/images/favicons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://nfe.io/images/favicons/favicon.ico">
+    <link rel="manifest" href="https://nfe.io/images/favicons/manifest.json">
+    <link rel="mask-icon" href="https://nfe.io/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="googlebot" content="INDEX, FOLLOW">
+    <meta name="robots" content="index, follow">
+    <meta name="msnbot" content="NOODP">
+
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nfe.io">
+    <meta property="og:site_name" content="NFe.io">
+    <meta property="og:image" content="https://nfe.io/images/favicons/share-facebook.png">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="https://nfe.io">
+    <meta name="twitter:image" content="https://nfe.io/images/favicons/share-facebook.png">
+
+    <link rel="stylesheet" type="text/css" href="https://nfe.io/css/app.css">
+
+    <script>
+        !function(e,t,a,n,r){e[n]=e[n]||[],e[n].push({"gtm.start":(new Date).getTime(),event:"gtm.js"});var g=t.getElementsByTagName(a)[0],m=t.createElement(a),s="dataLayer"!=n?"&l="+n:"";m.async=!0,m.src="https://www.googletagmanager.com/gtm.js?id="+r+s,g.parentNode.insertBefore(m,g)}(window,document,"script","dataLayer","GTM-M4S2LL9");
+    </script>
+</head>
+<body class="pages-home">
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4S2LL9" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+
+<header class="header" data-scope="header">
+    <div class="group-header" data-scope="group-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <a href="https://nfe.io/" class="logo"><i class="icon-logo-nfeio"></i></a>            
+                </div>
+                <div class="col-md-9">
+                    <nav class="menu">
+                       <button class="btClose">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
+                            </svg>
+                        </button>
+                        <ul>
+                            <li><a href="https://nfe.io/">Notas fiscais</a></li>
+                            <li><a href="https://nfe.io/consultas-automatizadas">Consultas</a></li>
+                            <li class="drop-down" data-drop-down="hover">
+                                <a href="javascript: void(0);" id="dev">Desenvolvedores</a>
+                                <div class="drop-down-box" data-drop-down="box">
+                                    <ul>
+                                        <li>
+                                            <span><i class="icon-book"></i>&nbsp;Documentação</span>
+                                            <ul class="sub-menu">
+                                                <li><a href="https://github.com/nfe?q=client" rel="nofollow" target="_blank">&nbsp;Clientes SDK</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="./docs/" target="_blank"><i class="icon-list"></i>&nbsp;API Completa</a></li>
+                                        <li><a href="https://status.nfe.io" target="_blank"><i class="icon-status"></i>&nbsp;Status</a></li>
+                                        <li><a href="https://github.com/nfe" rel="nofollow" target="_blank"><i class="icon-open"></i>Open Source</a></li>
+                                    </ul>
+                                </div>
+
+                            </li>
+                            <li><a href="#contato">Contato</a></li>
+                            <li class="login"><a href="https://app.nfe.io" title="Login">Login</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <button class="btMenu">
+                    <svg viewBox="0 0 24 24"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="content" data-scope="content">
+
+    <div class="cover-panel"></div> 
+    <div class="cover"></div>
+
+    <div class="box-1">
+
+        <div class="container">
+            <div class="title">
+                <h1>Economize horas, Automatize a Emissão de Notas Fiscais com nosso Sistema!</h1>
+                <p class="hidden-xs">
+                    A NFE.io é um sistema de emissão de nota fiscal que automatiza tarefas chatas e ainda te ajuda a ganhar performance, tempo e dinheiro. 
+                    Foque no seu negócio e deixe toda burocracia de comunicação com as prefeituras com a gente, afinal somos especialistas em descomplicar.
+                </p>
+                <a href="https://nfe.io/#contato" class="button button-white">Quero Conhecer Mais!</a>
+                <i class="icon-arrow-down"></i>
+            </div>
+            <figure></figure>
+        </div>
+
+    </div>
+
+    <div class="box-2">
+        <div class="container">
+            <h2>Empresas que já Economizam mais de 100 horas de trabalho por mês usando nosso sistema de emissão de nota fiscal</h2>
+            <a href="#contato">
+                <div class="list-customers">
+                    <ul class="row">
+
+                        <li class="col-md-2 col-sm-2 col-xs-12">
+                            <img src="https://nfe.io/images/home/clientes/cliente-casar-ponto-com.png" alt="Cliente 2">   
+                        </li>             
+
+                        <li class="col-md-2 col-sm-2 col-xs-12">
+                            <img src="https://nfe.io/images/home/clientes/im-clientes-4.png" alt="Cliente 4">                
+                        </li>
+
+                        <li class="col-md-2 col-sm-2 col-xs-12">
+                            <img src="https://nfe.io/images/home/clientes/im-clientes-5.png" alt="Cliente 4">                
+                        </li>
+                        
+                        <li class="col-md-2 col-sm-2 col-xs-12">
+                            <img src="https://nfe.io/images/home/clientes/cliente-consulta-do-bem.png" alt="Cliente 1">
+                        </li>
+                        <li class="col-md-2 col-sm-2 col-xs-12">
+                            <img src="https://nfe.io/images/home/clientes/olist.svg" alt="Cliente 4">                
+                        </li>
+                        <li class="col-md-2 col-sm-2 col-xs-12">
+                            <img src="https://nfe.io/images/home/clientes/cliente-organizze.png" alt="Cliente 3">                
+                        </li>
+                    </ul>
+                    <button>Quero Economizar!</button>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="box-3 gray-bg">
+        <div class="container">
+            <div class="title">
+                <h2>Dashboard: tudo no seu controle!</h2>
+                <p>
+                    Acompanhe o crescimento da sua empresa mês a mês, com um relatório direto e simples. 
+                    Monitore também de forma rápida o processamento através do sistema de emissão de notas fiscais e saiba exatamente o motivo da recusa no painel de controle. 
+                </p>
+            </div>
+        </div>
+        <img src="https://nfe.io/images/home/screen-dashboard.png" alt="Dashboard">
+        <!-- <img src="https://nfe.io/images/home/dashboard.svg" alt="Dashboard"> -->
+    </div>
+
+    <div class="box-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="title">
+                        <h2>Envio de emails para seus clientes</h2>
+                        <p>
+                            Ao emitir a nota fiscal eletrônica, o sistema faz o envio automático para o seu cliente, tanto em PDF como em XML. 
+                            Evitando o trabalho manual e otimizando o tempo da sua equipe.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-8 col-sm-8 col-xs-12">
+                    <div id="send-invoice-form" class="try-now">
+                        <div class="head">
+                            <svg class="left" style="width:24px;height:24px" viewBox="0 0 24 24">
+                                <path d="M12,15.36L4,10.36V18H20V10.36L12,15.36M4,8L12,13L20,8V8L12,3L4,8V8M22,8V18A2,2 0 0,1 20,20H4A2,2 0 0,1 2,18V8C2,7.27 2.39,6.64 2.97,6.29L12,0.64L21.03,6.29C21.61,6.64 22,7.27 22,8Z" />
+                            </svg>
+                            <h4>
+                                &nbsp;Receba uma Nota Fiscal em seu email
+                            </h4>
+                        </div>
+                        <form class="card-form" data-validate-form="true" accept-charset="utf-8" novalidate="novalidate">
+                            <div class="row">
+                                <label for="card-email">Para:</label>
+                                <input type="text" size="40" class="email email-typing" id="card-email" placeholder="seu-email@dominio.com" onkeydown="this.classList.remove('email-typing')">
+                            </div>
+
+                            <div class="row">
+                                <div class="box-mail-content">
+                                    <svg  viewBox="0 0 116 88" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="controlle" transform="translate(-676.000000, -1705.000000)">
+                                                <g id="Group-13" transform="translate(676.000000, 1691.000000)">
+                                                    <rect id="Rectangle-path" x="0" y="0" width="116" height="116"></rect>
+                                                    <path d="M0,14.5 L0,101.5 L116,101.5 L116,14.5 L0,14.5 Z M102.040125,21.75 L57.99275,56.981375 L13.959875,21.75 L102.040125,21.75 Z M7.25,94.246375 L7.25,25.668625 L57.99275,66.25775 L108.746375,25.668625 L108.746375,94.246375 L7.25,94.246375 Z" id="Shape" fill="#4CC89A" fill-rule="nonzero"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                    <p class="try-email-message">
+                                        Quer receber uma Nota Fiscal de exemplo agora? 
+                                        É simples: basta informar seu email no campo acima que vamos emitir uma nota fiscal eletrônica através de nosso sistema e enviar para você agora mesmo.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <button type="submit">Enviar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="box-5 gray-bg">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-5 col-sm-5 col-xs-12">
+                <div class="title">
+                    <h2>Cálculo de imposto automático</h2>
+                    <p>Sabe aqueles erros manuais na hora de lançar informações de impostos no site da prefeitura? Com nosso sistema para emissão de notas fiscais eletrônicas o cálculo de impostos é feito de forma automática. Você só precisa enviar os dados mínimos necessários e nosso sistema cuida de todo o resto.</p>
+                </div>
+            </div>
+
+            <div class="col-md-7 col-sm-7 col-xs-12">
+                <img src="https://nfe.io/images/home/calculo-impostos.svg" alt="Cálculo de imposto automátivo" class="image-left">
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<div class="box-6">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 col-sm-7 col-xs-12">
+                <div class="title">
+                    <h2>Multiempresas</h2>
+                    <p>Em nosso sistema você pode cadastrar vários CNPJs para emitir suas notas fiscais sem pagar nada a mais por isso. Assim você pode usar como white-label ou modo de revenda de forma simples e organizada, sem surpresas no fim do mês.</p>
+                </div>
+            </div>
+
+            <div class="col-md-5 col-sm-5 col-xs-12">
+                <svg width="347px" height="255px" viewBox="0 0 347 255" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <defs>
+                        <circle id="path-1" cx="159.5" cy="194.482639" r="44.3055556"></circle>
+                        <filter x="-24.8%" y="-22.6%" width="149.7%" height="149.7%" filterUnits="objectBoundingBox" id="filter-2">
+                            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                            <feGaussianBlur stdDeviation="7" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0808423913 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+                        </filter>
+                        <circle id="path-3" cx="274.694444" cy="194.482639" r="44.3055556"></circle>
+                        <filter x="-24.8%" y="-22.6%" width="149.7%" height="149.7%" filterUnits="objectBoundingBox" id="filter-4">
+                            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                            <feGaussianBlur stdDeviation="7" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0808423913 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+                        </filter>
+                        <circle id="path-5" cx="44.3055556" cy="194.482639" r="44.3055556"></circle>
+                        <filter x="-24.8%" y="-22.6%" width="149.7%" height="149.7%" filterUnits="objectBoundingBox" id="filter-6">
+                            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                            <feGaussianBlur stdDeviation="7" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0808423913 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+                        </filter>
+                        <circle id="path-7" cx="158.5" cy="44.5" r="44.5"></circle>
+                    </defs>
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="controlle" transform="translate(-866.000000, -2988.000000)">
+                            <g id="Group-29" transform="translate(880.000000, 2988.000000)">
+                                <polyline id="Line" class="svg-lines" stroke-width="2" stroke-linecap="square" points="158.946181 68.765625 158.946181 145.999971 158.946181 166.237847"></polyline>
+                                <g id="Oval-6-Copy-2">
+                                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                                    <use class="company-b" fill-rule="evenodd" xlink:href="#path-1"></use>
+                                </g>
+                                <path d="M40.9826389,166.791667 L40.9826389,142.117161 C40.9826389,128.489808 52.0313884,117.442656 65.6601462,117.442656 L161.58021,117.442656 L253.366004,117.442656 C266.99751,117.442656 278.048029,128.48122 278.048029,142.125787 L278.048029,159.560933" id="Path-11" class="svg-lines" stroke-width="2"></path>
+                                <g id="Oval-6-Copy-3">
+                                    <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                                    <use class="company-c" fill-rule="evenodd" xlink:href="#path-3"></use>
+                                </g>
+                                <g id="Oval-6-Copy">
+                                    <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-5"></use>
+                                    <use class="company-a" fill-rule="evenodd" xlink:href="#path-5"></use>
+                                </g>
+                                <rect id="Rectangle-path" fill="#FFFFFF" fill-rule="nonzero" x="34.1172793" y="192.767314" width="2.44457846" height="4.50090034"></rect>
+                                <rect id="Rectangle-path" fill="#FFFFFF" fill-rule="nonzero" x="34.1172793" y="201.767677" width="2.44457846" height="4.50018135"></rect>
+                                <rect id="Rectangle-path" fill="#FFFFFF" fill-rule="nonzero" x="34.1172793" y="183.766233" width="2.44457846" height="4.50018135"></rect>
+                                <rect id="Rectangle-path" fill="#FFFFFF" fill-rule="nonzero" x="41.6185402" y="201.767677" width="2.44457846" height="4.50018135"></rect>
+                                <rect id="Rectangle-path" fill="#FFFFFF" fill-rule="nonzero" x="41.6185402" y="192.767314" width="2.44457846" height="4.50090034"></rect>
+                                <rect id="Rectangle-path" fill="#FFFFFF" fill-rule="nonzero" x="41.6185402" y="183.766233" width="2.44457846" height="4.50018135"></rect>
+                                <rect id="Rectangle-path" fill="#FFFFFF" fill-rule="nonzero" x="55.5943391" y="197.956292" width="4.78274586" height="2.44457846"></rect>
+                                <rect id="Rectangle-path" fill="#FFFFFF" fill-rule="nonzero" x="55.5943391" y="203.956294" width="4.78274586" height="2.44457846"></rect>
+                                <path d="M52.3164469,213.59728 L61.0816987,213.59728 C63.7498842,213.59728 65.9219641,211.4252 65.9219641,208.756295 L65.9219641,190.872766 L52.3157279,190.870609 L52.3157279,175.089417 L25.866827,175.089417 L25.866827,213.597999 L49.8718685,213.597999 L52.3164469,213.597999 L52.3164469,213.59728 Z M63.4773856,193.317344 L63.4773856,208.756295 C63.4773856,210.077806 62.4017711,211.152701 61.0816987,211.152701 L52.3164469,211.152701 L52.3164469,193.314469 L63.4773856,193.317344 Z M28.3114055,211.152701 L28.3114055,177.533996 L49.8711495,177.533996 L49.8711495,190.86989 L49.8711495,211.151982 L28.3114055,211.151982 L28.3114055,211.152701 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                                <rect id="Rectangle-path" fill="#FFFFFF" fill-rule="nonzero" x="148.204085" y="192.767314" width="2.44457846" height="4.50090034"></rect>
+                                <rect id="Rectangle-path" fill="#FFFFFF" fill-rule="nonzero" x="148.204085" y="201.767677" width="2.44457846" height="4.50018135"></rect>
+                                <rect id="Rectangle-path" fill="#FFFFFF" fill-rule="nonzero" x="148.204085" y="183.766233" width="2.44457846" height="4.50018135"></rect>
+                                <rect id="Rectangle-path" fill="#FFFFFF" fill-rule="nonzero" x="155.705346" y="201.767677" width="2.44457846" height="4.50018135"></rect>
+                                <rect id="Rectangle-path" fill="#FFFFFF" fill-rule="nonzero" x="155.705346" y="192.767314" width="2.44457846" height="4.50090034"></rect>
+                                <rect id="Rectangle-path" fill="#FFFFFF" fill-rule="nonzero" x="155.705346" y="183.766233" width="2.44457846" height="4.50018135"></rect>
+                                <rect id="Rectangle-path" fill="#FFFFFF" fill-rule="nonzero" x="169.681145" y="197.956292" width="4.78274586" height="2.44457846"></rect>
+                                <rect id="Rectangle-path" fill="#FFFFFF" fill-rule="nonzero" x="169.681145" y="203.956294" width="4.78274586" height="2.44457846"></rect>
+                                <path d="M166.403252,213.59728 L175.168504,213.59728 C177.83669,213.59728 180.00877,211.4252 180.00877,208.756295 L180.00877,190.872766 L166.402534,190.870609 L166.402534,175.089417 L139.953633,175.089417 L139.953633,213.597999 L163.958674,213.597999 L166.403252,213.597999 L166.403252,213.59728 Z M177.564191,193.317344 L177.564191,208.756295 C177.564191,210.077806 176.488577,211.152701 175.168504,211.152701 L166.403252,211.152701 L166.403252,193.314469 L177.564191,193.317344 Z M142.398211,211.152701 L142.398211,177.533996 L163.957955,177.533996 L163.957955,190.86989 L163.957955,211.151982 L142.398211,211.151982 L142.398211,211.152701 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                                <rect id="Rectangle-path" fill="#FFFFFF" fill-rule="nonzero" x="265.613807" y="192.767314" width="2.44457846" height="4.50090034"></rect>
+                                <rect id="Rectangle-path" fill="#FFFFFF" fill-rule="nonzero" x="265.613807" y="201.767677" width="2.44457846" height="4.50018135"></rect>
+                                <rect id="Rectangle-path" fill="#FFFFFF" fill-rule="nonzero" x="265.613807" y="183.766233" width="2.44457846" height="4.50018135"></rect>
+                                <rect id="Rectangle-path" fill="#FFFFFF" fill-rule="nonzero" x="273.115068" y="201.767677" width="2.44457846" height="4.50018135"></rect>
+                                <rect id="Rectangle-path" fill="#FFFFFF" fill-rule="nonzero" x="273.115068" y="192.767314" width="2.44457846" height="4.50090034"></rect>
+                                <rect id="Rectangle-path" fill="#FFFFFF" fill-rule="nonzero" x="273.115068" y="183.766233" width="2.44457846" height="4.50018135"></rect>
+                                <rect id="Rectangle-path" fill="#FFFFFF" fill-rule="nonzero" x="287.090867" y="197.956292" width="4.78274586" height="2.44457846"></rect>
+                                <rect id="Rectangle-path" fill="#FFFFFF" fill-rule="nonzero" x="287.090867" y="203.956294" width="4.78274586" height="2.44457846"></rect>
+                                <path d="M283.812975,213.59728 L292.578226,213.59728 C295.246412,213.59728 297.418492,211.4252 297.418492,208.756295 L297.418492,190.872766 L283.812256,190.870609 L283.812256,175.089417 L257.363355,175.089417 L257.363355,213.597999 L281.368396,213.597999 L283.812975,213.597999 L283.812975,213.59728 Z M294.973913,193.317344 L294.973913,208.756295 C294.973913,210.077806 293.898299,211.152701 292.578226,211.152701 L283.812975,211.152701 L283.812975,193.314469 L294.973913,193.317344 Z M259.807933,211.152701 L259.807933,177.533996 L281.367677,177.533996 L281.367677,190.86989 L281.367677,211.151982 L259.807933,211.151982 L259.807933,211.152701 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                                <g id="Oval-71">
+                                    <use fill-rule="evenodd" xlink:href="#path-7"></use>
+                                    <circle stroke="#D0D0D0" stroke-width="1" cx="158.5" cy="44.5" r="44"></circle>
+                                </g>
+                            </g>
+                            <text id="multi-company" font-family="Lato ,sans-serif" font-size="80" font-weight="normal" fill="#A9A8A8">
+                                <tspan x="1009" y="3052">@</tspan>
+                            </text>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="box-7 gray-bg">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="title">
+                    <h2>Problemas no sistemas da Prefeitura</h2>
+                    <p>
+                        Nossa plataforma foi pensada em ajudar sua empresa em todos os sentidos, por isso criamos uma aplicação que monitora todas as prefeituras em tempo real. 
+                        Quando uma prefeitura está fora do ar, nosso sistema gerencia isso por um período e tenta reemitir as notas fiscais eletrônicas.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-8 col-sm-8 col-xs-12">
+
+                <svg width="665px" height="338px" viewBox="0 0 665 338" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <defs>
+                        <linearGradient x1="4.53603316%" y1="4.53603316%" x2="100%" y2="100%" id="linearGradient-1">
+                            <stop stop-color="#FFFFFF" offset="0%"></stop>
+                            <stop stop-color="#F1F1F1" offset="100%"></stop>
+                            <stop stop-color="#000000" offset="100%"></stop>
+                        </linearGradient>
+                        <rect x="563.371765" y="3583.67647" width="45.2564706" height="45.2911765" id="rect-2"></rect>
+                        <path d="M0.188563802,2.99872234 C0.188563802,1.34257372 1.54147467,0 3.19348274,0 L324.41188,0 C326.071451,0 327.416799,1.35223844 327.416799,2.99872234 L327.416799,262.982249 L0.188563802,262.982249 L0.188563802,2.99872234 Z" id="path-3"></path>
+                        <filter x="-11.3%" y="-13.3%" width="122.6%" height="128.1%" filterUnits="objectBoundingBox" id="filter-4">
+                            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                            <feGaussianBlur stdDeviation="12" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+                            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.114809783 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+                        </filter>
+                        <linearGradient x1="0%" y1="50%" x2="100%" y2="46.9293191%" id="linearGradient-5">
+                            <stop stop-color="#010101" stop-opacity="0" offset="0%"></stop>
+                            <stop stop-color="#000000" offset="100%"></stop>
+                        </linearGradient>
+                        <rect id="path-6" x="317" y="3702" width="7" height="8"></rect>
+                        <rect id="path-7" x="317" y="3673" width="7" height="22"></rect>
+                    </defs>
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="controlle" transform="translate(-108.000000, -3546.000000)">
+                            <g id="Macbook" transform="translate(108.000000, 3546.000000)">
+                                <g id="Screen" transform="translate(55.000000, 0.000000)">
+                                    <path d="M14.5061027,0 C6.51549564,0 0.0378287293,6.47959502 0.0378287293,14.4814239 L0.0378287293,318.959441 L492.381508,318.959441 L492.381508,14.4814239 C492.381508,6.48355434 485.90824,0 477.913234,0 L14.5061027,0 Z" id="Dark-Edge" fill="#25232C"></path>
+                                    <rect fill="url(#linearGradient-1)" x="14.7947238" y="14.7746516" width="462.829889" height="288.777282" rx="2.1714922"></rect>
+                                </g>
+                                <g id="Bottom" transform="translate(0.000000, 318.000000)">
+                                    <path d="M0,11.4119644 C0,11.4119644 6.28122333,17.6742875 24.0692984,19.3281039 L577.67458,19.3281039 C577.67458,19.3281039 592.426993,17.947258 602,11.4119644 L0,11.4119644 Z" id="Bottom-Darker" fill="#E7E7E7"></path>
+                                    <rect id="Bottom-Lighter" fill="#F0F0F0" x="0" y="0.197433409" width="602" height="11.214531"></rect>
+                                    <path d="M258.766147,0.197433413 C258.766147,0.197433413 258.83425,5.10807149 263.630559,7.45389464 L338.217425,7.45389464 C338.217425,7.45389464 342.32063,5.92734952 343.233853,0.197433409" id="Bottom-Indent" fill="#D8D8D8"></path>
+                                </g>
+                            </g>
+
+                            <rect id="Rectangle-17" fill="#D8D8D8" opacity="0.640058877" x="262" y="3627" width="246" height="8"></rect>
+                            <rect id="Rectangle-17-Copy-3" fill="#D8D8D8" opacity="0.640058877" x="382" y="3645" width="186" height="8"></rect>
+                            <rect id="Rectangle-17-Copy-4" fill="#D8D8D8" opacity="0.640058877" x="382" y="3662" width="186" height="8"></rect>
+                            <rect id="Rectangle-17-Copy-6" fill="#D8D8D8" opacity="0.640058877" x="382" y="3678" width="186" height="8"></rect>
+                            <rect id="Rectangle-17-Copy-5" fill="#D8D8D8" opacity="0.640058877" x="382" y="3695" width="186" height="8"></rect>
+                            <rect id="Rectangle-17-Copy-8" fill="#D8D8D8" opacity="0.640058877" x="382" y="3711" width="186" height="8"></rect>
+                            <rect id="Rectangle-17-Copy-7" fill="#D8D8D8" opacity="0.640058877" x="382" y="3728" width="186" height="8"></rect>
+                            <rect id="Rectangle-17-Copy-2" fill="#D8D8D8" opacity="0.640058877" x="262" y="3746" width="246" height="8"></rect>
+                            <g id="Group-28" transform="translate(422.000000, 3575.000000)">
+                                <g id="Group-5">
+                                    <g id="Rectangle-8-Copy">
+                                        <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-3"></use>
+                                        <path stroke-opacity="0.315132473" stroke="#979797" fill="#ffffff" stroke-width="1" d="M0.688563802,262.482249 L326.916799,262.482249 L326.916799,2.99872234 C326.916799,1.62502505 325.791953,0.5 324.41188,0.5 L3.19348274,0.5 C1.81458048,0.5 0.688563802,1.62174454 0.688563802,2.99872234 L0.688563802,262.482249 Z"></path>
+                                    </g>
+                                    <ellipse id="Oval-2" fill="#FFFFFF" cx="9.70834206" cy="9.0029959" rx="1.74960271" ry="2.25074897"></ellipse>
+                                    <ellipse id="Oval-2-Copy" fill="#FFFFFF" cx="14.9571502" cy="9.0029959" rx="1.74960271" ry="2.25074897"></ellipse>
+                                    <ellipse id="Oval-2-Copy-2" fill="#FFFFFF" cx="20.2059583" cy="9.0029959" rx="1.74960271" ry="2.25074897"></ellipse>
+                                    <path d="M0,2.99593733 C0,1.34132683 1.35291087,0 3.00491894,0 L324.223316,0 C325.882887,0 327.228235,1.33824024 327.228235,2.99593733 L327.228235,58.7842673 L0,58.7842673 L0,2.99593733 Z" id="Rectangle-14" fill="#FF7F7F"></path>
+                                </g>
+                            </g>
+                            <path d="M425,3578 L263,3635 L264,3744 C264,3744 431,3843 428,3835 C425,3827 425,3578 425,3578 Z" id="Path-10" fill="url(#linearGradient-5)" opacity="0.0178328804"></path>
+                            <text id="Status-do-sistema-de" font-family="MaisonNeue-Medium, Maison Neue" font-size="14" font-weight="400" line-spacing="25" fill="#FFFFFF">
+                                <tspan x="472" y="3610">Status do sistema de Notas Fiscais</tspan>
+                            </text>
+                            <text id="Nenhum-incidente-as" font-family="MaisonNeue-Medium, Maison Neue" font-size="14" font-weight="400" line-spacing="25" fill="#F0B200">
+                                <tspan x="504" y="3764">Nenhum incidente as 21h</tspan>
+                            </text>
+                            <g id="Group-22" transform="translate(457.000000, 3696.000000)">
+                                <path d="M0.5,9 L257.5,9" id="Line" class="timeline-dash" stroke="#00CD98" stroke-width="2" stroke-linecap="square" stroke-dasharray="3,7"></path>
+                                <g id="Group-12" transform="translate(28.000000, 0.000000)">
+                                    <text id="19h" font-family="MaisonNeue-Medium, Maison Neue" font-size="11" font-weight="400" line-spacing="25" fill="#AAAAAA">
+                                        <tspan x="0" y="35">19h</tspan>
+                                    </text>
+                                    <text id="21h" font-family="MaisonNeue-Medium, Maison Neue" font-size="11" font-weight="400" line-spacing="25" fill="#AAAAAA">
+                                        <tspan x="59" y="35">21h</tspan>
+                                    </text>
+                                    <text id="02h" font-family="MaisonNeue-Medium, Maison Neue" font-size="11" font-weight="400" line-spacing="25" fill="#AAAAAA">
+                                        <tspan x="120" y="35">02h</tspan>
+                                    </text>
+                                    <text id="03h" font-family="MaisonNeue-Medium, Maison Neue" font-size="11" font-weight="400" line-spacing="25" fill="#AAAAAA">
+                                        <tspan x="189" y="35">03h</tspan>
+                                    </text>
+                                    <circle id="Oval-6" stroke="#F0B200" stroke-width="2" fill="#FFFFFF" cx="9.5" cy="8.5" r="7.5"></circle>
+                                    <circle id="Oval-6-Copy-4" fill="#F0B200" cx="68.5" cy="8.5" r="8.5"></circle>
+                                    <circle id="Oval-6-Copy-5" stroke="#F0B200" stroke-width="2" fill="#FFFFFF" cx="129.5" cy="8.5" r="7.5"></circle>
+                                    <circle id="Oval-6-Copy-6" stroke="#F0B200" stroke-width="2" fill="#FFFFFF" cx="199.5" cy="8.5" r="7.5"></circle>
+                                </g>
+                            </g>
+                            <circle id="Oval-8" stroke="#FFFFFF" stroke-width="2" fill-opacity="0" fill="#FFFFFF" cx="452" cy="3605" r="10"></circle>
+                            <text id="!" font-family="MaisonNeue-Medium, Maison Neue" font-size="14" font-weight="400" fill="#FFFFFF">
+                                <tspan x="450" y="3610">!</tspan>
+                            </text>
+                            <circle id="Oval-8" stroke="#E8E8E8" stroke-width="8" fill-opacity="0" fill="#FFFFFF" cx="320.5" cy="3691.5" r="31.5"></circle>
+                            <g id="Rectangle-16">
+                                <use fill="#E8E8E8" fill-rule="evenodd" xlink:href="#path-6"></use>
+                                <rect x="317" y="3702" width="7" height="8"></rect>
+                            </g>
+                            <g id="Rectangle-22">
+                                <use fill="#E8E8E8" fill-rule="evenodd" xlink:href="#path-7"></use>
+                                <rect fill="#E8E8E8" x="317" y="3673" width="7" height="22"></rect>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="box-8">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <i class="icon-digital-certificate"></i>
+                <h4>Certificado digital<br/> com desconto</h4>
+                   <!--  <p>Para segurança e simplicidade nossa plataforma utiliza o certificado digital e-CNPJ (A1) da sua empresa para autenticar e criptografar a comunicação com os órgãos do Governo. Caso você ainda não tenha, temos um cupom de desconto imperdível para você comprar o seu.
+               </p> -->
+               <p>Para segurança e simplicidade nossa plataforma usa o certificado digital e-CNPJ (A1) da sua empresa para autenticar e criptografar a comunicação com os órgãos do Governo. Temos um desconto imperdível para você comprar o seu.</p>
+           </div>
+
+           <div class="col-md-4 col-sm-4 col-xs-12">
+            <svg width="42px" height="28px" viewBox="0 0 42 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <defs></defs>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="controlle" transform="translate(-655.000000, -4129.000000)" fill-rule="nonzero" >
+                        <g id="cloud-outline" transform="translate(655.000000, 4129.000000)">
+                            <path d="M33.25,24.5 L10.5,24.5 C6.63400675,24.5 3.5,21.3659932 3.5,17.5 C3.5,13.6340068 6.63400675,10.5 10.5,10.5 L11.7425,10.5 C12.8975,6.4575 16.625,3.5 21,3.5 C26.3157407,3.5 30.625,7.80925928 30.625,13.125 L30.625,14 L33.25,14 C36.1494949,14 38.5,16.3505051 38.5,19.25 C38.5,22.1494949 36.1494949,24.5 33.25,24.5 L33.25,24.5 Z M33.8625,10.5525 C32.6725,4.5325 27.37,0 21,0 C15.9425,0 11.55,2.87 9.3625,7.0525 C4.095,7.63 0,12.075 0,17.5 C7.10171439e-16,23.2989899 4.70101013,28 10.5,28 L33.25,28 C35.5706443,28 37.796241,27.0781276 39.4371843,25.4371843 C41.0781276,23.796241 42,21.5706443 42,19.25 C42,14.63 38.4125,10.885 33.8625,10.5525 Z" id="Shape"></path>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+            <h4>Notas Fiscais seguras <br/> por nosso sistema</h4>
+            <!--   <p>De acordo com a legislação brasileira, é necessário armazenar todas as notas emitidas pelo período de 05 anos. Com nosso sistema você não precisa se preocupar com isso. Todas as notas emitidas através da nossa plataforma ficam armazenadas na nuvem pelo período estipulado pela FISCO. </p> -->
+            <p>De acordo com a legislação, é necessário armazenar todas as notas emitidas pelo período de 05 anos. Com nosso sistema você não precisa se preocupar com isso, todas as notas emitidas ficam armazenadas na nuvem.</p>
+        </div>
+
+        <div class="col-md-4 col-sm-4 col-xs-12">
+
+            <svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <defs></defs>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="controlle" transform="translate(-1029.000000, -4128.000000)" fill-rule="nonzero" >
+                        <g id="message-text-outline" transform="translate(1029.000000, 4128.000000)">
+                            <path d="M23.4,0 C24.8359403,0 26,1.16405965 26,2.6 L26,18.2 C26,19.6359403 24.8359403,20.8 23.4,20.8 L5.2,20.8 L0,26 L0,2.6 C0,1.157 1.17,0 2.6,0 L23.4,0 L23.4,0 Z M2.6,2.6 L2.6,19.721 L4.121,18.2 L23.4,18.2 L23.4,2.6 L2.6,2.6 L2.6,2.6 Z M11.48,9.62 L14.6,9.62 L14.6,12.22 L11.48,12.22 L11.48,9.62 Z M5.24,9.62 L8.36,9.62 L8.36,12.22 L5.24,12.22 L5.24,9.62 Z M16.68,9.62 L19.8,9.62 L19.8,12.22 L16.68,12.22 L16.68,9.62 Z" id="Shape"></path>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+            <h4>Atendimento <br/>Rápido e Especializado</h4>
+            <p>
+                Nosso atendimento é focado em ajudar você a resolver seu problema! 
+                Damos 100% de suporte, seja por chat, telefone ou email. Do começo ao fim, seja na integração, configuração ou uso do nosso sistema para emissão de suas notas fiscais.
+            </p>
+        </div>
+
+
+    </div>
+</div>
+</div>
+
+<div class="box-9">
+    <div class="container">
+        <div class="title">
+            <h2>Saiba como funciona</h2>
+            <p>
+                Assim que é lançado um valor em sua plataforma de pagamento a NFe.io busca essa informação e imediatamente inicia o processo de comunicação com a prefeitura. 
+                Em questão de minutos a nota fiscal eletrônica é emitida em nosso sistema e o seu cliente recebe via email, eliminando todo trabalho manual.
+            </p>
+        </div>
+
+
+        <svg width="811px" height="280px" viewBox="0 0 811 280" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+            <desc>Created with Sketch.</desc>
+            <defs>
+                <rect x="379" y="4793" width="51" height="51" id="rect-1"></rect>
+                <circle id="path-2" cx="766" cy="5002" r="50"></circle>
+                <filter x="-31.0%" y="-29.0%" width="162.0%" height="162.0%" filterUnits="objectBoundingBox" id="filter-3">
+                    <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                    <feGaussianBlur stdDeviation="10" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                    <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.126783288 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+                </filter>
+                <linearGradient x1="100%" y1="93.8789062%" x2="0%" y2="-10.5507812%" id="linearGradient-4">
+                    <stop stop-color="#5EC1ED" offset="0%"></stop>
+                    <stop stop-color="#4AC998" offset="100%"></stop>
+                </linearGradient>
+                <rect x="1121" y="4798" width="40" height="40" id="rect-5"></rect>
+                <rect x="922" y="4794" width="40" height="42" id="rect-6"></rect>
+            </defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="controlle" transform="translate(-363.000000, -4794.000000)">
+                    <g id="Group-21" transform="translate(576.000000, 4797.000000)" stroke="#FF8768" stroke-width="2">
+                        <path d="M26.1271592,20.7920792 L35,20.7920792" id="Line-Copy-14" stroke-linecap="square"></path>
+                        <ellipse id="Oval-Copy-17" cx="20.8657519" cy="20.8367934" rx="5.1264994" ry="5.09741297"></ellipse>
+                        <path d="M24.7780804,24.1009262 L32,30" id="Line-Copy-13" stroke-linecap="square"></path>
+                        <ellipse id="Oval-Copy-16" cx="38.5836534" cy="20.9262217" rx="3.23778909" ry="3.21941872"></ellipse>
+                        <path d="M24.7780804,17.4832322 L32,12" id="Line-Copy-12" stroke-linecap="square"></path>
+                        <path d="M9.76901213,12.0443948 L16.9534235,17.4832322" id="Line-Copy-11" stroke-linecap="square"></path>
+                        <path d="M10,30 L16.9534235,24.4586394" id="Line-Copy-10" stroke-linecap="square"></path>
+                        <path d="M7,20.7920792 L15.6942832,20.7920792" id="Line-Copy-9" stroke-linecap="square"></path>
+                        <path d="M20.7920792,15.6052379 L20.7920792,7" id="Line-Copy-8" stroke-linecap="square"></path>
+                        <path d="M21,34.9948898 L21,26.0683488" id="Line-Copy-7" stroke-linecap="square"></path>
+                        <ellipse id="Oval-Copy-15" cx="34.536417" cy="32.0153306" rx="3.23778909" ry="3.21941872"></ellipse>
+                        <ellipse id="Oval-Copy-14" cx="3.23778909" cy="20.6579368" rx="3.23778909" ry="3.21941872"></ellipse>
+                        <ellipse id="Oval-Copy-13" cx="7.10514829" cy="9.83711274" rx="3.23778909" ry="3.21941872"></ellipse>
+                        <ellipse id="Oval-Copy-12" cx="34.6263556" cy="9.65825615" rx="3.23778909" ry="3.21941872"></ellipse>
+                        <ellipse id="Oval-Copy-11" cx="21.0456291" cy="3.21941872" rx="3.23778909" ry="3.21941872"></ellipse>
+                        <ellipse id="Oval-Copy-10" cx="20.9556905" cy="38.3647397" rx="3.23778909" ry="3.21941872"></ellipse>
+                        <ellipse id="Oval-Copy-9" cx="7.0152097" cy="32.0153306" rx="3.23778909" ry="3.21941872"></ellipse>
+                    </g>
+                    <path d="M839,5012 L1084.0042,5011.98505 C1116.0344,5011.98309 1142,4986.01721 1142,4953.97787 L1142,4877.57912" id="Path-9-Copy-6" class="svg-line-integration-out" stroke="#00B8FF"></path>
+                    <g id="Bitmap">
+                        <image x="379" y="4793" width="51" height="51" xlink:href="data:image/png;base64,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"></image>
+                        <use  fill-rule="evenodd" xlink:href="#rect-1"></use>
+                    </g>
+                    <path d="M837,4989 L890.008597,4988.99118 C917.618087,4988.98659 940,4966.60037 940,4938.98984 L940,4872" class="svg-line-integration-in" id="Path-9-Copy-2" stroke="#A056E4"></path>
+                    <path d="M838,4997 L893,4996.99085 C923.375661,4996.98579 948,4972.36394 948,4941.98103 L948,4872" class="svg-line-integration-out" id="Path-9-Copy-4" stroke="#A056E4"></path>
+                    <path d="M405,5002 L646.990135,5001.98423 C674.609821,5001.98243 697,4979.59946 697,4951.98255 L697,4872" id="Path-9-Copy-10" class="svg-line-integration-in" stroke="#4CC89A" transform="translate(551.000000, 4937.000000) scale(-1, 1) translate(-551.000000, -4937.000000) "></path>
+                    <path d="M596,4989 L649.008597,4988.99118 C676.618087,4988.98659 699,4966.60037 699,4938.98984 L699,4872" class="svg-line-integration-in" id="Path-9-Copy-5" stroke="#FF8768" transform="translate(647.500000, 4930.500000) scale(-1, 1) translate(-647.500000, -4930.500000) "></path>
+                    <g id="Oval-3">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                        <use fill="#353A42" fill-rule="evenodd" xlink:href="#path-2"></use>
+                    </g>
+                    <path d="M787.141699,4989.18887 L775.815182,4977.86235 C775.258857,4977.3067 774.51928,4977.00068 773.733494,4977.00068 L771.694843,4977.00068 L771.694843,4986.06135 C771.694843,4990.53234 774.472391,4993.30988 778.943379,4993.30988 L782.114613,4993.30988 L782.114613,5017.17999 C782.114613,5019.30336 780.387196,5021.03078 778.263828,5021.03078 L753.74022,5021.03078 C751.616852,5021.03078 749.889435,5019.30336 749.889435,5017.17999 L749.889435,4986.7409 C749.889435,4984.61753 751.616852,4982.89011 753.74022,4982.89011 L763.057533,4982.89011 L763.057533,4999.90356 L761.150489,4997.99674 C760.594163,4997.44087 759.854813,4997.13485 759.068573,4997.13485 C758.282334,4997.13485 757.542756,4997.4411 756.986205,4997.99742 C755.838671,4999.14518 755.838671,5001.01327 756.986431,5002.16171 L763.919882,5009.09516 L763.943893,5009.11894 C763.959296,5009.13344 763.974926,5009.14771 763.991009,5009.16175 C764.036312,5009.20434 764.084786,5009.24806 764.147305,5009.29948 C764.177658,5009.32371 764.208691,5009.34704 764.246293,5009.37423 C764.284348,5009.40322 764.323762,5009.43221 764.377673,5009.46823 C764.417087,5009.49405 764.457633,5009.51852 764.508826,5009.54842 C764.544615,5009.57039 764.580632,5009.59123 764.602604,5009.60278 C764.647228,5009.62702 764.692078,5009.64899 764.754596,5009.67844 C764.796955,5009.6986 764.838861,5009.71808 764.886882,5009.73756 C764.933545,5009.75659 764.980207,5009.77312 765.013958,5009.78467 C765.057449,5009.80053 765.100941,5009.81593 765.149642,5009.83066 C765.194945,5009.84447 765.239795,5009.8558 765.28827,5009.86758 C765.309109,5009.87279 765.330176,5009.87823 765.350562,5009.88298 L765.433241,5009.90156 C765.477411,5009.91039 765.522941,5009.91719 765.558731,5009.92172 L765.587725,5009.92625 C765.631669,5009.93327 765.67584,5009.93939 765.719558,5009.94346 C765.907567,5009.96068 766.098747,5009.96068 766.284038,5009.94346 C766.328208,5009.93916 766.372379,5009.93327 766.404318,5009.92783 L766.435124,5009.92353 C766.479068,5009.91787 766.523013,5009.91107 766.572393,5009.90133 L766.657111,5009.88208 C766.678177,5009.87709 766.700149,5009.87143 766.724839,5009.86531 C766.768104,5009.85467 766.811369,5009.84357 766.858711,5009.8293 C766.900616,5009.81661 766.941616,5009.80234 766.992129,5009.78399 C767.037206,5009.76836 767.08183,5009.75206 767.12147,5009.73575 C767.164961,5009.71808 767.207093,5009.6986 767.258286,5009.67436 L767.28275,5009.66258 C767.316727,5009.6465 767.350705,5009.62996 767.396914,5009.6055 C767.431345,5009.5867 767.466002,5009.56654 767.499979,5009.5457 L767.524217,5009.5312 C767.558421,5009.51104 767.592851,5009.49043 767.641779,5009.45826 C767.679381,5009.43312 767.716076,5009.40616 767.763645,5009.37015 C767.795131,5009.34704 767.825937,5009.32394 767.872826,5009.28634 C767.922207,5009.24556 767.969322,5009.20343 768.015532,5009.15949 C768.039089,5009.13865 768.062647,5009.11668 768.089376,5009.08972 L775.017844,5002.1608 C776.16583,5001.01236 776.165377,4999.14428 775.017844,4997.99697 C774.461971,4997.44042 773.722394,4997.13394 772.935702,4997.13394 C772.149236,4997.13394 771.409885,4997.44019 770.853107,4997.99629 L768.946968,4999.90265 L768.946968,4979.94472 C768.946968,4978.32105 767.625923,4977 766.002251,4977 L753.74022,4977 C748.369508,4977 744,4981.36951 744,4986.74022 L744,5017.17999 C744,5022.5507 748.369508,5026.92021 753.74022,5026.92021 L778.263828,5026.92021 C783.63454,5026.92021 788.004048,5022.5507 788.004048,5017.17999 L788.004048,4991.27123 C788.003822,4990.48522 787.698024,4989.74587 787.141699,4989.18887 Z" id="Shape-Copy" fill="url(#linearGradient-4)" fill-rule="nonzero"></path>
+                    <text id="PREFEITURAS" font-family=".AppleSystemUIFont" font-size="14" font-weight="normal" fill="#A056E4">
+                        <tspan x="897" y="4859">PREFEITURAS</tspan>
+                    </text>
+                    <text id="INTEGRAÇÕES" font-family=".AppleSystemUIFont" font-size="14" font-weight="normal" fill="#FF8768">
+                        <tspan x="550" y="4859">INTEGRAÇÕES</tspan>
+                    </text>
+                    <text id="PAGAMENTOS" font-family=".AppleSystemUIFont" font-size="14" font-weight="normal" fill="#4CC89A">
+                        <tspan x="362" y="4859">PAGAMENTOS</tspan>
+                    </text>
+                    <text id="CLIENTES" font-family=".AppleSystemUIFont" font-size="14" font-weight="normal" fill="#00B8FF">
+                        <tspan x="1109" y="4859">CLIENTES</tspan>
+                    </text>
+                    <g id="Bitmap">
+                        <image x="1121" y="4798" width="40" height="40" xlink:href="data:image/png;base64,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"></image>
+                        <use fill-rule="evenodd" xlink:href="#rect-5"></use>
+                    </g>
+                    <text id="NFE.io" font-family=".AppleSystemUIFont" font-size="18" font-weight="normal" fill-opacity="0.284137228" fill="#F3F9FB">
+                        <tspan x="746" y="4928">NFE.io</tspan>
+                    </text>
+                    <g id="Bitmap">
+                        <image x="922" y="4794" width="40" height="42" xlink:href="data:image/png;base64,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"></image>
+                        <use fill-rule="evenodd" xlink:href="#rect-6"></use>
+                    </g>
+                    <polygon id="Path-9-Copy-8" fill="#A056E4" points="842 4993 835 4989 842 4985"></polygon>
+                    <polygon id="Path-9-Copy-11" fill="#FF8768" transform="translate(696.500000, 4989.000000) scale(-1, 1) translate(-696.500000, -4989.000000) " points="700 4993 693 4989 700 4985"></polygon>
+                    <polygon id="Path-9-Copy-12" fill="#43C36F" transform="translate(696.500000, 5002.000000) scale(-1, 1) translate(-696.500000, -5002.000000) " points="700 5006 693 5002 700 4998"></polygon>
+                    <polygon id="Path-9-Copy-7" fill="#00B8FF" transform="translate(1141.500000, 4874.000000) scale(1, -1) rotate(-90.000000) translate(-1141.500000, -4874.000000) " points="1145 4878 1138 4874 1145 4870"></polygon>
+                    <polygon id="Path-9-Copy-9" fill="#A056E4" transform="translate(947.500000, 4874.000000) scale(1, -1) rotate(-90.000000) translate(-947.500000, -4874.000000) " points="951 4878 944 4874 951 4870"></polygon>
+                </g>
+            </g>
+        </svg>
+
+    </div>
+</div>
+
+<div class="box-10">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="title">
+                    <h2>Comece agora o Desenvolvimento</h2>
+                    <p>
+                        Contamos com um ambiente de testes totalmente gratuito e sem limitações de uso, onde você consegue simular todo o processo de integração e emissão de notas fiscais de forma prática e rápida, justamente para que você se familiarize com o sistema que irá revolucionar o financeiro da sua empresa.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-8 col-sm-8 col-xs-12">
+                <div class="screen">
+                    <div class="controls">
+                        <ul class="list-controls" data-scope="controls">
+                            <li>
+                                <span>1</span>
+                                <p>Criar empresa</p>
+                            </li>
+                            <li>
+                                <span>2</span>
+                                <p>Criar webhooks</p>
+                            </li>
+                            <li>
+                                <span>3</span>
+                                <p class="one-line">Criar NF</p>
+                            </li>
+                            <li>
+                                <span>4</span>
+                                <p class="one-line">Cancelar NF</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="slide">
+                        <ul class="list-slide" data-scope="slider">
+                            <li>
+                                <pre>
+                                    <code class="language-javascript line-numbers">
+                                        const stripe = require('stripe')('sk_test_BQokikJOvBiI2HlWgH4olfQ2');
+
+                                        // Save customer details and payment information.
+                                        const customer = await stripe.customers.create({
+                                        source: token, // Token retrieved from Stripe.js, Checkout, or native apps.
+                                        email: 'john@example.com'
+                                    });
+
+                                    // Charge or refund customers anytime using their saved payment details.
+                                    let charge = await stripe.charges.create({
+                                    amount: 7999,
+                                    currency: 'eur',
+                                    customer: customer.id
+                                });
+
+                                charge = await stripe.charges.refund(charge.id, {
+                                amount: 1000
+                            });
+                        </code>
+                    </pre>
+                </li>
+                <li>
+                    <pre>
+                        <code class="language-javascript line-numbers">
+                            const stripe = require('stripe')('sk_test_BQokikJOvBiI2HlWgH4olfQ2');
+
+                            // Save customer details and payment information.
+                            const customer = await stripe.customers.create({
+                            source: token, // Token retrieved from Stripe.js, Checkout, or native apps.
+                            email: 'john@example.com'
+                        });
+
+                        charge = await stripe.charges.refund(charge.id, {
+                        amount: 1000
+                    });
+                </code>
+            </pre>
+        </li>
+        <li>
+            <pre>
+                <code class="language-javascript line-numbers">
+                    const stripe = require('stripe')('sk_test_BQokikJOvBiI2HlWgH4olfQ2');
+
+                    charge = await stripe.charges.refund(charge.id, {
+                    amount: 1000
+                });
+            </code>
+        </pre>
+    </li>
+    <li>
+        <pre>
+            <code class="language-javascript line-numbers">
+                const stripe = require('stripe')('sk_test_BQokikJOvBiI2HlWgH4olfQ2');
+            </code>
+        </pre>
+    </li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="box-11">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-sm-8 col-xs-12">
+                <img src="https://nfe.io/images/home/languages.svg" alt="Pensado para desenvolvedores" class="image-left">          
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="title">
+                    <h2>Pensado para desenvolvedores</h2>
+                    <p>Através de nossa REST API com documentação e códigos de exemplo, sua equipe de desenvolvimento consegue de forma rápida e eficaz integrar emissão de notas fiscais ao sistema financeiro, permitindo que em poucas horas você já consiga estar com tudo automatizado.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="box-12">
+    <div class="container">
+        <div class="title">
+            <h2>Integrações</h2>
+            <p>
+                Nosso sistema de emissão de notas fiscais tem integrações com os principais meios de pagamento disponíveis no mercado hoje. Ou seja, você integra seu sistema de pagamento com a NFe.io e a gente trabalha para que seu cliente receba a nota fiscal via email, sem que você precise se preocupar com nada.
+            </p>
+        </div>
+    </div>
+
+
+    <svg width="511px" height="511px" viewBox="0 0 511 511" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+        <desc>Created with Sketch.</desc>
+        <defs>
+            <circle id="path-1" cx="934" cy="6759" r="36"></circle>
+            <filter x="-51.4%" y="-48.6%" width="202.8%" height="202.8%" filterUnits="objectBoundingBox" id="filter-2">
+                <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                <feGaussianBlur stdDeviation="12" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+            </filter>
+            <circle id="path-3" cx="934" cy="6759" r="36"></circle>
+            <filter x="-51.4%" y="-48.6%" width="202.8%" height="202.8%" filterUnits="objectBoundingBox" id="filter-4">
+                <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                <feGaussianBlur stdDeviation="12" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+            </filter>
+            <circle id="path-5" cx="934" cy="6759" r="36"></circle>
+            <filter x="-51.4%" y="-48.6%" width="202.8%" height="202.8%" filterUnits="objectBoundingBox" id="filter-6">
+                <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                <feGaussianBlur stdDeviation="12" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+            </filter>
+            <path d="M783,6723 C802.882251,6723 819,6706.88225 819,6687 C819,6667.11775 802.882251,6651 783,6651 C763.117749,6651 747,6667.11775 747,6687 C747,6706.88225 763.117749,6723 783,6723 Z" id="path-7"></path>
+            <filter x="-51.4%" y="-48.6%" width="202.8%" height="202.8%" filterUnits="objectBoundingBox" id="filter-8">
+                <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                <feGaussianBlur stdDeviation="12" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+            </filter>
+            <path d="M783,6723 C802.882251,6723 819,6706.88225 819,6687 C819,6667.11775 802.882251,6651 783,6651 C763.117749,6651 747,6667.11775 747,6687 C747,6706.88225 763.117749,6723 783,6723 Z" id="path-9"></path>
+            <filter x="-51.4%" y="-48.6%" width="202.8%" height="202.8%" filterUnits="objectBoundingBox" id="filter-10">
+                <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                <feGaussianBlur stdDeviation="12" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+            </filter>
+            <circle id="path-11" cx="782.5" cy="6883.5" r="57.5"></circle>
+            <filter x="-32.2%" y="-30.4%" width="164.3%" height="164.3%" filterUnits="objectBoundingBox" id="filter-12">
+                <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                <feGaussianBlur stdDeviation="12" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+            </filter>
+            <circle id="path-13" cx="628" cy="6760" r="36"></circle>
+            <filter x="-51.4%" y="-48.6%" width="202.8%" height="202.8%" filterUnits="objectBoundingBox" id="filter-14">
+                <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                <feGaussianBlur stdDeviation="12" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+            </filter>
+            <circle id="path-15" cx="782" cy="7080" r="36"></circle>
+            <filter x="-51.4%" y="-48.6%" width="202.8%" height="202.8%" filterUnits="objectBoundingBox" id="filter-16">
+                <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                <feGaussianBlur stdDeviation="12" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+            </filter>
+            <circle id="path-17" cx="934" cy="7010" r="36"></circle>
+            <filter x="-51.4%" y="-48.6%" width="202.8%" height="202.8%" filterUnits="objectBoundingBox" id="filter-18">
+                <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                <feGaussianBlur stdDeviation="12" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+            </filter>
+            <circle id="path-19" cx="627" cy="7009" r="36"></circle>
+            <filter x="-51.4%" y="-48.6%" width="202.8%" height="202.8%" filterUnits="objectBoundingBox" id="filter-20">
+                <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                <feGaussianBlur stdDeviation="12" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+            </filter>
+            <circle id="path-21" cx="585" cy="6884" r="36"></circle>
+            <filter x="-51.4%" y="-48.6%" width="202.8%" height="202.8%" filterUnits="objectBoundingBox" id="filter-22">
+                <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                <feGaussianBlur stdDeviation="12" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+            </filter>
+            <circle id="path-23" cx="978" cy="6884" r="36"></circle>
+            <filter x="-51.4%" y="-48.6%" width="202.8%" height="202.8%" filterUnits="objectBoundingBox" id="filter-24">
+                <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                <feGaussianBlur stdDeviation="12" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+            </filter>
+            <circle id="path-25" cx="934" cy="6760" r="36"></circle>
+            <filter x="-51.4%" y="-48.6%" width="202.8%" height="202.8%" filterUnits="objectBoundingBox" id="filter-26">
+                <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                <feGaussianBlur stdDeviation="12" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+            </filter>
+            <linearGradient x1="100%" y1="93.8789062%" x2="0%" y2="-10.5507812%" id="linearGradient-27">
+                <stop stop-color="#5EC1ED" offset="0%"></stop>
+                <stop stop-color="#4AC998" offset="100%"></stop>
+            </linearGradient>
+            <polygon id="path-28" points="30 38 30 0 0 0 0 38"></polygon>
+        </defs>
+        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="controlle" transform="translate(-526.000000, -6630.000000)">
+                <path d="M839.5,6883 L950.5,6883" id="Line" stroke="#DFDFDF" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M824.5,6920.5 L915.5,6992.5" id="Line" stroke="#DFDFDF" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M824.5,6774.5 L915.5,6846.5" id="Line-Copy" stroke="#DFDFDF" stroke-width="2" stroke-linecap="square" transform="translate(870.000000, 6810.500000) scale(1, -1) translate(-870.000000, -6810.500000) "></path>
+                <path d="M646.5,6774.5 L737.5,6846.5" id="Line-Copy-2" stroke="#DFDFDF" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M646.5,6924.5 L737.5,6996.5" id="Line-Copy-3" stroke="#DFDFDF" stroke-width="2" stroke-linecap="square" transform="translate(692.000000, 6960.500000) scale(1, -1) translate(-692.000000, -6960.500000) "></path>
+                <path d="M612.5,6883 L723.5,6883" id="Line-Copy-4" stroke="#DFDFDF" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M727,6769 L838,6769" id="Line-Copy-6" stroke="#DFDFDF" stroke-width="2" stroke-linecap="square" transform="translate(782.500000, 6769.000000) rotate(-90.000000) translate(-782.500000, -6769.000000) "></path>
+                <path d="M727,6997 L838,6997" id="Line-Copy-5" stroke="#DFDFDF" stroke-width="2" stroke-linecap="square" transform="translate(782.500000, 6997.000000) rotate(-90.000000) translate(-782.500000, -6997.000000) "></path>
+                <g id="Oval-Copy-119">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+                <g id="Oval-Copy-119">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-3"></use>
+                </g>
+                <g id="Oval-Copy-119">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-5"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-5"></use>
+                </g>
+                <g id="Oval-Copy-118">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-8)" xlink:href="#path-7"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-7"></use>
+                </g>
+                <g id="Oval-Copy-118">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-10)" xlink:href="#path-9"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-9"></use>
+                </g>
+                <g id="Oval-Copy-117">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-12)" xlink:href="#path-11"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-11"></use>
+                </g>
+                <g id="Oval-Copy-116">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-14)" xlink:href="#path-13"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-13"></use>
+                </g>
+                <g id="Oval-Copy-115">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-16)" xlink:href="#path-15"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-15"></use>
+                </g>
+                <g id="Oval-Copy-114">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-18)" xlink:href="#path-17"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-17"></use>
+                </g>
+                <g id="Oval-Copy-113">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-20)" xlink:href="#path-19"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-19"></use>
+                </g>
+                <g id="Oval-Copy-Oval-Copy-112">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-22)" xlink:href="#path-21"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-21"></use>
+                </g>
+                <g id="Oval-Copy-111">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-24)" xlink:href="#path-23"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-23"></use>
+                </g>
+                <g id="Oval-Copy-111">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-26)" xlink:href="#path-25"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-25"></use>
+                </g>
+                <path d="M810.445422,6868.38252 L796.151201,6854.0883 C795.449111,6853.38706 794.515754,6853.00086 793.524081,6853.00086 L790.951276,6853.00086 L790.951276,6864.43555 C790.951276,6870.078 794.45658,6873.5833 800.099028,6873.5833 L804.10117,6873.5833 L804.10117,6903.70771 C804.10117,6906.38743 801.921146,6908.56745 799.241426,6908.56745 L768.292292,6908.56745 C765.612573,6908.56745 763.432549,6906.38743 763.432549,6903.70771 L763.432549,6865.29315 C763.432549,6862.61343 765.612573,6860.43341 768.292292,6860.43341 L780.050871,6860.43341 L780.050871,6881.90461 L777.644154,6879.49818 C776.942064,6878.79666 776.008993,6878.41046 775.016748,6878.41046 C774.024503,6878.41046 773.091146,6878.79695 772.38877,6879.49904 C770.940567,6880.94753 770.940567,6883.30507 772.389056,6884.75442 L781.139167,6893.50453 L781.169469,6893.53455 C781.188908,6893.55284 781.208633,6893.57085 781.22893,6893.58858 C781.286103,6893.64232 781.347279,6893.69749 781.426178,6893.76239 C781.464484,6893.79297 781.503648,6893.82242 781.551102,6893.85672 C781.599128,6893.89331 781.648869,6893.9299 781.716905,6893.97536 C781.766646,6894.00795 781.817816,6894.03882 781.882422,6894.07655 C781.927589,6894.10428 781.973042,6894.13058 782.000771,6894.14516 C782.057087,6894.17575 782.113689,6894.20348 782.192588,6894.24064 C782.246046,6894.26608 782.298931,6894.29067 782.359535,6894.31525 C782.418423,6894.33927 782.477312,6894.36013 782.519906,6894.37471 C782.574793,6894.39472 782.629679,6894.41416 782.691141,6894.43274 C782.748314,6894.45018 782.804916,6894.46448 782.866092,6894.47934 C782.892391,6894.48592 782.918977,6894.49278 782.944705,6894.49878 L783.049047,6894.52222 C783.104791,6894.53337 783.16225,6894.54195 783.207417,6894.54766 L783.244008,6894.55338 C783.299466,6894.56224 783.35521,6894.56996 783.410383,6894.57511 C783.647653,6894.59683 783.888925,6894.59683 784.122764,6894.57511 C784.178508,6894.56967 784.234252,6894.56224 784.27456,6894.55538 L784.313438,6894.54995 C784.368896,6894.5428 784.424354,6894.53423 784.486673,6894.52193 L784.593587,6894.49764 C784.620173,6894.49135 784.647902,6894.4842 784.679062,6894.47648 C784.733662,6894.46305 784.788263,6894.44904 784.848009,6894.43103 C784.900895,6894.41502 784.952637,6894.39701 785.016385,6894.37386 C785.073273,6894.35413 785.129589,6894.33355 785.179615,6894.31297 C785.234502,6894.29067 785.287673,6894.26608 785.352279,6894.2355 L785.383153,6894.22063 C785.426033,6894.20033 785.468913,6894.17947 785.52723,6894.14859 C785.570682,6894.12487 785.61442,6894.09942 785.6573,6894.07312 L785.687887,6894.05483 C785.731053,6894.02939 785.774505,6894.00337 785.836253,6893.96278 C785.883706,6893.93105 785.930017,6893.89703 785.990049,6893.85158 C786.029785,6893.82242 786.068663,6893.79326 786.127837,6893.74581 C786.190156,6893.69435 786.249617,6893.64118 786.307933,6893.58572 C786.337664,6893.55942 786.367394,6893.53169 786.401126,6893.49767 L795.144948,6884.75328 C796.593724,6883.30393 796.593152,6880.94638 795.144948,6879.49847 C794.44343,6878.79609 793.510073,6878.40931 792.517256,6878.40931 C791.524725,6878.40931 790.591654,6878.7958 789.888993,6879.49761 L787.48342,6881.90347 L787.48342,6856.71627 C787.48342,6854.66718 785.816242,6853 783.767145,6853 L768.292292,6853 C761.51438,6853 756,6858.51438 756,6865.29229 L756,6903.70771 C756,6910.48562 761.51438,6916 768.292292,6916 L799.241426,6916 C806.019339,6916 811.533719,6910.48562 811.533719,6903.70771 L811.533719,6871.0105 C811.533433,6870.01854 811.147512,6869.08547 810.445422,6868.38252 Z" id="Shape-Copy" fill="url(#linearGradient-27)" fill-rule="nonzero"></path>
+                <path d="M616.608487,6767.83465 L619.945042,6761.56299 L636.379353,6761.56299 C635.562961,6762.98031 634.959542,6764.04331 632.474873,6764.04331 L623.459074,6764.04331 C623.63655,6763.79528 621.61332,6767.83465 621.61332,6767.83465 L616.608487,6767.83465 Z M621.293863,6759.15354 C622.28773,6757.38189 623.352588,6755.25591 623.352588,6755.25591 C623.956008,6754.37008 624.701409,6753.23622 627.150582,6753.23622 L636.663315,6753.23622 C638.793031,6753.37795 639.360955,6754.29921 638.864022,6756 C638.722041,6756.4252 637.941145,6758.33858 637.444211,6759.18898 L621.293863,6759.18898 L621.293863,6759.15354 Z" id="XMLID_118_" fill="#F26F21" fill-rule="nonzero"></path>
+                <path d="M627.895983,6783 C615.401648,6783 605.25,6772.90157 605.25,6760.5 C605.25,6748.09843 615.401648,6738 627.895983,6738 C640.319328,6738 650.506471,6748.09843 650.506471,6760.5 C650.506471,6772.90157 640.390318,6783 627.895983,6783 Z M627.895983,6740.58661 C616.892449,6740.58661 607.841155,6749.51575 607.841155,6760.5 C607.841155,6771.48425 616.821458,6780.41339 627.860488,6780.41339 C638.864022,6780.41339 647.879821,6771.48425 647.879821,6760.5 C647.879821,6749.51575 638.970507,6740.58661 627.966973,6740.58661 L627.895983,6740.58661 Z" id="XMLID_110_" fill="#F26F21" fill-rule="nonzero"></path>
+                <g id="Iugu-Simbolo" transform="translate(768.000000, 6668.000000)">
+                    <mask id="mask-29" fill="white">
+                        <use xlink:href="#path-28"></use>
+                    </mask>
+                    <g id="Clip-2"></g>
+                    <path d="M13.5228468,16.0245695 L16.4773655,16.0245695 C17.2791033,16.0245695 17.9348592,16.6894719 17.9348592,17.5023923 L17.9348592,20.4978587 C17.9348592,21.3110411 17.2791033,21.9759435 16.4773655,21.9759435 L13.5228468,21.9759435 C12.721109,21.9759435 12.0653531,21.3110411 12.0653531,20.4978587 L12.0653531,17.5023923 C12.0653531,16.6894719 12.721109,16.0245695 13.5228468,16.0245695 Z M3.22246682,15.6177163 L3.22246682,15.6177163 C5.55223469,15.3290156 7.14847578,16.179137 7.4631766,18.7132586 C7.76650891,21.1488762 8.67392211,23.16035 10.1686218,24.5286656 C11.7142214,25.9449234 13.9755199,26.7586297 16.9594934,26.7452688 C19.1791935,26.7345277 21.1940021,27.1940386 22.9806656,28.0148184 C24.9058182,28.8992591 26.5661363,30.1984123 27.9313901,31.7791928 L29.320156,33.3874811 C30.3192923,34.5435938 30.2035403,36.3006861 29.0625561,37.3119246 C27.9207967,38.323163 26.1873584,38.2060584 25.1879637,37.0509936 L23.7986811,35.4413954 C22.9434596,34.4516393 21.9120264,33.6413386 20.7204007,33.0953746 C19.6086128,32.5837299 18.3573024,32.297649 16.9817136,32.3041985 C12.5433469,32.3246328 9.03538881,30.9825151 6.48781077,28.6485453 C4.17819615,26.5341138 2.72586997,23.6727806 2.13961697,20.3280964 C1.98071631,19.4234834 1.87245716,18.1303556 1.85204553,17.2102859 C1.82827503,16.0612465 2.23934974,15.7392745 3.22246682,15.6177163 Z M26.7769703,22.3827967 C27.7600874,22.2601906 28.1719372,21.9382185 28.1471332,20.7899651 C28.1280135,19.8693714 28.019496,18.5765057 27.8605953,17.6724166 C27.2735672,14.3266844 25.8217577,11.4663991 23.5124015,9.35065778 C20.9640483,7.01721198 17.4568653,5.67588017 13.018757,5.6965765 C11.6429099,5.70181607 10.3908243,5.41678306 9.27877811,4.90513833 C8.08844423,4.35891239 7.05571914,3.54887372 6.20127283,2.55806963 L4.81224854,0.949519372 C3.81337058,-0.205807444 2.07864046,-0.323697936 0.937656215,0.688588418 C-0.203586401,1.69982686 -0.319080051,3.45665716 0.679281161,4.61276991 L2.06908058,6.22132017 C3.43407599,7.80131474 5.09361897,9.10046796 7.0187715,9.98569456 C8.80621013,10.8064744 10.8212772,11.2649374 13.0399438,11.2552442 C16.0239173,11.2421452 18.2854741,12.0555896 19.8318488,13.4710614 C21.3265485,14.8396391 22.2339617,16.8516368 22.537294,19.2864684 C22.8519949,21.821114 24.4482359,22.6714974 26.7769703,22.3827967 L26.7769703,22.3827967 Z" id="Fill-1" fill="#1A1919" mask="url(#mask-29)"></path>
+                </g>
+                <g id="Stripe-Logo-(blue)" transform="translate(908.000000, 6748.000000)" fill="#6772E5">
+                    <path d="M54,11.550055 C54,7.88888889 52.1641992,5 48.6554509,5 C45.1318977,5 43,7.88888889 43,11.5214521 C43,15.8261826 45.5168237,18 49.1292059,18 C50.8909825,18 52.2234186,17.6138614 53.230148,17.070407 L53.230148,14.210121 C52.2234186,14.6963696 51.0686406,14.9966997 49.602961,14.9966997 C48.166891,14.9966997 46.8936743,14.510451 46.730821,12.8228823 L53.9703903,12.8228823 C53.9703903,12.6369637 54,11.8932893 54,11.550055 Z M46.6864065,10.1914191 C46.6864065,8.57535754 47.7079408,7.90319032 48.640646,7.90319032 C49.5437416,7.90319032 50.5060565,8.57535754 50.5060565,10.1914191 L46.6864065,10.1914191 Z" id="Shape"></path>
+                    <path d="M37.1285714,5 C35.7285714,5 34.8285714,5.66159052 34.3285714,6.12182741 L34.1428571,5.23011844 L31,5.23011844 L31,22 L34.5714286,21.2377327 L34.5857143,17.1675127 C35.1,17.5414552 35.8571429,18.0736041 37.1142857,18.0736041 C39.6714286,18.0736041 42,16.0025381 42,11.4433164 C41.9857143,7.27241963 39.6285714,5 37.1285714,5 Z M36.2714286,14.9094755 C35.4285714,14.9094755 34.9285714,14.607445 34.5857143,14.2335025 L34.5714286,8.89763113 C34.9428571,8.48054146 35.4571429,8.1928934 36.2714286,8.1928934 C37.5714286,8.1928934 38.4714286,9.65989848 38.4714286,11.5439932 C38.4714286,13.4712352 37.5857143,14.9094755 36.2714286,14.9094755 Z" id="Shape"></path>
+                    <polygon id="Shape" points="25 3 29 2.36964981 29 0 25 0.618677043"></polygon>
+                    <rect id="Rectangle-path" x="25" y="5" width="4" height="13"></rect>
+                    <path d="M21.1636364,6.23837117 L20.9454545,5.15177875 L18,5.15177875 L18,18 L21.4090909,18 L21.4090909,9.29257691 C22.2136364,8.16193344 23.5772727,8.36750498 24,8.52902548 L24,5.15177875 C23.5636364,4.97557457 21.9681818,4.65253358 21.1636364,6.23837117 Z" id="Shape"></path>
+                    <path d="M14.3870968,1 L11.0138249,1.7963964 L11,14.063964 C11,16.3306306 12.5345622,18 14.5806452,18 C15.7142857,18 16.5437788,17.7702703 17,17.4945946 L17,14.3855856 C16.5576037,14.5846847 14.3732719,15.2891892 14.3732719,13.0225225 L14.3732719,7.58558559 L17,7.58558559 L17,4.32342342 L14.3732719,4.32342342 L14.3870968,1 Z" id="Shape"></path>
+                    <path d="M3.98425197,8.87142857 C3.98425197,8.31428571 4.48818898,8.1 5.32283465,8.1 C6.51968504,8.1 8.03149606,8.42857143 9.22834646,9.01428571 L9.22834646,5.65714286 C7.92125984,5.18571429 6.62992126,5 5.32283465,5 C2.12598425,5 0,6.51428571 0,9.04285714 C0,12.9857143 5.98425197,12.3571429 5.98425197,14.0571429 C5.98425197,14.7142857 5.35433071,14.9285714 4.47244094,14.9285714 C3.16535433,14.9285714 1.49606299,14.4428571 0.173228346,13.7857143 L0.173228346,17.1857143 C1.63779528,17.7571429 3.11811024,18 4.47244094,18 C7.7480315,18 10,16.5285714 10,13.9714286 C9.98425197,9.71428571 3.98425197,10.4714286 3.98425197,8.87142857 Z" id="Shape"></path>
+                </g>
+                <image id="logo-vindi-horizontal" x="912" y="6988" width="45" height="45" xlink:href="data:image/png;base64,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"></image>
+                <text id="VINDI" font-family="MaisonNeue-Medium, Maison Neue" font-size="9" font-weight="400" fill="#818181">
+                    <tspan x="924" y="7014">VINDI</tspan>
+                </text>
+                <g id="moip" transform="translate(953.000000, 6868.000000)">
+                    <path d="M31.4633785,8.38217867 C31.6046816,8.56950775 31.7637544,8.71946217 31.9440141,8.83204193 C32.1235904,8.9443938 32.3086342,9 32.5,9 C32.6911949,9 32.8757262,8.9443938 33.0554733,8.83204193 C33.235733,8.71946217 33.3963435,8.56950775 33.5366215,8.38217867 C33.6765577,8.19507748 33.7888142,7.98154057 33.873391,7.74179581 C33.9583096,7.50205105 34,7.25455789 34,7 C34,6.74544211 33.9583096,6.49840474 33.873391,6.25865998 C33.7888142,6.01868733 33.6765577,5.80492252 33.5366215,5.61759344 C33.3963435,5.43094804 33.235733,5.28053783 33.0554733,5.16841386 C32.8757262,5.05606199 32.6911949,5 32.5,5 C32.3086342,5 32.1235904,5.05606199 31.9440141,5.16841386 C31.7637544,5.28053783 31.6046816,5.43094804 31.4633785,5.61759344 C31.3234423,5.80492252 31.2108441,6.01868733 31.1269507,6.25865998 C31.042203,6.49840474 31,6.74544211 31,7 C31,7.25455789 31.042203,7.50205105 31.1269507,7.74179581 C31.2108441,7.98154057 31.3234423,8.19507748 31.4633785,8.38217867" id="Fill-1" fill="#25466C"></path>
+                    <g id="Group-8">
+                        <path d="M26.4645497,17.4162829 C26.3076556,17.8112468 26.0954801,18.1535132 25.8290762,18.4436178 C25.5616192,18.7339011 25.2497616,18.9648773 24.8924503,19.1377968 C24.5346126,19.3107163 24.1495728,19.3966402 23.7378576,19.3966402 C23.3379007,19.3966402 22.9584768,19.3107163 22.6008146,19.1377968 C22.2428013,18.9648773 21.9307682,18.7339011 21.6638377,18.4436178 C21.3976093,18.1535132 21.1852583,17.8112468 21.0278377,17.4162829 C20.8704172,17.0214977 20.7912682,16.6017034 20.7912682,16.1576146 C20.7912682,15.7135258 20.8704172,15.2937315 21.0278377,14.8987676 C21.1852583,14.503625 21.3976093,14.1615374 21.6638377,13.8708968 C21.9307682,13.5816853 22.2428013,13.3499946 22.6008146,13.1774323 C22.9584768,13.0041555 23.3379007,12.9182317 23.7378576,12.9182317 C24.1495728,12.9182317 24.5346126,13.0041555 24.8924503,13.1774323 C25.2497616,13.3499946 25.5616192,13.5816853 25.8290762,13.8708968 C26.0954801,14.1615374 26.3076556,14.503625 26.4645497,14.8987676 C26.6224967,15.2937315 26.7019967,15.7135258 26.7019967,16.1576146 C26.7019967,16.6017034 26.6224967,17.0214977 26.4645497,17.4162829 M29.3767417,13.5311314 C29.0624272,12.7447763 28.6305298,12.0586359 28.0808742,11.4721743 C27.5306921,10.88607 26.8792483,10.4262613 26.1267185,10.0929267 C25.3736623,9.76012811 24.565851,9.59346084 23.7017053,9.59346084 C22.8375596,9.59346084 22.0325563,9.76012811 21.2861689,10.0929267 C20.539957,10.4262613 19.8920232,10.88607 19.3421921,11.4721743 C18.7923609,12.0586359 18.3601126,12.7447763 18.046149,13.5311314 C17.7320099,14.3174865 17.5749404,15.1701155 17.5749404,16.0895543 C17.5749404,17.0089931 17.7320099,17.8623367 18.046149,18.6481559 C18.3601126,19.4343324 18.7923609,20.1204728 19.3421921,20.706577 C19.8920232,21.2933959 20.539957,21.7524901 21.2861689,22.0858246 C22.0325563,22.4188019 22.8375596,22.5856478 23.7017053,22.5856478 C24.565851,22.5856478 25.3736623,22.4188019 26.1267185,22.0858246 C26.8792483,21.7524901 27.5306921,21.2933959 28.0808742,20.706577 C28.6305298,20.1204728 29.0624272,19.4343324 29.3767417,18.6481559 C29.6910563,17.8623367 29.8479503,17.0089931 29.8479503,16.0895543 C29.8479503,15.1701155 29.6910563,14.3174865 29.3767417,13.5311314" id="Fill-2" fill="#25466C"></path>
+                        <path d="M45.312543,17.4611205 C45.1493311,17.8726976 44.9280298,18.2292548 44.650745,18.5316853 C44.3717053,18.8339372 44.0468609,19.074917 43.674457,19.254982 C43.301702,19.4348683 42.9005166,19.5243649 42.4717781,19.5243649 C42.0549735,19.5243649 41.659755,19.4348683 41.2871755,19.254982 C40.914245,19.074917 40.5888742,18.8339372 40.3107119,18.5316853 C40.0332517,18.2292548 39.8121258,17.8726976 39.6480364,17.4611205 C39.4841225,17.0499008 39.4018146,16.6124215 39.4018146,16.1499332 C39.4018146,15.6872663 39.4841225,15.2497871 39.6480364,14.83821 C39.8121258,14.4268116 40.0332517,14.0702544 40.3107119,13.7674666 C40.5888742,13.4661079 40.914245,13.2247708 41.2871755,13.0448845 C41.659755,12.8646409 42.0549735,12.7747871 42.4717781,12.7747871 C42.9005166,12.7747871 43.301702,12.8646409 43.674457,13.0448845 C44.0468609,13.2247708 44.3717053,13.4661079 44.650745,13.7674666 C44.9280298,14.0702544 45.1493311,14.4268116 45.312543,14.83821 C45.4773344,15.2497871 45.5598179,15.6872663 45.5598179,16.1499332 C45.5598179,16.6124215 45.4773344,17.0499008 45.312543,17.4611205 Z M48.1475166,13.5909744 C48.1422517,13.5775767 48.1362848,13.5648935 48.1310199,13.5520318 C48.1282119,13.545065 48.126106,13.5379195 48.123298,13.5311314 C47.8089834,12.7447763 47.3770861,12.0586359 46.8274305,11.4721743 C46.2772483,10.88607 45.6258046,10.4262613 44.8732748,10.0929267 C44.1202185,9.76012811 43.3125828,9.59346084 42.4480861,9.59346084 C41.5839404,9.59346084 40.7784106,9.76012811 40.0321987,10.0929267 C39.2858113,10.4262613 38.637702,10.88607 38.0876954,11.4721743 C37.5380397,12.0586359 37.1059669,12.7447763 36.7916523,13.5311314 C36.4775132,14.3174865 36.3204437,15.1701155 36.3204437,16.0895543 C36.3204437,16.0977716 36.3246556,16.1058102 36.3246556,16.1140274 C36.3246556,16.1217088 36.3278146,16.1290328 36.3278146,16.1365355 L36.3278146,27.7080314 C36.3243046,27.7326831 36.3204437,27.7569776 36.3204437,27.7825226 L36.3204437,28.5738795 C36.3204437,28.8700577 36.5561358,29.1097871 36.8469338,29.1097871 L36.9362616,29.1097871 C36.9643411,29.1146102 36.992947,29.1176471 37.0224305,29.1176471 L38.7122881,29.1176471 C38.742649,29.1176471 38.7723079,29.1146102 38.8017914,29.1097871 L38.9579834,29.1097871 C39.2487815,29.1097871 39.4844735,28.8700577 39.4844735,28.5738795 L39.4844735,28.2546572 C39.485351,28.240009 39.486755,28.2251822 39.486755,28.2105341 L39.486755,22.3441321 C39.486755,21.8530621 40.0243013,22.1672826 40.0243013,22.1672826 C40.7701623,22.5002598 41.6069305,22.6867557 42.4712517,22.6867557 L42.4717781,22.6867557 C43.3350464,22.6867557 44.1437351,22.5002598 44.8969669,22.1672826 C45.6505497,21.8337694 46.3011159,21.3639571 46.8514735,20.7778528 C47.4014801,20.1919271 47.833553,19.5006063 48.1475166,18.7137153 C48.4620066,17.9277174 48.6185497,17.071873 48.6185497,16.1520769 C48.6185497,15.2321021 48.4620066,14.3773295 48.1475166,13.5909744 L48.1475166,13.5909744 Z" id="Fill-4" fill="#25466C"></path>
+                        <path d="M34.5728477,21.2676723 L34.5728477,12.5461332 C34.5728477,11.5956117 34.1909669,10.7515572 33.5318013,10.2088614 C33.0983245,9.85194695 32.5923675,9.62775893 31.9907649,9.59006676 C31.7255894,9.59006676 31.589404,9.9214363 31.589404,10.2070751 L31.589404,21.2694587 C31.5844901,21.298755 31.5804536,21.3285872 31.5804536,21.3594912 L31.5804536,22.1508481 C31.5804536,22.4470263 31.8161457,22.6867557 32.1069437,22.6867557 L34.0554834,22.6867557 C34.346106,22.6867557 34.5819735,22.4470263 34.5819735,22.1508481 L34.5819735,21.3594912 C34.5819735,21.3280512 34.5779371,21.2976831 34.5728477,21.2676723" id="Fill-5" fill="#25466C"></path>
+                        <path d="M15.9701987,21.2746391 L15.9701987,14.5656117 C15.9701987,13.8603573 15.8320828,13.20262 15.5918278,12.597223 C15.3489404,11.9889679 15.0107583,11.4635998 14.5909702,11.0168315 C14.1704801,10.5697059 13.6704901,10.2199368 13.0950364,9.96752436 C13.0525662,9.94858896 13.0071126,9.93251173 12.9646424,9.91518405 C12.7013974,9.7894244 12.4318344,9.70171418 12.1584106,9.65616204 C11.8777914,9.61186034 11.5662848,9.58667268 11.2252947,9.58667268 C10.5977185,9.58667268 10.0054172,9.70600144 9.44926821,9.94787441 C9.17057947,10.0675604 8.90750993,10.2110051 8.65988411,10.3782082 L8.45999338,10.5214742 C8.02265563,10.8251552 7.60409603,10.6195453 7.46650662,10.5275478 L7.39841391,10.4828888 C7.39841391,10.4828888 6.81699338,10.1195435 6.48618212,9.97752797 C5.92985762,9.73583363 5.35124503,9.64633706 4.72384437,9.64633706 L4.72296689,9.64633706 C4.38197682,9.64633706 4.07169868,9.64151389 3.79090397,9.68599423 C3.79090397,9.68599423 3.3070596,9.76834536 2.85761258,9.97752797 C2.28759934,10.2429809 1.78550331,10.5748863 1.36553974,11.0220119 C0.945576159,11.4691375 0.610201987,11.9912901 0.367665563,12.5999026 C0.127410596,13.2051209 0,13.8603573 0,14.5656117 L0,22.1508481 C0,22.4470263 0.235692053,22.6867557 0.526490066,22.6867557 L2.38131457,22.6867557 C2.67211258,22.6867557 2.90798013,22.4470263 2.90798013,22.1508481 L2.90798013,21.3594912 C2.90798013,21.3489516 2.90552318,21.3391267 2.90499669,21.3289444 L2.8935894,14.4773656 C2.8935894,13.4487802 3.71298344,12.6156225 4.72366887,12.6156225 C5.7343543,12.6156225 6.52215894,13.4612847 6.52215894,14.4900487 L6.49337748,14.6272411 L6.49337748,21.781965 C6.49337748,21.8134049 6.49565894,21.8448448 6.49899338,21.8761061 L6.49899338,22.1508481 C6.49899338,22.4470263 6.73468543,22.6867557 7.02548344,22.6867557 L8.97402318,22.6867557 C9.2646457,22.6867557 9.50051325,22.4470263 9.50051325,22.1508481 L9.50051325,21.8498466 C9.50103974,21.837878 9.50437417,21.8262667 9.50437417,21.8142981 L9.49173841,14.4062685 C9.49173841,13.4168044 10.2797185,12.6156225 11.2519702,12.6156225 C12.2238709,12.6156225 12.9981623,13.4291303 12.9981623,14.4185944 L12.986755,14.6272411 L12.986755,21.2626705 C12.9811391,21.2941104 12.9771026,21.3262649 12.9771026,21.3594912 L12.9771026,22.1508481 C12.9771026,22.4470263 13.2129702,22.6867557 13.5035927,22.6867557 L15.451957,22.6867557 C15.742755,22.6867557 15.9786225,22.4470263 15.9786225,22.1508481 L15.9786225,21.3594912 C15.9786225,21.3303735 15.9745861,21.3023277 15.9701987,21.2746391" id="Fill-6" fill="#25466C"></path>
+                        <path d="M51.0619901,4.38908336 L49.8796689,5.59219596 C49.7166325,5.75832732 49.450404,5.75832732 49.2873675,5.59255323 L49.2540232,5.55843378 C49.0911623,5.39265969 49.0911623,5.12077589 49.2540232,4.95518044 L49.8099967,4.38908336 C49.9728576,4.22313064 49.9728576,3.95178275 49.8099967,3.78565139 L49.2540232,3.21973295 C49.0911623,3.05395886 49.0911623,2.7822537 49.2540232,2.61647961 L49.2873675,2.58236016 C49.450404,2.41658607 49.7166325,2.41658607 49.8796689,2.58271743 L51.0619901,3.78565139 C51.225202,3.95178275 51.225202,4.22313064 51.0619901,4.38908336 Z M47.886904,5.59219596 C47.724043,5.75832732 47.4576391,5.75832732 47.2946026,5.59255323 L47.2616093,5.55843378 C47.0983974,5.39265969 47.0983974,5.12077589 47.2616093,4.95518044 L47.8174073,4.38908336 C47.9800927,4.22313064 47.9800927,3.95178275 47.8174073,3.78565139 L47.2616093,3.21973295 C47.0983974,3.05395886 47.0983974,2.7822537 47.2616093,2.61647961 L47.2946026,2.58236016 C47.4576391,2.41658607 47.724043,2.41658607 47.886904,2.58271743 L49.0694007,3.78565139 C49.2324371,3.95178275 49.2324371,4.22313064 49.0694007,4.38908336 L47.886904,5.59219596 Z M46.8493675,0.184888127 C45.157404,1.12915734 45.0431556,7.31049441 46.8346258,8.04325875 C48.5076358,8.72707687 52.9169901,5.9494677 52.9283974,4.11398412 C52.9387517,2.28153735 48.4283113,-0.696322627 46.8493675,0.184888127 L46.8493675,0.184888127 Z" id="Fill-7" fill="#3E89BD"></path>
+                    </g>
+                </g>
+                <g id="webhooks" transform="translate(762.000000, 7060.000000)" fill-rule="nonzero">
+                    <path d="M18.6217205,16.3585628 C16.8871107,19.2900511 15.2252531,22.1288415 13.528736,24.9462654 C13.0930399,25.6696048 12.877399,26.258828 13.2254653,27.1782463 C14.186449,29.718234 12.8308048,32.1900132 10.2830046,32.8609223 C7.88021848,33.4938648 5.53923088,31.9063314 5.06249927,29.3201591 C4.64004575,27.031146 6.40702627,24.787167 8.91755114,24.4293597 C9.12779698,24.3991178 9.34262048,24.3956663 9.69608198,24.3690403 L13.5148395,17.9314683 C11.1130342,15.5305274 9.68349338,12.7241155 9.99984306,9.24630139 C10.2234949,6.78799959 11.1851325,4.66350879 12.9426307,2.92230071 C16.3088529,-0.412193295 21.4443444,-0.952109147 25.4079524,1.60727279 C29.2146118,4.06573894 30.95805,8.85447205 29.4719422,12.9530661 C28.3513941,12.6476891 27.2229985,12.3396823 25.9826135,12.0014336 C26.4492088,9.72261072 26.1040852,7.67635429 24.575307,5.92331244 C23.5652769,4.76590379 22.2691424,4.15925861 20.7954597,3.9357318 C17.8409009,3.48703461 14.9401296,5.39523036 14.0793642,8.3106116 C13.1023587,11.6191371 14.5811095,14.3220035 18.6217205,16.3587271 L18.6217205,16.3585628 Z" id="Shape" fill="#C73A63"></path>
+                    <path d="M23.7700822,11.8353002 C24.9940144,14.0050123 26.2367763,16.2074667 27.4684041,18.3896834 C33.693675,16.454268 38.3873525,19.9172187 40.0712212,23.6246671 C42.105159,28.1031227 40.7147066,33.4073753 36.7203487,36.1703976 C32.6203807,39.0066376 27.4353292,38.5220845 23.8028296,34.8786398 C24.7285971,34.0998996 25.6589493,33.3177041 26.6529951,32.4820351 C30.2407946,34.817104 33.3788093,34.7071952 35.7084557,31.9420339 C37.6950736,29.5831075 37.6520108,26.0658606 35.6077576,23.756459 C33.2486386,21.091499 30.0886832,21.0102191 26.2690324,23.5683964 C24.684552,20.7436738 23.0725637,17.9414923 21.5381867,15.0963675 C21.0207786,14.1374623 20.4496648,13.5810078 19.2835317,13.3781371 C17.3362107,13.0388677 16.0790399,11.3584802 16.0035573,9.47588022 C15.9293846,7.61401155 17.0210174,5.93099153 18.7271543,5.27532286 C20.417245,4.62557742 22.4005881,5.14994782 23.5374123,6.5938997 C24.4664546,7.7736097 24.761672,9.10140045 24.272754,10.5563761 C24.1368526,10.9621174 23.9608356,11.3546959 23.7700822,11.8354648 L23.7700822,11.8353002 Z" id="Shape" fill="#4B4B4B"></path>
+                    <path d="M27.6888407,30.1300529 L20.1320538,30.1300529 C19.4077448,32.9683682 17.843224,35.2599098 15.1475793,36.7171339 C13.0519206,37.8496916 10.7933048,38.2336601 8.38939795,37.8638485 C3.96330347,37.1838421 0.344234875,33.3877291 0.0255851311,29.1132678 C-0.335000901,24.2709547 3.15842394,19.9667638 7.81483779,19 C8.1362943,20.112266 8.46121797,21.2352283 8.78267448,22.3448202 C4.51045645,24.4214905 3.03178956,27.0380132 4.22746906,30.3098464 C5.28000384,33.1890596 8.26986302,34.7672472 11.516293,34.1569245 C14.8315712,33.5337032 16.503079,30.9086862 16.2990111,26.6958864 C19.4419212,26.6958864 22.587473,26.6648984 25.7307133,26.7111445 C26.9580927,26.7295486 27.9056216,26.6082705 28.8302012,25.5773285 C30.3524554,23.8810088 33.1544268,24.0340614 34.7939045,25.6361586 C36.4693748,27.2734908 36.3891345,29.9079457 34.616088,31.4762235 C32.9054507,32.9894463 30.2028716,32.9085943 28.6023584,31.2780259 C28.2734722,30.9420338 28.0142597,30.5429645 27.6888407,30.1300529 Z" id="Shape" fill="#4A4A4A"></path>
+                </g>
+
+                <image id="photo" x="600" y="6998" width="55" height="24" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAyCAIAAAAlV+npAAAACXBIWXMAAAsTAAALEwEAmpwYAAAKT2lDQ1BQaG90b3Nob3AgSUNDIHByb2ZpbGUAAHjanVNnVFPpFj333vRCS4iAlEtvUhUIIFJCi4AUkSYqIQkQSoghodkVUcERRUUEG8igiAOOjoCMFVEsDIoK2AfkIaKOg6OIisr74Xuja9a89+bN/rXXPues852zzwfACAyWSDNRNYAMqUIeEeCDx8TG4eQuQIEKJHAAEAizZCFz/SMBAPh+PDwrIsAHvgABeNMLCADATZvAMByH/w/qQplcAYCEAcB0kThLCIAUAEB6jkKmAEBGAYCdmCZTAKAEAGDLY2LjAFAtAGAnf+bTAICd+Jl7AQBblCEVAaCRACATZYhEAGg7AKzPVopFAFgwABRmS8Q5ANgtADBJV2ZIALC3AMDOEAuyAAgMADBRiIUpAAR7AGDIIyN4AISZABRG8lc88SuuEOcqAAB4mbI8uSQ5RYFbCC1xB1dXLh4ozkkXKxQ2YQJhmkAuwnmZGTKBNA/g88wAAKCRFRHgg/P9eM4Ors7ONo62Dl8t6r8G/yJiYuP+5c+rcEAAAOF0ftH+LC+zGoA7BoBt/qIl7gRoXgugdfeLZrIPQLUAoOnaV/Nw+H48PEWhkLnZ2eXk5NhKxEJbYcpXff5nwl/AV/1s+X48/Pf14L7iJIEyXYFHBPjgwsz0TKUcz5IJhGLc5o9H/LcL//wd0yLESWK5WCoU41EScY5EmozzMqUiiUKSKcUl0v9k4t8s+wM+3zUAsGo+AXuRLahdYwP2SycQWHTA4vcAAPK7b8HUKAgDgGiD4c93/+8//UegJQCAZkmScQAAXkQkLlTKsz/HCAAARKCBKrBBG/TBGCzABhzBBdzBC/xgNoRCJMTCQhBCCmSAHHJgKayCQiiGzbAdKmAv1EAdNMBRaIaTcA4uwlW4Dj1wD/phCJ7BKLyBCQRByAgTYSHaiAFiilgjjggXmYX4IcFIBBKLJCDJiBRRIkuRNUgxUopUIFVIHfI9cgI5h1xGupE7yAAygvyGvEcxlIGyUT3UDLVDuag3GoRGogvQZHQxmo8WoJvQcrQaPYw2oefQq2gP2o8+Q8cwwOgYBzPEbDAuxsNCsTgsCZNjy7EirAyrxhqwVqwDu4n1Y8+xdwQSgUXACTYEd0IgYR5BSFhMWE7YSKggHCQ0EdoJNwkDhFHCJyKTqEu0JroR+cQYYjIxh1hILCPWEo8TLxB7iEPENyQSiUMyJ7mQAkmxpFTSEtJG0m5SI+ksqZs0SBojk8naZGuyBzmULCAryIXkneTD5DPkG+Qh8lsKnWJAcaT4U+IoUspqShnlEOU05QZlmDJBVaOaUt2ooVQRNY9aQq2htlKvUYeoEzR1mjnNgxZJS6WtopXTGmgXaPdpr+h0uhHdlR5Ol9BX0svpR+iX6AP0dwwNhhWDx4hnKBmbGAcYZxl3GK+YTKYZ04sZx1QwNzHrmOeZD5lvVVgqtip8FZHKCpVKlSaVGyovVKmqpqreqgtV81XLVI+pXlN9rkZVM1PjqQnUlqtVqp1Q61MbU2epO6iHqmeob1Q/pH5Z/YkGWcNMw09DpFGgsV/jvMYgC2MZs3gsIWsNq4Z1gTXEJrHN2Xx2KruY/R27iz2qqaE5QzNKM1ezUvOUZj8H45hx+Jx0TgnnKKeX836K3hTvKeIpG6Y0TLkxZVxrqpaXllirSKtRq0frvTau7aedpr1Fu1n7gQ5Bx0onXCdHZ4/OBZ3nU9lT3acKpxZNPTr1ri6qa6UbobtEd79up+6Ynr5egJ5Mb6feeb3n+hx9L/1U/W36p/VHDFgGswwkBtsMzhg8xTVxbzwdL8fb8VFDXcNAQ6VhlWGX4YSRudE8o9VGjUYPjGnGXOMk423GbcajJgYmISZLTepN7ppSTbmmKaY7TDtMx83MzaLN1pk1mz0x1zLnm+eb15vft2BaeFostqi2uGVJsuRaplnutrxuhVo5WaVYVVpds0atna0l1rutu6cRp7lOk06rntZnw7Dxtsm2qbcZsOXYBtuutm22fWFnYhdnt8Wuw+6TvZN9un2N/T0HDYfZDqsdWh1+c7RyFDpWOt6azpzuP33F9JbpL2dYzxDP2DPjthPLKcRpnVOb00dnF2e5c4PziIuJS4LLLpc+Lpsbxt3IveRKdPVxXeF60vWdm7Obwu2o26/uNu5p7ofcn8w0nymeWTNz0MPIQ+BR5dE/C5+VMGvfrH5PQ0+BZ7XnIy9jL5FXrdewt6V3qvdh7xc+9j5yn+M+4zw33jLeWV/MN8C3yLfLT8Nvnl+F30N/I/9k/3r/0QCngCUBZwOJgUGBWwL7+Hp8Ib+OPzrbZfay2e1BjKC5QRVBj4KtguXBrSFoyOyQrSH355jOkc5pDoVQfujW0Adh5mGLw34MJ4WHhVeGP45wiFga0TGXNXfR3ENz30T6RJZE3ptnMU85ry1KNSo+qi5qPNo3ujS6P8YuZlnM1VidWElsSxw5LiquNm5svt/87fOH4p3iC+N7F5gvyF1weaHOwvSFpxapLhIsOpZATIhOOJTwQRAqqBaMJfITdyWOCnnCHcJnIi/RNtGI2ENcKh5O8kgqTXqS7JG8NXkkxTOlLOW5hCepkLxMDUzdmzqeFpp2IG0yPTq9MYOSkZBxQqohTZO2Z+pn5mZ2y6xlhbL+xW6Lty8elQfJa7OQrAVZLQq2QqboVFoo1yoHsmdlV2a/zYnKOZarnivN7cyzytuQN5zvn//tEsIS4ZK2pYZLVy0dWOa9rGo5sjxxedsK4xUFK4ZWBqw8uIq2Km3VT6vtV5eufr0mek1rgV7ByoLBtQFr6wtVCuWFfevc1+1dT1gvWd+1YfqGnRs+FYmKrhTbF5cVf9go3HjlG4dvyr+Z3JS0qavEuWTPZtJm6ebeLZ5bDpaql+aXDm4N2dq0Dd9WtO319kXbL5fNKNu7g7ZDuaO/PLi8ZafJzs07P1SkVPRU+lQ27tLdtWHX+G7R7ht7vPY07NXbW7z3/T7JvttVAVVN1WbVZftJ+7P3P66Jqun4lvttXa1ObXHtxwPSA/0HIw6217nU1R3SPVRSj9Yr60cOxx++/p3vdy0NNg1VjZzG4iNwRHnk6fcJ3/ceDTradox7rOEH0x92HWcdL2pCmvKaRptTmvtbYlu6T8w+0dbq3nr8R9sfD5w0PFl5SvNUyWna6YLTk2fyz4ydlZ19fi753GDborZ752PO32oPb++6EHTh0kX/i+c7vDvOXPK4dPKy2+UTV7hXmq86X23qdOo8/pPTT8e7nLuarrlca7nuer21e2b36RueN87d9L158Rb/1tWeOT3dvfN6b/fF9/XfFt1+cif9zsu72Xcn7q28T7xf9EDtQdlD3YfVP1v+3Njv3H9qwHeg89HcR/cGhYPP/pH1jw9DBY+Zj8uGDYbrnjg+OTniP3L96fynQ89kzyaeF/6i/suuFxYvfvjV69fO0ZjRoZfyl5O/bXyl/erA6xmv28bCxh6+yXgzMV70VvvtwXfcdx3vo98PT+R8IH8o/2j5sfVT0Kf7kxmTk/8EA5jz/GMzLdsAAAAEZ0FNQQAAsY58+1GTAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAABg3SURBVHja7Jt5eFRVtujX3vuMNSaVVGWoqhAykAABAjIFMICChFYcEFAbB9q2tbUdWlu8fW3F9okz3b5rO79+Tu0AOCu0CogIDYkMkgRCCBkgZJ6qKjWdqnPO3vv9EQScuN236fe9+2T9eWp9a+361a69hr0O4pzDGfn7BJ9BcAbWGVhnYP03EuEUn3EABAAAzKQtRzv2Vdd2HW3VDA2AS0RM82QXjystKsi1qtKPBBY6dTTsae968/U1Vds+NgYbhznibpWmOLAiI2rSSAJ3hlVNLiicNP+iRUtzh2f+eGHxeOLZJ55avfapib6ec8e78jLsqoQJ5oCZbDFFlUqY6RoOBszq1sjOrszCs2656rrrJcs/tct0XQcASTqVEcMwKTUJIaIofq8CpdQwDIzxqe2cNljBfftuuuGWONt6zxUef2pqMI6AMVngNlmXRSbaVWKVAScZ0oEyATFTCr5Taa2vn/OrO1Zkjx7xd/p+5MGHd2z/m2q1PrByZSgUeunFF5ubmoDzgsLCX9xww/gJ409W3rVr15bNn1fv2dM/MEAZFQTRbneMGFF4y223ZWZlAkBvT8+GDRu3b9vWeuSIruuEEIvVml9QMHPmzPMXXIAxPu2wOABq/eTTX1x73dhZwX9f6OlrU8I6RhK3KMxpMRz2pGS1Y4cfWVMZ0RAOcxbiLMa0gOqAXU2lrz7DbrnrgaJZ0/9Tx/FYbP68iprqaq/PN6+i4s3X34hFI5Isq6qaSCR8fv/b77yTX1gAAM3NTQ8/+NDmjZv6BwYkWbZaLByAUZpMJr1e74bNn3k8nldeevnpp5463NysG4bVZkMIAQcAHotGz6uoWL12LSanAda3TKDAxo23LF46akbstxf6Wmrk7m6Ia1wzkMExxRzLgBUZ2WwoNR2l57D00Wb6OD19LM0oisTQhPzD197qWvXvN7ZX7f5PHbe0tHR3daW6XFos9tbatVddfdWLr7y8ePFijLHD4ehob1+37qOhDbVk0ZIP33s/nkgsuOiil1995cP168tnzgTOBUGYOWuWx+O5794V/7Z8+dHWVk9Gxu/uvfetd95ZvXZNUXERxlhWlDlz55wWUt+OhoM1+x76+S/JaOPXFf6mGhaMAshAKJIYUAqmKZqGLjKNgMYJQ8SBiI1xpBsal32Kx6uFGsfmdf1kmeeFu26//713UJrnFI5ra2sj4bBqseiG+cBDK5f97GcAMH3GjO3bt4fDYYxxX29fX2/vrb+6ubO9XRDFZdde+z9WPiAIgmmYvT09gBAAzKuoWLN69XPPPCPLst1uf/aFF8pnlgNAf19fJBwGzp1O55SpU09vnsUBgMVjn997z4bA4Z/P9vQ20uAgcAAVIZsJcgTMPtbfwTva1EAPSwZDgt4n8oQASMIuqzRMkfKRXCRYS+LheMW0GM3p+3zVqlM73rF9B+dci8fnzps7RAoAGIehQwEhlJGR8fxzzzc3NRFCJk6atOL39wmCAAC7du1sPHQIY+zz+Twez5/+40lJkgzDuP6GG4ZIAcCOHTs6Ozs5wLDhw0eMKDq9eRYCgL7331q7adPks9OGWZSuHlMQ8IBmVrZoB7pizQPGoGaajGMCNhkNz+ydOL57bnnvpKnD5TQ/hVQB2Tk4GbYg0UMjhy65xPrSynemXbpQmfj9v+rAwMDevXtFUeQAl1666KRTfGcwGBQFQVXVrKystWvXqqpqGMaVV16pKMqQzoZPN2iahgmZMGFCZ1dnS3OzJEkpKSkXLLjguJ1NGzcxxhhjkydPVi3qaU5KeTx2cM1r+4l+d7EnGgUK6P3qwLv7gv2DBnBAmCgEIQCdg0nZgTZ9/a7Ioy+3nT1+/29vLD5n3mgieXQmcsCU40QcF2ZoKEfb+drr5T8Aq6G+vuPoUYRxampq6fhjUc80zddeeZUzpuv6xEmT7A5HR3s7QshitRaPGjWk09nZ+eEHH8iynEgkJk6e3Ha0jXPOGLPZ7RmZWUM6B+sPbtq4QZYkk7HJU6ac/gw+WV11oL5e8igFTkt9W+IPX/TVHI5lK+IlrtRCVXILgoNgjiDGeEfSqEsmvoon+pLGxi8Ht1bvvuL8jpXLx3nzPHFmABADWQWaGDVe+OKTqvLWZhiW/12vlZWViWSSEFJUVOT1eQGAUbbqscerKisFQijAzbfdCpxr8bhqsei63tvTAwDhwcEVd9/T0d5utVoVRSkqKqqrq+OcC4LQ39e3bdvWefMqGhsP3XXnneHBsCCKqU5n6bhxpx+WtuPzfX3h3JHKoS7j9g86SJT/zueZYbeomOic6YybAAgAISiSxbnIGsK0MhZ/tz/cHtNffretam/gpcdKp071G5gLAjYoGl0gPN97OLqryvYdWIZhVFVWEUIkUWxqbFxxz71uj2fH9r9t+2IrNU1RVR986KG5c+fu2b1HUlTOGEbovhUr1q37aO9Xe/t6e30+X29Pj8PpLBhRaLXbREkyDZMxducdv3km/5nGQ40AXJHluKaVTC3z+X2nuZDmyYRWv68fAaOw4uOuYiq/OsK32O1QJRTDLMKZxrjOeIIyzWRRSiOMOTG53ON8vth7ebZTkoWDh7WFN+3ZuvUIJAPE0KwC9Xn4oJgM1FR/12Xb0bYDdXWSJGFMurq6/7hq1d13/dtf160HgNIJ4//3yy9dedWVAFBaWrrk8stimqbF4/UHDvz5hf9FKX3k8ccFSQpHo5IiWy2Ws846677773ekOiljwWDwQF3d1ddcPWv2bC2RYJSWTSsjgnCadxbt69H7+g1E1u8fPFu13V/osYgQY4xS4AZwAAaMc2AcccSBM8YhThFPMquElue4p9ut97f2dfUZi26r9rsFq8wrypQl82XFziMd7ZDUQP7GEVtVWRkMBIggFBUXX3f99Qfr65OJREpqyqRJk8umT1PVY8pEIA8/8vDMmeVfVlWZJi0uLr7o4otVVdU0LZlMpqWlWaxWALjuF9fN/8n8hoMNjNFRo0djhM+fPx8jbEtJmVsx7/R3HWioH6IRkeB0Jt6U6RIkbIgIOMc6BZMBAoaAc2DAOQAHwJxTypIIIwCT0p4kZZwDhv6A2RcwgbFt1dq67YqaAEINiEW/BWvHjh2cg2EYEydPuvyKy0+1OEG4YMGCCxYsOPnhZZdfdqIMNCkRiNfr9Xq9ABCNRm+9+Zauzk7DMC5dsmjkyJGnH5YZjXBT5wATrGqaJFAMkkA4ZYAoQscSiyFMDIBzBIAMxghFIcqe6wts7Y9ggUwYZmnoSRomu3OYJ2KwZ2sDOapgOZtw00AnV52B4J7du0VJNCktL5/5zyydUnrXncsHBvpHl5TY7faurq6tX3zRUF9vUlpUXHzn8uX/kn4WxjhCaa2WVBAxEZcRCAgBQgLGBDOMADgaSlyH+luMc8xRnNGn+oI7B6N5HvWOSzwXzVIfWdP29PuxkMlWDvcIOv9LX6A/mcxB3yg1qqp2NDQ0AONev6+0tPSfWfpXu/f85S+vRCNR8Z13EUJD1bXDYSufNuuBB1f6/P5/CSzRYg/p4shcoSVAuxN0jEXA1MSMU85FQCIAQ8hEAIwBRxSAA0cMrwmFdg7Gzh2T+ttF6aPGcFuWetu1vjVbj2zsCf/M7cSAQWAH49EJsnyyP48783d3rxAI8fv92d7sf2bpBfkjVj32RHNzSygUSuqa1WbN8edOnzFj4pQJ32lffm9rk6ETpfGpNL8BS8jMDnLb1FFCZkLcujNelqoyalAG3OSMAUXACcIMdI6GTGJAtUltfTBaXmx/4AqPK5tx2QCrpzArY/60yJr13TVhvYElb5vmiCsKWG0n+xs3qcReZBwJHYjr7WvqVqXI6aWZszNsw4Y+jeiB+r6dbYMNOtVEog5PHTUuo1zA8vEvQ7nZGjrQEtgX0LoB87RzrPnzx2bZ8r22QhnL+4PbNKOnqv2j4vSpKYobAEym1/Zsi+mDnLPhrrFpanZN9xaDJjzWnGL35L54+5dtf0UIVxQsI1gwaLIpsLcpuC+aDCCEsmzDx2WWpygZ38yzUlxCaroqHVw2y/3L7aFggmUpYHCOACgHjgAD0gA4Rgw4Y4hRvmkw6rSRG89NEyWkUw5YAeQA2XFWsePN9d07AvF0N5kzjDSlZAA50aJrCux978CT7ZFGzYxyzjkHQJCmZg3B2tnxyYbmV7oiLbqpcYRELAtEnJxdsaRkuUwUADg0sOezljcaA3vjRthkBkFYJDJGAgN6RcldPmfRC5X3UGBW0bl8+tDmQkGtd/W+xzUzQplx46Q/xI3wG/seMqg+v/BnCAtv1K5sjzROyZ5PsNA0sPfjppdbAntjZpRxJmBBwOIXR96+rGR5UfrEk2AJoqdsSs3+z6eOs5VVkD9/2v9IcXqUGwDAAAhHiAMDYAhTzjlibaZRHU9ee3ZabrqiGUzkGEDGmHHAXp+dIFapxf7nuAyLhfvGTj5Oqj3c+OKee8JGUBXs47PmZtiHheI9SVMbnTGDcfpe/VNbDq9l3MxNLRnpLuOc7uncEE4OVLWvG+2ZPiHrnA3Nr37S9FLS1CSilrinZ9qGBRO9Df17OFAGNMua19C7mwFFCIanjEpTj5U+zcHaBI1iJHjsvkLX+Kr29Ywzi2SPGZGX964IJXoUbJnkm7+z469r9/1BYzEZW87KnpMquxsGvgpoXX1a+2u1D/667Kk01Xsig/fOPie29fm4zu9flnPZwfp3e8JL/CkhbsjA+VC2xQBhBAYnDB9KGjYbnl1kTzJGEAiIiSSAaYBrsqwFGKDLxjrH+6R6M61g/IwTRXLHxyG9T8SK15G/rPS+k/+bn7W8tvnwaozJDN/CJSW/IUgAgD6to6ZzMwBoZqTy6IcfHnxOINguuRaPvn1C9hwEqDlYXd//JePUbfG6rf6PG18kQCgzC9LG46+jStPAV5wzBqzANV4RbUcGDxAkYCzs7PgkTc2uKFjmdxYOaN1v7n+cc6oQ6+JRv57qXwAAraH6Z3fdjikOJLrqer8sH7bwBKzssinWjCnNbU1jCvQ/3VNyw901ykDyfK8jnDSZTpFBwWQi5QJgRlF7Qh+ZqWalCQxA5kA4QyY1tW6qd1bt7/PZpUWjLFTGtvxZ7uLi40QIkjlnBIud4aa3654oz73UY80BgL5Y++aWNQIRVWLJd41t7N8TTPS1DTYc6tvNgDvkdAkpHx56RiASA3ZB0fVnZc8dMljXW2nQJADkpY5NUK0t0kCwKGJlhOvYAR83IodD+wkWGKcj08soM9oHDxEsGGbSZ8//+cSHXUom5fSdA0+azADOy7wXDpECgAyr36F4eqOtwFlcD3+z+adI5yy9sWrLHWPyjJJM6bnHJ955f3VHK7qmIEOiZiyZJLpuGlTRKSSQyXihT1EUQjHHAsUcxKQU7I4+827kxbcSZXlKdpYYdRX6Z10hS+R4rCkfvrB1sK6hbycV5K1H3t7TuWlO/k/PzVu6v3d7SO9XBZvB9NdrH2bcNKjOOJUES4Y155KRv2oN1QeTPSKSvba8Sd5jSbnJ9OZADUaYcxiRNvFIcL9mRBCQTGtupi13SOdo6EBQ60aAHHJ6nmvM0XBDINGDARNMLhp5i0vJBICG/l0d4UYJiZiQqf7zj682ogfDegBjTLjkUjO/3Smd/JO51bvnNhzdXOjmYzLRa0+OX/l0w+2VLT/NyChNkSwCMhNJg1IRYztCGWnYlgKmwBUrwQht3EM3bojkdlncJLHkLKea7dUKF6cXjjrerQaAFNl9w8RHK9vWbz36djDerdHoB/VPZ9pyA1oXAg6cuq0+p+zGgC2S06Vmeh35ha6zrJLj88NvYSSY3PSmFMhE/TpWVLcNNiAkqIIlxzny0+ZXKQfEzdyUUbJgGdLZ2bXBYAZCONue75BdO9o+0E2NYKEwdUKh61iK1xluYpwCQk7J47HkHF9tXW9lPBkiWLDJqXmukm/DwgK6+Be//ei5Q1llrcqAkea0/Mdy76Yve957v+O9ZjwOWQowZGBsMXkWiKG4QS1mQ7vRcjTZVmfKHXBZWmq1oHlH2M8/uyiQPiN92kL0ncRFIurM3EWjM6Y+seNGzYiZoHdEWgAAOErSZKFr/KWjbv92i4LpBksgwAjxsDbAOUcI9cfbPzj4LOOUceZPLVBFe9vgQQELjBou5Vju9mXHx9Wdm2WiJmlsKJwd7N9JMKHcLHZPQV8fapybQ91Zyk3G6bHb0ljrlta1BJEkTczMXZxu8X1PDz7TnzF98aOfrb/pvFFtnMeYhmaP1c8erRxsRXtqtS9beXKACWFEFP5JVYw14NQETtXJLJulMEsyEP1wIH7/RWMCarFzxrXS141NAOCcbWh+hWBpeOpoq5TS2P+VSXXGqUDk4rSJR8MNjDNFUHZ2fEqQkOsaI2Axmgy2hurzXWMnZs9zW/xNA9UW0dYcqnml+j6n4t7b/XkkOSBgKUHjw12lEpGjeggjDESs6dlilRwdkaZd7Z8ISKCcyoKlKG1i22BDR7gRI0EkSn7qmONrG5Y6BmOCEA4nB94/+PRkX0VI6/2s5Y1AvIsyWuIuOy//6h+8vh9VWiILz1VtuKPEvduWKkeTiBGam0Hy5wvAhXgcJTRQECpcJ+x8n1Y47Q4btquIIljV2T2nLN3lK7Wfc0dKRvbJKXFLcN8HDc9TZlhEh4CEBItyBopgmV94XU7KSLfVV9O9pa6vysTGhpa/kMMSQsigCU2PLCr5DQDMyVt6NHSgM9qCMalsX0eQNM1/Qetg/UC8Q8RSgWucgCW31XdoYI9MLEcG6xv6v3LKrnPyrqhsX98ba/XZC7Pt+R83vjSYDIhY9lp9XnvBiTLANX7WsCWftbxBMNnR/tHuzk8MZjBmKoK9LOe8C4t+aRHtJ2LU73//+2/xcnnc9mHz9te26oGDQImRVDRNisSESATrCW5qJBHDJV7VdOJtnRHGkKYbTza2GZmOK6+5acwV9zrS045Xkcf+SlSjnCKOMUICEZ2Ke7Rn+sWjbp6YPRcARCKXZEwXiazpUQlLqmC1Ss4c58gZuRdP9lZYJaddTh2TOd0qOx2Sqyht4oUjbxyeUrLt6Hsm1d0W/3n518iCkmkd1hU5zLhpFZ1jMqYtHXu3P6WoJVDrkF2jM6YXp0/e3/03jFGq7BmXNasofdKJuz+ERrqnpFjdscQgAJKw7FTSx2ZMv3DkjbNyl0hEObkS+sHr+0SSNVW+N1DzIg4fUCSGsUgEEQBxBtwEzIEAP9gRXbMjfLTXdtWCiy//1c3u0adqiZg0qdMkBy5hRRTk71MwdKoBB0EQRSwj9IOXfX/ec3dt7xeU0XkFyy4s+uXx+Bg3YiKWVNE6VO1zTgEAI4LQUCVITl0G6qAlk0m77PwhhR+CdcxiLKp1HazsqNmQ6N4X6Wk1mQ4IxZM8FGP9CZW5SkqnnnfO7FmevOH/olkMzYju7d6crmY7VQ8BoV9r23b0vf292xljHlvOrZP/5FTSvw/Atx+EQoNbNn/ucqWWz5xJGd20aROjdF5FxdB1UV3dfpvFOmv27KKRxZ9v3hIJD547d47Vav3HpmhO3L8ORkN93YwZHDFN5wmduVNdObk++BdLZfu6F/feYxUcquhACMX1QZ0lEUCGLffKsffmpZb8nXZqa2svOv8ChPGWrVu9Xu+s8vJDDQ1vrl3z4fsfvP7aa7FYjGDs9fsfffzxV1566dOPP3599ZsXL1z4D8xnnSxOp83pLPi/P+VjmJrfXpRkmkl14GCX01KV9JHusmm+BU7V/ffbIZjY7PZYLBaNRgjBVqvVYrGseuzxvV99lZ+ff/Wyaw41HFqzevUjDz4oCIJqsYSCoX9smO3/AeHlwxaV+RdE9GDSjCPAquSwiQ6CxX/YEOfAOcKYEAEQQggbhlG3fz/n/Lbbf33F0qWMsebm5t27dimKIooiIeS/HSwECESiuL7uIvyXRZRETIhpGLFYzNQNTYsTQhRFSSQSff39ABAKhmKxGCHk2HASQv/w5N//NxKPxy+9ZOGuqqqy6dPT0tM2b/os1eW66qqrn3jij6qqzps3r7W1dcf27VOnTjVNc19t7dhx4/x+fywe/+nSpQsuuvDE/vyRyMYNG0vHjE21O2wWa67P/9gjj5qm+cQf/jgiL9+mqGnOlPPOmVNTXXPlT5f6s725/hxvZlam2/P22reOW0A/qjcsOto7ampqDF0fnpc3dtzYoYeNhxrr6w9YrdYpU6ba7LaGhoZoJIox5pzLijxixIjj85jozOso/+XJvzNyBtYZWGdgnYF1BtaPUP7PAH5awNBn1UJVAAAAAElFTkSuQmCC"></image>
+
+                <image id="logo-mundi-fundo-claro-(1)" x="563.578947" y="6870.875" width="42.9473684" height="24.375" xlink:href="data:image/png;base64,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"></image>
+            </g>
+        </g>
+    </svg>
+
+
+</div>
+
+<div class="box-testimonials">
+    <div class="container">
+        <div class="title">
+            <svg class="love" viewBox="0 0 24 24">
+                <path d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z"></path>
+            </svg>
+
+            <h2>Depoimentos</h2>
+            <p>O que alguns de nossos orgulhosos clientes que usam nosso sistema para emissão de notas fiscais eletrônicas dizem sobre nossa plataforma.</p>
+        </div>
+
+        <ul class="box-row-testimonials">
+            <li class="item">
+                <img src="https://nfe.io/images/home/clientes/plataformatec.svg" class="company wide vtex">
+                <p class="testimonials">"Antes da integração com a plataforma da NFe.io a emissão de notas eletrônicas era totalmente manual, direto no site da prefeitura, uma a uma. Após a contratação da NFe.io finalmente conseguimos focar no que realmente importa pra gente: os nossos clientes. A integração com a API NFSe também é super simples e tira nossa preocupação de depender dos webservices das prefeituras."</p>
+                <img src="https://nfe.io/images/home/depoimentos/george-plataformatec.jpg">
+                <p class="name">George Guimarães, Plataformatec</p>
+            </li>
+            <li class="item">
+                <img src="https://nfe.io/images/home/clientes/agendor-logo.png" class="company wide">
+                <p class="testimonials">
+                    "Antes era preciso fazer a emissão manual de cada nota e o processo de fechamento, que consumia 3 dias, passou a levar somente 1. Sem contar que foi muito mais fácil integrar com o NFe.io do que com a prefeitura. O envio das notas em PDF para os nossos clientes ajudou bastante. Com certeza o investimento se paga, para não ter dor de cabeça com burocracia e ter mais tempo para focar no meu negócio."
+                </p>
+                <img src="https://nfe.io/images/home/depoimentos/tulio-agendor.jpg">
+                <p class="name">Túlio Monte Azul, Agendor</p>
+            </li>
+            <li class="item">
+                <img src="https://nfe.io/images/home/clientes/parafuzo.png" class="company wide">
+                <p class="testimonials">"A Parafuzo é um marketplace para contato entre usuários e profissionais de limpeza. Com o crescimento da empresa, tornou-se inviável gerarmos notas fiscais para todos os parceiros na mão, foi quando encontramos com a NFE.io e isso permitiu um ganho de escala excepcional para nossa empresa, nos permitindo focar nosso tempo em atividades core da empresa."</p>
+                <img src="https://nfe.io/images/home/depoimentos/felipe-parafuzo.jpg">
+                <p class="name">Felipe Brasileiro, Parafuzo</p>
+            </li>
+            <li class="item">
+                <img src="https://nfe.io/images/home/clientes/organizze.png" class="company wide vtex">
+                <p class="testimonials">"O caso da Organizze é atípico, pois começamos o projeto da nossa plataforma juntamente com a NFe.io, somos parceiros desde o começo. O maior diferencial que nos fez optar por usar a solução NFe.io é o atendimento, aliás esse foi o fator que teve maior peso na hora da decisão. Quanto ao uso da plataforma para que emita notas fiscais, nossa experiência tem sido muito positiva."</p>
+                <img src="https://nfe.io/images/home/depoimentos/leandro-organizze.jpg">
+                <p class="name">Leandro Benincá, Organizze</p>
+            </li>
+            <li class="item">
+                <img src="https://nfe.io/images/home/clientes/dr-pet.jpg" class="company wide">
+                <p class="testimonials">"Antes de usarmos a plataforma da NFe.io a emissão era feita toda manualmente, o que era muito custoso principalmente no gasto de tempo desnecessário para emitir nota por nota. Com a automação conseguimos economizar em tempo, trabalho e até mão de obra. O custo benefício de usar a plataforma é muito bom e nos trouxe muito mais facilidade e agilidade."</p>
+                <img src="https://nfe.io/images/home/depoimentos/alexandre-rossi-drpetsaude.jpg">
+                <p class="name">Alexandre Rossi, Dr. Pet Saúde</p>
+            </li>
+            <li class="item">
+                <img src="https://nfe.io/images/home/clientes/dietbox.jpg" class="company wide vtex">
+                <p class="testimonials">"Começamos a usar a plataforma logo que lançamos o nosso produto e a experiência até então está sendo muito boa! O ponto principal que nos fez escolher o sistema foi a economia de tempo, pois se não usássemos a NFe.io, teríamos que desenvolver uma solução específica para emissão das notas fiscais dentro do nosso sistema da DietBox."</p>
+                <img src="https://nfe.io/images/home/depoimentos/jieverson-dietbox.jpg">
+                <p class="name">Jiéverson Maissiat, DietBox</p>
+            </li>
+            <li class="item">
+                <img src="https://nfe.io/images/home/clientes/dona-mada.png" class="company">
+                <p class="testimonials">"Hoje eu utilizo a NFe.io para automatizar a emissão de NFs integrado a um plataforma de pagamentos online. Desde o primeiro momento que contratei, o trabalho de emissão de notas caiu drasticamente. Antes a emissão era manual e demandava muito tempo, havia erros e gerava risco fiscal. Agora é outro patamar. E o atendimento é excelente! Recomendo muito!"</p>
+                <img src="https://nfe.io/images/home/depoimentos/roberto-andrade-dona-mada.jpg">
+                <p class="name">Roberto Andrade, Dona Madá</p>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="box-request-estimate" id="contato">
+    <div class="container">
+        <div class="title">
+            <h2>Gostou? Vamos conversar!</h2>
+            <p>
+                Que tal uma ligação rápida ou um café? Queremos entender melhor o seu negócio e como nosso sistema de emissão de notas fiscais pode te ajudar.
+            </p>
+        </div>
+        <div id="contato-form">
+            <form data-validate-form="true" accept-charset="utf-8" novalidate="novalidate">
+                <div class="input-row row">
+                    <div class="col-md-6 col-sm-6 col-xs-12 first">
+                        <label for="name">Nome</label>
+                        <input type="text" id="name" name="name" placeholder="Seu nome completo" class="input-text" required="required" title="Este campo é obrigatório">
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12 last">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Seu melhor email" class="input-text" required="required" title="Informe um email válido">
+                    </div>
+                </div>
+                <div class="input-row">
+                    <div class="input text">
+                        <label for="name">Telefone</label>
+                        <input type="phone" id="phone" name="phone" placeholder="(00) 00000-0000" class="input-text" required="required" title="Informe um telefone válido">
+                    </div>
+                </div>
+                <div class="input-row">
+                    <label for="what-do-you–sell">O que você vende?</label>
+                    <div class="input select">
+                        <select id="product_type" name="product_type" class="input-text" required="required" title="Selecione uma opção">
+                            <option value="servicos">Serviços</option>
+                            <option value="produtos">Produtos</option>
+                            <option value="produtos_e_servicos">Produtos &amp; serviços</option>              
+                        </select>
+                    </div>            
+                </div>
+                <div class="button-bar">
+                    <div class="submit">
+                        <button class="button button-white" type="submit">
+                            Quero conversar!
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <ul class="contact">
+            <li>
+                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                    <path d="M4,4H20A2,2 0 0,1 22,6V18A2,2 0 0,1 20,20H4C2.89,20 2,19.1 2,18V6C2,4.89 2.89,4 4,4M12,11L20,6H4L12,11M4,18H20V8.37L12,13.36L4,8.37V18Z" />
+                </svg>
+                <a href="mailto:comercial@nfe.io">comercial@nfe.io</a>
+            </li>
+            <li>
+                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                    <path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z" />
+                </svg>
+                <a href="tel:+551140638091">(11) 4063-8091</a>
+            </li>
+        </ul>
+    </div>
+</div> 
+
+<div class="box-contact">
+    <div class="title">
+        <h2>Precisando de suporte?</h2>
+        <p> Calma... A gente te ajuda!
+            <br> <br> 
+            Só enviar um email para nós <br> 
+            <a href="mailto:suporte@nfe.io">suporte@nfe.io</a> ou ligue <a href="tel:+551140638091">(11) 4063-8091</a>.
+        </p>
+    </div>
+</div>
+
+</section>
+
+<footer class="application-footer">
+    <div class="container">
+        <div class="ft-content">
+            <ul class="ul1">
+                <li class="li-header" id="ul1">
+                    <p>SERVIÇOS</p>
+                    <label>Notas fiscais, consultas e mais 1 link</label>
+                    <svg version="1.1" viewBox="0 0 24 24" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="arrow">
+                        <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"></path>
+                    </svg>
+                </li>
+                <li>
+                    <a href="https://nfe.io/" target="_blank">Notas Fiscais</a>
+                </li>
+                <li>
+                    <a href="https://nfe.io/consultas-automatizadas" target="_blank">Consulta de dados</a>
+                </li>
+                <li>
+                    <a href="https://caiu.la" target="_blank">Caiu.la</a>
+                </li>
+            </ul>
+            <ul class="ul2">
+                <li class="li-header" id="ul2">
+                    <p >ASSUNTOS</p>
+                    <label>Pagamentos, Notas fiscais e mais 1 link</label>
+                    <svg version="1.1" viewBox="0 0 24 24" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="arrow">
+                        <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"></path>
+                    </svg>
+                </li>
+                <li>
+                    <a href="https://nfe.io/blog/pagamentos/" target="_blank">Pagamentos</a>
+                </li>
+                <li>
+                    <a href="https://nfe.io/blog/nota-Fiscal/" target="_blank">Nota fiscal eletrônica</a>
+                </li>
+                <li>
+                    <a href="https://nfe.io/blog/gestao-empresarial/" target="_blank">Gestão empresarial</a>
+                </li>
+            </ul>
+            <ul class="ul3">
+                <li class="li-header" id="ul3">
+                    <p >PLATAFORMA</p>
+                    <label>Documentação, Status da API e mais 1 link</label>
+                    <svg version="1.1" viewBox="0 0 24 24" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="arrow">
+                        <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"></path>
+                    </svg>
+                </li>
+                <li>
+                    <a href="https://api.nfe.io" target="_blank">Documentação API</a>
+                </li>
+                <li>
+                    <a href="https://status.nfe.io" target="_blank">Status dos Serviços</a>
+                </li>
+                <li>
+                    <a href="#contato" target="_blank">Parcerias</a>
+                </li>
+            </ul>
+            <ul class="ul4">
+                <li class="li-header" id="ul4">
+                    <p >CONTATOS</p>
+                    <label>Email &amp; Telefone</label>
+                    <svg version="1.1" viewBox="0 0 24 24" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="arrow">
+                        <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"></path>
+                    </svg>
+                </li>
+                <li>
+                    <a href="mailto:comercial@nfe.io" target="_blank">comercial@nfe.io</a>
+                </li>
+                <li>
+                    <a href="mailto:suporte@nfe.io" target="_blank">suporte@nfe.io</a>
+                </li>
+                <li>
+                    <a href="tel:+551140638091" target="_blank">(11) 4063-8091</a>
+                </li>
+            </ul>
+        </div>
+        <div class="ft-actions">
+            <div class="footer-logo">
+                <svg xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:cc="http://creativecommons.org/ns#" viewBox="0 0 4013 1333" xmlns:dc="http://purl.org/dc/elements/1.1/">
+                    <g id="Group" style="fill-rule:evenodd" transform="matrix(.97305 0 0 .96083 51.011 25.706)" sketch:type="MSLayerGroup">
+                        <path id="ponto" d="m2725.8 1222.6a110.04 109.1 0 0 1 -110.04 109.1 110.04 109.1 0 0 1 -110.04 -109.1 110.04 109.1 0 0 1 110.04 -109.1 110.04 109.1 0 0 1 110.04 109.1z"></path>
+                        <g id="nfe" sketch:type="MSShapeGroup">
+                            <path id="Rectangle-6" d="m1165 784.9v192.61 236.72c0 65.509-53.474 118.61-119.37 118.61h-119.74c-39.426 0-71.409-16.871-95.24-43.866-23.831-26.994-48.146-69.306-62.006-90.461-161.55-246.7-484.82-740.13-484.82-740.13v770.89c0 57.207-46.862 103.58-104.46 103.58h-74.863c-57.7-0.1-104.47-46.5-104.47-103.6v-962.73-133.37c0-73.565 60.233-133.2 134.3-133.2h74.944c63.117 0 103.97 40.491 134.61 80.983l508.45 774.17v-721.95c0.01-73.595 59.18-133.2 133.46-133.2h44.891c2.6384 0 5.259 0.075462 7.8597 0.22432 2.2-0.14877 4.5-0.22432 6.8-0.22432h717.2c57.675 0 104.43 46.47 104.43 103.67v44.416c0 57.256-46.877 104.98-104.43 104.98h-598.29v296.94h493.65c-60.001 30.422-164.48 117.49-179.63 233.37-0.067 0.51013-313.31 1.5192-313.31 1.5192z"></path>
+                            <path id="Oval-1" d="m1941.7 1332.8c-283.79 0-403.28-156.03-403.28-385.04s134.43-399.85 403.28-399.85c268.86 0 388.35 177.71 388.35 325.81 0 103.67-13.536 118.47-74.682 118.47h-126.29-381.55c0 18.574 3.2632 36.5 9.3803 53.239 23.147 63.338 87.157 109.66 169.86 109.66 44.809 0 104.56 0 164.3-44.428 29.511-21.945 40.801-33.051 50.071-38.67 15.976-10.98 33.63-17.642 48.26-18.025 68.105-1.7827 98.91 32.44 95.843 86.314-1.307 23.197-12.788 52.947-25.836 69.332-1.1264 1.5405-2.3351 2.9791-3.63 4.3044-2.8856 3.2318-5.9608 6.2493-9.2028 9.029-71.189 68.862-137.84 109.86-304.87 109.86zm-194.17-473.9h388.35c-31.939-89.606-89.815-148.09-191.18-148.09-96.09 0-164.18 58.488-197.16 148.09z"></path>
+                        </g>
+                        <g id="io" sketch:type="MSShapeGroup" transform="translate(2894.4 545.63)">
+                            <path id="i-shape" d="m73.598 0.36664h44c40.442 0 73 32.558 73 73v640.21c0 40.442-32.558 73-73 73h-44c-40.442 0-73-32.558-73-73v-640.21c0-40.442 32.558-73 73-73z"></path>
+                        </g>
+                    </g>
+                    <path id="rect4224" style="stroke-linejoin:round;stroke:#000;stroke-linecap:round;stroke-width:.93730" d="m3561.1 548.83a378.54 378.54 0 0 0 -136.7 25.56v705.51a378.54 378.54 0 0 0 136.7 26 378.54 378.54 0 0 0 1.3 0v-757a378.54 378.54 0 0 0 -1.3 -0.07zm52.2 4.07v749a378.54 378.54 0 0 0 41 -8v-732.92a378.54 378.54 0 0 0 -41 -8.08zm96.9 26.65v695.25a378.54 378.54 0 0 0 56 -29.4v-635.71a378.54 378.54 0 0 0 -56 -30.14zm-327.5 14.32a378.54 378.54 0 0 0 -23 13.15v640.38a378.54 378.54 0 0 0 23 13.6v-667.13zm438.6 59.22v548.91a378.54 378.54 0 0 0 118.3 -274.63 378.54 378.54 0 0 0 -118.3 -274.28zm-524.6 3.38a378.54 378.54 0 0 0 -114.2 270.9 378.54 378.54 0 0 0 114.2 270.43v-541.33z"></path>
+                    <rect id="rect4235" style="opacity:0.04;stroke-linejoin:round;stroke:#000;stroke-linecap:round;fill:#ad7fa8" height="753.37" width="466.19" y="542.33" x="3379"></rect>
+                </svg>
+                <p class="footer-rights">
+                    NFe.io © 2017. 
+                    <br/>Todos os Direitos Reservados. 
+                    <br/>Sistema de emissão de notas fiscais eletrônicas para prestadores de serviços, cobranças recorrentes, clubes de assinaturas  e outros tipos de empresas. 
+                </p>
+            </div>
+            <div class="ct ft-social">
+                <div class="ft-social">
+                    <a href="https://nfe.io/blog" target="_blank">
+                        <svg version="1.1" viewBox="0 0 24 24" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14,13H9.95A1,1 0 0,0 8.95,14A1,1 0 0,0 9.95,15H14A1,1 0 0,0 15,14A1,1 0 0,0 14,13M9.95,10H12.55A1,1 0 0,0 13.55,9A1,1 0 0,0 12.55,8H9.95A1,1 0 0,0 8.95,9A1,1 0 0,0 9.95,10M16,9V10A1,1 0 0,0 17,11A1,1 0 0,1 18,12V15A3,3 0 0,1 15,18H9A3,3 0 0,1 6,15V8A3,3 0 0,1 9,5H13A3,3 0 0,1 16,8M20,2H4C2.89,2 2,2.89 2,4V20A2,2 0 0,0 4,22H20A2,2 0 0,0 22,20V4C22,2.89 21.1,2 20,2Z"></path>
+                        </svg>
+                    </a>
+                    <a href="https://facebook.com/nfe.io" rel="nofollow" target="_blank">
+                        <svg version="1.1" viewBox="0 0 24 24" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17,2V2H17V6H15C14.31,6 14,6.81 14,7.5V10H14L17,10V14H14V22H10V14H7V10H10V6A4,4 0 0,1 14,2H17Z"></path>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/company-beta/10407705" rel="nofollow" target="_blank">
+                        <svg version="1.1" viewBox="0 0 24 24" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21,21H17V14.25C17,13.19 15.81,12.31 14.75,12.31C13.69,12.31 13,13.19 13,14.25V21H9V9H13V11C13.66,9.93 15.36,9.24 16.5,9.24C19,9.24 21,11.28 21,13.75V21M7,21H3V9H7V21M5,3A2,2 0 0,1 7,5A2,2 0 0,1 5,7A2,2 0 0,1 3,5A2,2 0 0,1 5,3Z"></path>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/nfe" rel="nofollow" target="_blank">
+                        <svg version="1.1" viewBox="0 0 24 24" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5,3H19A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H14.56C14.24,20.93 14.23,20.32 14.23,20.11L14.24,17.64C14.24,16.8 13.95,16.25 13.63,15.97C15.64,15.75 17.74,15 17.74,11.53C17.74,10.55 17.39,9.74 16.82,9.11C16.91,8.89 17.22,7.97 16.73,6.73C16.73,6.73 15.97,6.5 14.25,7.66C13.53,7.46 12.77,7.36 12,7.35C11.24,7.36 10.46,7.46 9.75,7.66C8.03,6.5 7.27,6.73 7.27,6.73C6.78,7.97 7.09,8.89 7.18,9.11C6.61,9.74 6.26,10.55 6.26,11.53C6.26,15 8.36,15.75 10.36,16C10.1,16.2 9.87,16.6 9.79,17.18C9.27,17.41 7.97,17.81 7.17,16.43C7.17,16.43 6.69,15.57 5.79,15.5C5.79,15.5 4.91,15.5 5.73,16.05C5.73,16.05 6.32,16.33 6.73,17.37C6.73,17.37 7.25,19.12 9.76,18.58L9.77,20.11C9.77,20.32 9.75,20.93 9.43,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3Z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- <div class="menu-mobile-bk"></div> -->
+<!-- <div class="menu-mobile">
+    <button class="bt-close">
+        <svg viewBox="0 0 24 24">
+            <path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
+        </svg>
+    </button>
+    <ul class="inside">
+        <li>
+            <a href="">Notas Fiscais</a>
+        </li>
+        <li>
+            <a href="">Consultas</a>
+        </li>
+        <li class="li-sub">
+            <p>Desenvolvimento</p>
+            <svg viewBox="0 0 24 24">
+                <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+            </svg>
+            <ul>
+                <li>
+                    <a href="">Plugins</a>
+                </li>
+                <li>
+                    <a href="">Cliente SDK</a>
+                </li>
+                <li>
+                    <a href="">API Completa</a>
+                </li>
+                <li>
+                    <a href="">Status</a>
+                </li>
+            </ul>
+        </svg>
+    </li>
+    <li>
+        <a href="">Contato</a>
+    </li>
+    <li>
+        <a href="" class="action">Login</a>
+    </li>
+</ul>
+</div> -->
+
+<script type="text/javascript" src="https://nfe.io/js/prism.js"></script>
+<script type="text/javascript" src="https://nfe.io/js/jquery.min.js"></script>
+<script type="text/javascript" src="https://nfe.io/js/slider.js"></script>
+<script type="text/javascript" src="https://nfe.io/js/drop-down.js"></script>
+<script type="text/javascript" src="https://nfe.io/js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="https://nfe.io/js/all.js"></script>
+<script type="text/javascript" src="https://nfe.io/js/home.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+
+</script>
+<script type="text/javascript">( function(){ window.SIG_EXT = {}; } )()</script>
+</body>
+</html>

@@ -48,7 +48,7 @@ const platforms = [
     caption: `Moip`,
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: 'img/integration-logos/moip.svg',
+    image: 'integration-logos/moip.svg',
     erpLink: 'erp/moip',
     pinned: true,
   },
@@ -56,7 +56,7 @@ const platforms = [
     caption: `Vindi`,
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: 'img/integration-logos/vindi.svg',
+    image: 'integration-logos/vindi.svg',
     erpLink: 'erp/vindi',
     pinned: true,
   },
@@ -64,7 +64,7 @@ const platforms = [
     caption: `PagSeguro`,
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: 'img/integration-logos/pagseguro.svg',
+    image: 'integration-logos/pagseguro.svg',
     erpLink: 'erp/pagseguro',
     pinned: true,
   },
@@ -72,7 +72,7 @@ const platforms = [
     caption: `Mundipagg`,
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: 'img/integration-logos/mundipagg.svg',
+    image: 'integration-logos/mundipagg.svg',
     erpLink: 'erp/mundipagg',
     pinned: true,
   },
@@ -80,7 +80,7 @@ const platforms = [
     caption: `Iugu`,
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: 'img/integration-logos/iugu.svg',
+    image: 'integration-logos/iugu.svg',
     erpLink: 'erp/iugu',
     pinned: true,
   },
@@ -88,7 +88,7 @@ const platforms = [
     caption: `Pagar.me`,
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: 'img/integration-logos/pagar-me.svg',
+    image: 'integration-logos/pagar-me.svg',
     erpLink: 'erp/pagarme',
     pinned: true,
   },
@@ -96,7 +96,7 @@ const platforms = [
     caption: `Stripe`,
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: 'img/integration-logos/stripe.svg',
+    image: 'integration-logos/stripe.svg',
     erpLink: 'erp/stripe',
     pinned: true,
   },
@@ -104,7 +104,7 @@ const platforms = [
     caption: `Paypal`,
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: 'img/integration-logos/paypal.svg',
+    image: 'integration-logos/paypal.svg',
     erpLink: 'erp/paypal',
     pinned: true,
   }
@@ -115,7 +115,7 @@ const plugins = [
     caption: `Microsoft Flow`,
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: 'img/microsoft-flow.png',
+    image: 'microsoft-flow.png',
     pluginLink: 'plugin/microsoftFlow',
     pinned: true,
   },
@@ -123,7 +123,7 @@ const plugins = [
     caption: 'Woocommerce',
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: 'img/woocommerce.svg',
+    image: 'woocommerce.svg',
     pluginLink: 'plugin/woocommerce',
     pinned: true,
   },
@@ -131,7 +131,7 @@ const plugins = [
     caption: 'WHMCS',
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: 'img/whmcs.png',
+    image: 'whmcs.png',
     pluginLink: 'plugin/whmcs',
     pinned: true,
   },
@@ -143,7 +143,7 @@ const sdks = [
     caption: 'Csharp',
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: 'img/lang-logos/csharp.svg',
+    image: 'lang-logos/csharp.svg',
     sdkLink: 'sdk',
     pinned: true,
   },
@@ -151,7 +151,7 @@ const sdks = [
     caption: 'Node.JS',
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: 'img/lang-logos/nodejs.svg',
+    image: 'lang-logos/nodejs.svg',
     sdkLink: 'sdk',
     pinned: true,
   },
@@ -159,7 +159,7 @@ const sdks = [
     caption: 'PHP',
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: 'img/lang-logos/php.svg',
+    image: 'lang-logos/php.svg',
     sdkLink: 'sdk',
     pinned: true,
   },
@@ -167,7 +167,7 @@ const sdks = [
     caption: 'Python',
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: 'img/lang-logos/python.svg',
+    image: 'lang-logos/python.svg',
     sdkLink: 'sdk',
     pinned: true,
   },
@@ -175,7 +175,7 @@ const sdks = [
     caption: 'Ruby',
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: 'img/lang-logos/ruby.svg',
+    image: 'lang-logos/ruby.svg',
     sdkLink: 'sdk',
     pinned: true,
   },
@@ -183,7 +183,7 @@ const sdks = [
     caption: 'Scala',
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: 'img/lang-logos/scala.svg',
+    image: 'lang-logos/scala.svg',
     sdkLink: 'sdk',
     pinned: true,
   },
@@ -191,7 +191,7 @@ const sdks = [
     caption: 'Java',
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: 'img/lang-logos/java.svg',
+    image: 'lang-logos/java.svg',
     sdkLink: 'sdk',
     pinned: true,
   },
@@ -199,7 +199,7 @@ const sdks = [
     caption: 'Golang',
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: 'img/lang-logos/golang.svg',
+    image: 'lang-logos/golang.svg',
     sdkLink: 'sdk',
     pinned: true,
   }
@@ -209,7 +209,7 @@ const siteConfig = {
   title: 'NFe.io : Documentação' /* title for your website */,
   tagline: 'Documentações',
   url: 'https://yagosenhorini.github.io' /* your website url */,
-  baseUrl: '/docs/' /* base url for your project */,
+  baseUrl: '/' /* base url for your project */,
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
@@ -221,7 +221,7 @@ const siteConfig = {
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
     { doc: 'doc1', label: 'Documentação' },
-    { page: 'api/referencias', label: `API's` },
+    { page: 'docs/api/referencias', label: `API's` },
     { blog: true, label: 'Atualizações' },
   ],
 

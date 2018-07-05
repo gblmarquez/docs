@@ -120,7 +120,7 @@ class Plugins extends React.Component {
       return (
         <a href={plugin.pluginLink} key={i}>
           <div className="app-item">
-            <img className="plugin" src={plugin.image} alt={plugin.caption} title={plugin.caption} />
+            <img className="plugin" src={imgUrl(plugin.image)} alt={plugin.caption} title={plugin.caption} />
             <span className="app-name">{plugin.caption}</span>
           </div>
         </a>
@@ -147,7 +147,7 @@ class SDKS extends React.Component {
       return (
         <a href={sdk.sdkLink} key={i}>
           <div className="app-item">
-            <img className="sdk" src={sdk.image} alt={sdk.caption} title={sdk.caption} />
+            <img className="sdk" src={imgUrl(sdk.image)} alt={sdk.caption} title={sdk.caption} />
             <span className="app-name">{sdk.caption}</span>
           </div>
         </a>
@@ -173,7 +173,7 @@ class Platforms extends React.Component {
       return (
         <a href={platforms.erpLink} key={i}>
           <div className="app-item">
-            <img className="erp" src={platforms.image} alt={platforms.caption} title={platforms.caption} />
+            <img className="erp" src={imgUrl(platforms.image)} alt={platforms.caption} title={platforms.caption} />
             <span className="app-name">{platforms.caption}</span>
           </div>
         </a>
