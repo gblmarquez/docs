@@ -221,7 +221,7 @@ const siteConfig = {
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
     { doc: 'doc1', label: 'Documentação' },
-    { page: 'api/api', label: `API's` },
+    { page: 'api/referencias', label: `API's` },
     { blog: true, label: 'Atualizações' },
   ],
 
