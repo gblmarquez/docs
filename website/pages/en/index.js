@@ -110,6 +110,7 @@ const Features = props => (
       <img src={imgUrl('updates.svg')} />
       <h4>Atualizações</h4>
     </a>
+    
   </div>
 );
 
@@ -154,11 +155,22 @@ class SDKS extends React.Component {
     });
 
     return (
+<<<<<<< HEAD
       <div className="productShowcaseSection">
         <div className="prose shadow-card">
           <h3>Clientes SDK</h3>
           <p>Pensado para desenvolvedores. Disponibilização de Clientes SDK para integração.</p>
           <div className="logos">{sdks}</div>
+=======
+      <Container>
+        <div className="productShowcaseSection">
+          <div className="prose shadow-card">
+            <h3>Clientes SDK</h3>
+            <h5>Pensado para desenvolvedores</h5>
+            <p>Disponibilização de Clientes SDK para integração.</p>
+            <div className="logos">{sdks}</div>
+          </div>
+>>>>>>> f4610dc8689f5e61834bfde49cea4ed65a5ff521
         </div>
       </div>
     );
