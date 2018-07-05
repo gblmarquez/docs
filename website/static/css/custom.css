@@ -353,7 +353,7 @@ section.developers{
   }
 } */
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1024px) {
   .navigationSlider .slidingNav ul li:not(.navSearchWrapper){
     display: none;
   }
@@ -376,8 +376,7 @@ section.developers{
 
   .navSearchWrapper {
     right: 20px;
-    top: 25px;
-    width: 30%;
+    top: 25px !important;
   }
 
   /* .navSearchWrapper:before{
