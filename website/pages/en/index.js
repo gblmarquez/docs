@@ -162,7 +162,7 @@ class SDKS extends React.Component {
           <div className="prose shadow-card">
             <h3>Clientes SDK</h3>
             <h5>Pensado para desenvolvedores</h5>
-            <p>Disponibilização de Clientes SDK para integração. Asnaisnfas aisndaisda sd as</p>
+            <p>Disponibilização de Clientes SDK para integração.</p>
             <div className="logos">{sdks}</div>
           </div>
         </div>
