@@ -4,7 +4,7 @@
       align-items: center;
     }
   
-    .integrations .box-wrapper .productShowcaseSection {
+    .integrations .box-wrapper .productShowcaseSection:first-child {
       margin-bottom: 64px;
     }
   
