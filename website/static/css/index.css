@@ -1,0 +1,15 @@
+.index .mainContainer {
+    padding: 0;
+}
+
+.index .integrations,
+.index .developers {
+    padding: 80px 0 50px 0;
+}
+
+.index h2 {
+    margin: 0;
+    padding: 0;
+}
+
+

@@ -134,7 +134,7 @@ input#search_input_react:focus{
 
 .homeContainer .block-features{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .homeContainer .block-features img{
@@ -276,7 +276,7 @@ section.developers{
   -webkit-box-shadow: 0 5px 15px 0 rgba(37,44,97,0.15), 0 2px 4px 0 rgba(93,100,148,0.2);
   box-shadow: 0 5px 15px 0 rgba(37,44,97,0.15), 0 2px 4px 0 rgba(93,100,148,0.2);
   border-radius: 2px;
-  max-width: 400px;
+  width: 100%;
 }
 
 .integrations .shadow-card {
@@ -352,7 +352,7 @@ section.developers{
   }
 } */
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
   .navigationSlider .slidingNav ul li:not(.navSearchWrapper){
     display: none;
   }
@@ -369,14 +369,18 @@ section.developers{
   .navSearchWrapper:after{
     left: 21px;
   }
-
-  
 }
 
 @media only screen and (max-width: 768px) {
   /* .fixedHeaderContainer{
     padding: 25px 0;
   } */
+
+  .homeContainer .block-features{
+    display: flex;
+    justify-content: space-around;
+  }
+  
 
   .fixedHeaderContainer .homeWrapper .Wrapper {
     max-width: 1100px;
