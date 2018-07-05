@@ -110,6 +110,7 @@ const Features = props => (
       <img src={imgUrl('updates.svg')} />
       <h4>Atualizações</h4>
     </a>
+    
   </div>
 );
 
