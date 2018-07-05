@@ -266,6 +266,8 @@ section.developers{
 
 .productShowcaseSection .logos img[title="Microsoft Flow"]{
   height: initial;
+  padding-top: 14.65px !important;
+
 }
 
 .shadow-card {
