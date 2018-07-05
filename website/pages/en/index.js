@@ -106,7 +106,7 @@ const Features = props => (
         <img src={imgUrl('docs.svg')} />
         <h4>Documentação</h4>
       </a>
-      <a href={pageUrl('api/api')} className="features alignCenter">
+      <a href={pageUrl('api/referencias')} className="features alignCenter">
         <img src={imgUrl('api-reference.svg')} />
         <h4>Referência da API</h4>
       </a>
