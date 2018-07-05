@@ -1,6 +1,7 @@
 /* your custom css */
 @import url('fonts.css');
 @import url('api.css');
+@import url('blog.css');
 
 *{
   font-family: 'Maison Neue', sans-serif !important;
@@ -352,14 +353,14 @@ section.developers{
   }
 } */
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
   .navigationSlider .slidingNav ul li:not(.navSearchWrapper){
     display: none;
   }
 
   .navSearchWrapper {
     right: 20px;
-    top: 25px;
+    top: 25px !important;
   }
 
   .navSearchWrapper:before{
@@ -369,8 +370,6 @@ section.developers{
   .navSearchWrapper:after{
     left: 21px;
   }
-
-  
 }
 
 @media only screen and (max-width: 768px) {
