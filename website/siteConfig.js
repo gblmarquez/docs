@@ -14,32 +14,32 @@ const apis = [
   {
     title: 'Nfe v1',
     content: 'API para emissão de Nota Fiscal de Serviço',
-    apiLink: 'api/nfe-v1',
+    apiLink: 'nfe-v1',
   },
   {
     title: 'Nfe v2',
     content: 'API para emissão de Nota Fiscal de Produto',
-    apiLink: 'api/nfe-v2',
+    apiLink: 'nfe-v2',
   },
   {
     title: 'Address v1',
     content: 'API para consulta da endereços',
-    apiLink: 'api/address-v1',
+    apiLink: 'address-v1',
   },
   {
     title: 'Legal Entity v1',
     content: 'API para consulta de CNPJ',
-    apiLink: 'api/legalentity-v1',
+    apiLink: 'legalentity-v1',
   },
   {
     title: 'Sefaz NF v1',
     content: 'API para consulta de notas fiscais',
-    apiLink: 'api/sefaz_nf-v1',
+    apiLink: 'sefaz_nf-v1',
   },
   {
     title: 'Natural Person v1',
     content: 'API para consulta de CPF',
-    apiLink: 'api/naturalperson-v1',
+    apiLink: 'naturalperson-v1',
   }
 ];
 
@@ -221,7 +221,7 @@ const siteConfig = {
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
     { doc: 'doc1', label: 'Documentação' },
-    { page: 'api', label: `API's` },
+    { page: 'api/api', label: `API's` },
     { blog: true, label: 'Atualizações' },
   ],
 
