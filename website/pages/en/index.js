@@ -156,18 +156,12 @@ class SDKS extends React.Component {
 
     return (
       <div className="productShowcaseSection">
-        <div className="prose shadow-card">
-          <h3>Clientes SDK</h3>
-          <p>Pensado para desenvolvedores. Disponibilização de Clientes SDK para integração.</p>
-          <div className="logos">{sdks}</div>
-
-          <div className="productShowcaseSection">
-            <div className="prose shadow-card">
-              <h3>Clientes SDK</h3>
-              <h5>Pensado para desenvolvedores</h5>
-              <p>Disponibilização de Clientes SDK para integração.</p>
-              <div className="logos">{sdks}</div>
-            </div>
+        <div className="productShowcaseSection">
+          <div className="prose shadow-card">
+            <h3>Clientes SDK</h3>
+            
+            <p>Pensado para desenvolvedores. Disponibilização de Clientes SDK para integração.</p>
+            <div className="logos">{sdks}</div>
           </div>
         </div>
       </div>
