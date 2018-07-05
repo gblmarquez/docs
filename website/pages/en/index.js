@@ -104,15 +104,15 @@ const Features = props => (
     <div className="block-features">
       <a href={siteConfig.baseUrl + 'docs/doc1'} className="features alignCenter">
         <img src={imgUrl('docs.svg')} />
-        <h2>Documentação</h2>
+        <h4>Documentação</h4>
       </a>
       <a href={pageUrl('api')} className="features alignCenter">
         <img src={imgUrl('api-reference.svg')} />
-        <h2>Referência da API</h2>
+        <h4>Referência da API</h4>
       </a>
       <a href={pageUrl('blog')} className="features alignCenter">
         <img src={imgUrl('updates.svg')} />
-        <h2>Atualizações</h2>
+        <h4>Atualizações</h4>
       </a>
     </div>
   </Container>
@@ -136,7 +136,7 @@ class Plugins extends React.Component {
         <div className="productShowcaseSection">
           <div className="prose shadow-card">
             <h3>Integração Plugins</h3>
-            <h4>Não é um Desenvolvedor?</h4>
+            <h5>Não é um Desenvolvedor?</h5>
             <p>Fique tranquilo!
               Nós disponibilizamos alguns plugins para integração ao seu site.
               </p>
@@ -166,7 +166,7 @@ class SDKS extends React.Component {
         <div className="productShowcaseSection">
           <div className="prose shadow-card">
             <h3>Clientes SDK</h3>
-            <h4>Pensado para desenvolvedores</h4>
+            <h5>Pensado para desenvolvedores</h5>
             <p>Disponibilização de Clientes SDK para integração. Asnaisnfas aisndaisda sd as</p>
             <div className="logos">{sdks}</div>
           </div>
@@ -194,7 +194,7 @@ class Platforms extends React.Component {
         <div className="productShowcaseSection">
           <div className="prose shadow-card">
             <h3>Integração Plataformas</h3>
-            <h4>Facilidade na hora de integrar o NFe</h4>
+            <h5>Facilidade na hora de integrar o NFe</h5>
             <p>Nosso sistema possui integração com diversas plataformas do mercado</p>
             <div className="logos">{platforms}</div>
           </div>
