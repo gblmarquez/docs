@@ -115,7 +115,7 @@ input#search_input_react:focus{
 }
 
 .homeContainer .homeWrapper{
-  padding: 6em 0;
+  padding: 6em 20px;
 }
 
 .homeContainer .homeWrapper .wrapper{
@@ -331,13 +331,37 @@ section.developers{
   padding: 4em 0;
 }
 
+.nav-footer .sitemap a{
+  margin: 2px 0;
+  padding: 3px 0;
+}
+
 /* @media only screen and (min-device-width: 360px){
   .navPusher{
     padding-top: 100px;
   }
 } */
 
-@media only screen and (min-width: 1024px) {}
+@media only screen and (max-width: 1024px) {
+  .navigationSlider .slidingNav ul li:not(.navSearchWrapper){
+    display: none;
+  }
+
+  .navSearchWrapper {
+    right: 20px;
+    top: 25px;
+  }
+
+  .navSearchWrapper:before{
+    left: 10px;
+  }
+
+  .navSearchWrapper:after{
+    left: 21px;
+  }
+
+  
+}
 
 @media only screen and (max-width: 768px) {
   /* .fixedHeaderContainer{
@@ -353,25 +377,51 @@ section.developers{
   }
 
   .reactNavSearchWrapper input#search_input_react{
-    padding-left: 35px;
-  }
-
-  .navPusher{
-    padding-top: 130px;
+    /* padding-left: 30px; */
   }
 
   .navigationSlider .slidingNav ul{
     background: linear-gradient(90deg,#50e0a2 0%, #82d9ff 100%);
     margin-top: 80px;;
   }
+
+  .homeContainer .block-features{
+    display: grid;
+  }
+
+  .homeContainer .features:nth-child(2){
+    margin: 30px 0; 
+  }
+
+  .homeContainer .features:hover{
+    transform: inherit;
+  }
+}
+
+@media only screen and (max-width: 735px){
+  .navSearchWrapper {
+    /* width: 90px; */
+  }
+
+  .reactNavSearchWrapper input#search_input_react {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-left: 30px;
+    /* transition: 0.5s width ease; */
+  }
+
+  .reactNavSearchWrapper input#search_input_react:focus,
+  .reactNavSearchWrapper input#search_input_react:active {
+    background: rgba(0, 0, 0, 0.5);
+    /* width: 170px; */
+  }
 }
 
 @media only screen and (max-width: 425px){
-  .navPusher{
-    padding-top: 100px;
+  .homeContainer .features{
+    margin: 25px;
   }
 
-  .homeContainer .features{
+  .homeContainer .features:nth-child(2){
     margin: 25px;
   }
 
