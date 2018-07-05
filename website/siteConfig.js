@@ -112,6 +112,14 @@ const platforms = [
 
 const plugins = [
   {
+    caption: `Microsoft Flow`,
+    // You will need to prepend the image path with your baseUrl
+    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
+    image: 'img/microsoft-flow.png',
+    pluginLink: 'plugin/microsoftFlow',
+    pinned: true,
+  },
+  {
     caption: 'Woocommerce',
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
@@ -127,16 +135,8 @@ const plugins = [
     pluginLink: 'plugin/whmcs',
     pinned: true,
   },
-  {
-    caption: `Microsoft Flow`,
-    // You will need to prepend the image path with your baseUrl
-    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: 'img/microsoft-flow.png',
-    pluginLink: 'plugin/microsoftFlow',
-    pinned: true,
-  }
+ 
 ];
-
 
 const sdks = [
   {
@@ -205,8 +205,6 @@ const sdks = [
   }
 ];
 
-
-
 const siteConfig = {
   title: 'NFe.io : Documentação' /* title for your website */,
   tagline: 'Documentações',
@@ -240,6 +238,8 @@ apis, platforms, plugins, sdks,
 
   disableHeaderTitle: true,
   disableTitleTagline: true,
+  useEnglishUrl: false,
+  cleanUrl: true,
 
   // This copyright info is used in /core/Footer.js and blog rss/atom feeds.
   copyright:
